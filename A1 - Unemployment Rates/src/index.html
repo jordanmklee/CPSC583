@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<title>CPSC 583 - Assignment 1</title>
+</head>
+
+<body>
+	<h1 style="font-family: monospace">Unemployment Rates from 1995-2004</h1>
+	<svg></svg>
+</body>
+
+<script>
+	
+	var w = window.screen.width;
+	var h = window.screen.height;
+	
+	
+	
+	var svg = d3.select("svg").attr("width", 1000).attr("height", 1000);
+	
+	svg.append("text")
+		.attr("x", 100)
+		.attr("y", 15)
+		.text("Men");
+	
+	svg.append("text")
+		.attr("x", 200)
+		.attr("y", 15)
+		.text("Women");
+	
+	svg.append("text")
+		.attr("x", 15)
+		.attr("y", 100)
+		.text("Native");
+	
+	svg.append("text")
+		.attr("x", 15)
+		.attr("y", 200)
+		.text("Foreign-born");
+	
+</script>
+</html>
