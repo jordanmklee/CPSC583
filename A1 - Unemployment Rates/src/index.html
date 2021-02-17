@@ -25,9 +25,9 @@
 
 <script>
 	
-	var w = 1000;
+	var w = 1200;
 	var h = 300;
-	var chartX = [100, 200, 300, 400];	// X coordinate for 1995, 2000, 2003, 2004
+	var chartX = [100, 600, 900, 1000];	// X coordinate for 1995, 2000, 2003, 2004
 	
 	// Chart SVGs
 	var nm = d3.select("#native-men").attr("width", w).attr("height", h);
@@ -37,24 +37,115 @@
 	
 	// Chart axes
 	nm.append("text")
-		.attr("x", 0)
-		.attr("y", 12)
+		.attr("x", 0).attr("y", 12)
 		.text("30%");
 	nm.append("text")
-		.attr("x", 0)
-		.attr("y", h-12)
+		.attr("x", 0).attr("y", h-20)
 		.text("0%");
+	nm.append("text")
+		.attr("x", chartX[0]).attr("y", h)
+		.text("1995");
+	nm.append("text")
+		.attr("x", chartX[1]).attr("y", h)
+		.text("2000");
+	nm.append("text")
+		.attr("x", chartX[2]).attr("y", h)
+		.text("2003");
+	nm.append("text")
+		.attr("x", chartX[3]).attr("y", h)
+		.text("2004");
 	nm.append("line")
-		.attr("x1", 30)
-		.attr("y1", 0)
-		.attr("x2", 30)
-		.attr("y2", h-12)
+		.attr("x1", 30).attr("y1", 0)
+		.attr("x2", 30).attr("y2", h-20)
 		.attr("stroke", "black");
 	nm.append("line")
-		.attr("x1", 30)
-		.attr("y1", h-12)
-		.attr("x2", w)
-		.attr("y2", h-12)
+		.attr("x1", 30).attr("y1", h-20)
+		.attr("x2", w).attr("y2", h-20)
+		.attr("stroke", "black");
+	
+	
+	fbm.append("text")
+		.attr("x", 0).attr("y", 12)
+		.text("30%");
+	fbm.append("text")
+		.attr("x", 0).attr("y", h-20)
+		.text("0%");
+	fbm.append("text")
+		.attr("x", chartX[0]).attr("y", h)
+		.text("1995");
+	fbm.append("text")
+		.attr("x", chartX[1]).attr("y", h)
+		.text("2000");
+	fbm.append("text")
+		.attr("x", chartX[2]).attr("y", h)
+		.text("2003");
+	fbm.append("text")
+		.attr("x", chartX[3]).attr("y", h)
+		.text("2004");
+	fbm.append("line")
+		.attr("x1", 30).attr("y1", 0)
+		.attr("x2", 30).attr("y2", h-20)
+		.attr("stroke", "black");
+	fbm.append("line")
+		.attr("x1", 30).attr("y1", h-20)
+		.attr("x2", w).attr("y2", h-20)
+		.attr("stroke", "black");
+	
+	
+	
+	nw.append("text")
+		.attr("x", 0).attr("y", 12)
+		.text("30%");
+	nw.append("text")
+		.attr("x", 0).attr("y", h-20)
+		.text("0%");
+	nw.append("text")
+		.attr("x", chartX[0]).attr("y", h)
+		.text("1995");
+	nw.append("text")
+		.attr("x", chartX[1]).attr("y", h)
+		.text("2000");
+	nw.append("text")
+		.attr("x", chartX[2]).attr("y", h)
+		.text("2003");
+	nw.append("text")
+		.attr("x", chartX[3]).attr("y", h)
+		.text("2004");
+	nw.append("line")
+		.attr("x1", 30).attr("y1", 0)
+		.attr("x2", 30).attr("y2", h-20)
+		.attr("stroke", "black");
+	nw.append("line")
+		.attr("x1", 30).attr("y1", h-20)
+		.attr("x2", w).attr("y2", h-20)
+		.attr("stroke", "black");
+	
+	
+	fbw.append("text")
+		.attr("x", 0).attr("y", 12)
+		.text("30%");
+	fbw.append("text")
+		.attr("x", 0).attr("y", h-20)
+		.text("0%");
+	fbw.append("text")
+		.attr("x", chartX[0]).attr("y", h)
+		.text("1995");
+	fbw.append("text")
+		.attr("x", chartX[1]).attr("y", h)
+		.text("2000");
+	fbw.append("text")
+		.attr("x", chartX[2]).attr("y", h)
+		.text("2003");
+	fbw.append("text")
+		.attr("x", chartX[3]).attr("y", h)
+		.text("2004");
+	fbw.append("line")
+		.attr("x1", 30).attr("y1", 0)
+		.attr("x2", 30).attr("y2", h-20)
+		.attr("stroke", "black");
+	fbw.append("line")
+		.attr("x1", 30).attr("y1", h-20)
+		.attr("x2", w).attr("y2", h-20)
 		.attr("stroke", "black");
 	
 	
@@ -65,42 +156,46 @@
 		
 		// Loop through all data
 		for(var i = 5; i < 17; i++){
-			for(var x = 0; x < 4; x++){	// Four years; 1995, 2000, 2003, 2004
+			for(var x = 1; x < 4; x++){	// Four years; 1995, 2000, 2003, 2004
 				
 				// Native Men chart
-				if(rows[i][1+x] != ".."){
-					nm.append("circle")
-						.attr("cx", chartX[x])
-						.attr("cy", (h-12)-(rows[i][1+x]*10))
-						.attr("r", 2)
-						.style("fill", "red");		
+				if(rows[i][1+x] != ".." && rows[i][1+x-1] != ".."){
+					nm.append("line")
+						.attr("x1", chartX[x-1])
+						.attr("y1", (h-20)-(rows[i][1+x-1]*10))
+						.attr("x2", chartX[x])
+						.attr("y2", (h-20)-(rows[i][1+x]*10))
+						.attr("stroke", "red");
 				}
 				
 				// Foreign-born Men chart
-				if(rows[i][5+x] != ".."){
-					fbm.append("circle")
-						.attr("cx", chartX[x])
-						.attr("cy", (h-12)-(rows[i][5+x]*10))
-						.attr("r", 2)
-						.style("fill", "red");		
+				if(rows[i][5+x] != ".." && rows[i][5+x-1] != ".."){
+					fbm.append("line")
+						.attr("x1", chartX[x-1])
+						.attr("y1", (h-20)-(rows[i][5+x-1]*10))
+						.attr("x2", chartX[x])
+						.attr("y2", (h-20)-(rows[i][5+x]*10))
+						.attr("stroke", "red");		
 				}
 				
 				// Native Women chart
-				if(rows[i][9+x] != ".."){
-					nw.append("circle")
-						.attr("cx", chartX[x])
-						.attr("cy", (h-12)-(rows[i][9+x]*10))
-						.attr("r", 2)
-						.style("fill", "red");		
+				if(rows[i][9+x] != ".." && rows[i][9+x-1] != ".."){
+					nw.append("line")
+						.attr("x1", chartX[x-1])
+						.attr("y1", (h-20)-(rows[i][9+x-1]*10))
+						.attr("x2", chartX[x])
+						.attr("y2", (h-20)-(rows[i][9+x]*10))
+						.attr("stroke", "red");	
 				}
 				
 				// Foreign-born Women chart
-				if(rows[i][13+x] != ".."){
-					fbw.append("circle")
-						.attr("cx", chartX[x])
-						.attr("cy", (h-12)-(rows[i][13+x]*10))
-						.attr("r", 2)
-						.style("fill", "red");		
+				if(rows[i][13+x] != ".." && rows[i][13+x-1] != ".."){
+					fbw.append("line")
+						.attr("x1", chartX[x-1])
+						.attr("y1", (h-20)-(rows[i][13+x-1]*10))
+						.attr("x2", chartX[x])
+						.attr("y2", (h-20)-(rows[i][13+x]*10))
+						.attr("stroke", "red");		
 				}
 				
 			}
