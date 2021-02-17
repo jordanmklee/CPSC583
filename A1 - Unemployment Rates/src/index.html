@@ -25,7 +25,7 @@
 
 <script>
 	
-	var w = 1200;
+	var w = 1100;
 	var h = 300;
 	var chartX = [100, 600, 900, 1000];	// X coordinate for 1995, 2000, 2003, 2004
 	
@@ -38,22 +38,22 @@
 	// Chart axes
 	nm.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%");
+		.text("30%").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", 0).attr("y", h-20)
-		.text("0%");
+		.text("0%").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", chartX[0]).attr("y", h)
-		.text("1995");
+		.text("1995").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", chartX[1]).attr("y", h)
-		.text("2000");
+		.text("2000").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", chartX[2]).attr("y", h)
-		.text("2003");
+		.text("2003").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", chartX[3]).attr("y", h)
-		.text("2004");
+		.text("2004").attr("font-family", "monospace");
 	nm.append("line")
 		.attr("x1", 30).attr("y1", 0)
 		.attr("x2", 30).attr("y2", h-20)
@@ -66,22 +66,22 @@
 	
 	fbm.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%");
+		.text("30%").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", 0).attr("y", h-20)
-		.text("0%");
+		.text("0%").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", chartX[0]).attr("y", h)
-		.text("1995");
+		.text("1995").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", chartX[1]).attr("y", h)
-		.text("2000");
+		.text("2000").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", chartX[2]).attr("y", h)
-		.text("2003");
+		.text("2003").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", chartX[3]).attr("y", h)
-		.text("2004");
+		.text("2004").attr("font-family", "monospace");
 	fbm.append("line")
 		.attr("x1", 30).attr("y1", 0)
 		.attr("x2", 30).attr("y2", h-20)
@@ -95,22 +95,22 @@
 	
 	nw.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%");
+		.text("30%").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", 0).attr("y", h-20)
-		.text("0%");
+		.text("0%").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", chartX[0]).attr("y", h)
-		.text("1995");
+		.text("1995").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", chartX[1]).attr("y", h)
-		.text("2000");
+		.text("2000").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", chartX[2]).attr("y", h)
-		.text("2003");
+		.text("2003").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", chartX[3]).attr("y", h)
-		.text("2004");
+		.text("2004").attr("font-family", "monospace");
 	nw.append("line")
 		.attr("x1", 30).attr("y1", 0)
 		.attr("x2", 30).attr("y2", h-20)
@@ -123,22 +123,22 @@
 	
 	fbw.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%");
+		.text("30%").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", 0).attr("y", h-20)
-		.text("0%");
+		.text("0%").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", chartX[0]).attr("y", h)
-		.text("1995");
+		.text("1995").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", chartX[1]).attr("y", h)
-		.text("2000");
+		.text("2000").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", chartX[2]).attr("y", h)
-		.text("2003");
+		.text("2003").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", chartX[3]).attr("y", h)
-		.text("2004");
+		.text("2004").attr("font-family", "monospace");
 	fbw.append("line")
 		.attr("x1", 30).attr("y1", 0)
 		.attr("x2", 30).attr("y2", h-20)
@@ -165,7 +165,7 @@
 						.attr("y1", (h-20)-(rows[i][1+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][1+x]*10))
-						.attr("stroke", "red");
+						.attr("stroke", "#0000FF");
 				}
 				
 				// Foreign-born Men chart
@@ -175,7 +175,7 @@
 						.attr("y1", (h-20)-(rows[i][5+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][5+x]*10))
-						.attr("stroke", "red");		
+						.attr("stroke", "#00B3FF");		
 				}
 				
 				// Native Women chart
@@ -185,7 +185,7 @@
 						.attr("y1", (h-20)-(rows[i][9+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][9+x]*10))
-						.attr("stroke", "red");	
+						.attr("stroke", "#FF0000");	
 				}
 				
 				// Foreign-born Women chart
@@ -195,17 +195,13 @@
 						.attr("y1", (h-20)-(rows[i][13+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][13+x]*10))
-						.attr("stroke", "red");		
+						.attr("stroke", "#F7778F");		
 				}
 				
 			}
-			
 		}
 		
 	});
-	
-		   
-	
 	
 	
 </script>
