@@ -9,37 +9,109 @@
 
 <body>
 	<h1 style="font-family: monospace">Unemployment Rates from 1995-2004</h1>
-	<svg></svg>
+	
+	<h2 style="font-family: monospace">Percentage of Unemployed Native Men</h2>
+	<svg id="native-men"></svg>
+	
+	<h2 style="font-family: monospace">Foreign-Born Men</h2>
+	<svg id="foreign-born-men"></svg>
+	
+	<h2 style="font-family: monospace">Native Women</h2>
+	<svg id="native-women"></svg>
+	
+	<h2 style="font-family: monospace">Foriegn-born Women</h2>
+	<svg id="foreign-born-women"></svg>
 </body>
 
 <script>
 	
-	var w = window.screen.width;
-	var h = window.screen.height;
+	var w = 1000;
+	var h = 300;
+	var chartX = [100, 200, 300, 400];	// X coordinate for 1995, 2000, 2003, 2004
+	
+	// Chart SVGs
+	var nm = d3.select("#native-men").attr("width", w).attr("height", h);
+	var fbm = d3.select("#foreign-born-men").attr("width", w).attr("height", h);
+	var nw = d3.select("#native-women").attr("width", w).attr("height", h);
+	var fbw = d3.select("#foreign-born-women").attr("width", w).attr("height", h);
+	
+	// Chart axes
+	nm.append("text")
+		.attr("x", 0)
+		.attr("y", 12)
+		.text("30%");
+	nm.append("text")
+		.attr("x", 0)
+		.attr("y", h-12)
+		.text("0%");
+	nm.append("line")
+		.attr("x1", 30)
+		.attr("y1", 0)
+		.attr("x2", 30)
+		.attr("y2", h-12)
+		.attr("stroke", "black");
+	nm.append("line")
+		.attr("x1", 30)
+		.attr("y1", h-12)
+		.attr("x2", w)
+		.attr("y2", h-12)
+		.attr("stroke", "black");
 	
 	
 	
-	var svg = d3.select("svg").attr("width", 1000).attr("height", 1000);
+	// Open CSV file and draw charts
+	d3.text("unemployment.csv").then(function(text){
+		var rows = d3.csvParseRows(text);
+		
+		// Loop through all data
+		for(var i = 5; i < 17; i++){
+			for(var x = 0; x < 4; x++){	// Four years; 1995, 2000, 2003, 2004
+				
+				// Native Men chart
+				if(rows[i][1+x] != ".."){
+					nm.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-12)-(rows[i][1+x]*10))
+						.attr("r", 2)
+						.style("fill", "red");		
+				}
+				
+				// Foreign-born Men chart
+				if(rows[i][5+x] != ".."){
+					fbm.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-12)-(rows[i][5+x]*10))
+						.attr("r", 2)
+						.style("fill", "red");		
+				}
+				
+				// Native Women chart
+				if(rows[i][9+x] != ".."){
+					nw.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-12)-(rows[i][9+x]*10))
+						.attr("r", 2)
+						.style("fill", "red");		
+				}
+				
+				// Foreign-born Women chart
+				if(rows[i][13+x] != ".."){
+					fbw.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-12)-(rows[i][13+x]*10))
+						.attr("r", 2)
+						.style("fill", "red");		
+				}
+				
+			}
+			
+		}
+		
+	});
 	
-	svg.append("text")
-		.attr("x", 100)
-		.attr("y", 15)
-		.text("Men");
+		   
 	
-	svg.append("text")
-		.attr("x", 200)
-		.attr("y", 15)
-		.text("Women");
 	
-	svg.append("text")
-		.attr("x", 15)
-		.attr("y", 100)
-		.text("Native");
-	
-	svg.append("text")
-		.attr("x", 15)
-		.attr("y", 200)
-		.text("Foreign-born");
 	
 </script>
 </html>
