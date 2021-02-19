@@ -8,25 +8,21 @@
 </head>
 
 <body>
-	<h1 style="font-family: monospace">Unemployment Rates from 1995-2004</h1>
+	<h1 style="font-family: monospace">Unemployment Rates of Various Countries from 1995-2004</h1>
 	
-	<h2 style="font-family: monospace">Percentage of Unemployed Native Men</h2>
-	<svg id="native-men"></svg>
+	<div>
+		<svg id="native-men"></svg>
+		 <svg id="foreign-born-men"></svg>
+		<svg id="native-women"></svg>
+		<svg id="foreign-born-women"></svg>
+	</div>
 	
-	<h2 style="font-family: monospace">Foreign-Born Men</h2>
-	<svg id="foreign-born-men"></svg>
-	
-	<h2 style="font-family: monospace">Native Women</h2>
-	<svg id="native-women"></svg>
-	
-	<h2 style="font-family: monospace">Foriegn-born Women</h2>
-	<svg id="foreign-born-women"></svg>
 </body>
 
 <script>
 	
-	var w = 1100;
-	var h = 300;
+	var w = 1200;
+	var h = 350;
 	var chartX = [100, 600, 900, 1000];	// X coordinate for 1995, 2000, 2003, 2004
 	
 	// Chart SVGs
@@ -38,7 +34,7 @@
 	// Chart axes
 	nm.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%").attr("font-family", "monospace");
+		.text("35%").attr("font-family", "monospace");
 	nm.append("text")
 		.attr("x", 0).attr("y", h-20)
 		.text("0%").attr("font-family", "monospace");
@@ -66,7 +62,7 @@
 	
 	fbm.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%").attr("font-family", "monospace");
+		.text("35%").attr("font-family", "monospace");
 	fbm.append("text")
 		.attr("x", 0).attr("y", h-20)
 		.text("0%").attr("font-family", "monospace");
@@ -95,7 +91,7 @@
 	
 	nw.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%").attr("font-family", "monospace");
+		.text("35%").attr("font-family", "monospace");
 	nw.append("text")
 		.attr("x", 0).attr("y", h-20)
 		.text("0%").attr("font-family", "monospace");
@@ -123,7 +119,7 @@
 	
 	fbw.append("text")
 		.attr("x", 0).attr("y", 12)
-		.text("30%").attr("font-family", "monospace");
+		.text("35%").attr("font-family", "monospace");
 	fbw.append("text")
 		.attr("x", 0).attr("y", h-20)
 		.text("0%").attr("font-family", "monospace");
@@ -155,18 +151,59 @@
 		var rows = d3.csvParseRows(text);
 		
 		// Loop through all data
-		for(var i = 5; i < 17; i++){
-			for(var x = 1; x < 4; x++){	// Four years; 1995, 2000, 2003, 2004
+		for(var i = 5; i < 28; i++){
+			// Four years; 1995, 2000, 2003, 2004
+			// Draw points
+			for(var x = 0; x < 4; x++){
+				if(rows[i][1+x] != ".."){
+					nm.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-20)-(rows[i][1+x]*10))
+						.attr("r", 2)
+						.attr("fill", "#0000FF")
+						.attr("id", rows[i][0]);
+				}
+				if(rows[i][5+x] != ".."){
+					fbm.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-20)-(rows[i][5+x]*10))
+						.attr("r", 2)
+						.attr("fill", "#00B3FF")
+						.attr("id", rows[i][0]);		
+				}
+				if(rows[i][9+x] != ".."){
+					nw.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-20)-(rows[i][9+x]*10))
+						.attr("r", 2)
+						.attr("fill", "#FF0000")
+						.attr("id", rows[i][0]);	
+				}
+				
+				// Foreign-born Women chart
+				if(rows[i][13+x] != ".."){
+					fbw.append("circle")
+						.attr("cx", chartX[x])
+						.attr("cy", (h-20)-(rows[i][13+x]*10))
+						.attr("r", 2)
+						.attr("fill", "#F7778F")
+						.attr("id", rows[i][0]);
+				}
+			}
+			// Draw lines
+			for(var x = 1; x < 4; x++){
 				
 				// Native Men chart
 				if(rows[i][1+x] != ".." && rows[i][1+x-1] != ".."){
-					nm.append("line")
-						.attr("x1", chartX[x-1])
-						.attr("y1", (h-20)-(rows[i][1+x-1]*10))
-						.attr("x2", chartX[x])
-						.attr("y2", (h-20)-(rows[i][1+x]*10))
-						.attr("stroke", "#0000FF");
-				}
+						nm.append("line")
+							.attr("x1", chartX[x-1])
+							.attr("y1", (h-20)-(rows[i][1+x-1]*10))
+							.attr("x2", chartX[x])
+							.attr("y2", (h-20)-(rows[i][1+x]*10))
+							.attr("stroke", "#0000FF")
+							.attr("id", rows[i][0]);
+			   }
+				
 				
 				// Foreign-born Men chart
 				if(rows[i][5+x] != ".." && rows[i][5+x-1] != ".."){
@@ -175,7 +212,8 @@
 						.attr("y1", (h-20)-(rows[i][5+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][5+x]*10))
-						.attr("stroke", "#00B3FF");		
+						.attr("stroke", "#00B3FF")
+						.attr("id", rows[i][0]);		
 				}
 				
 				// Native Women chart
@@ -185,7 +223,8 @@
 						.attr("y1", (h-20)-(rows[i][9+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][9+x]*10))
-						.attr("stroke", "#FF0000");	
+						.attr("stroke", "#FF0000")
+						.attr("id", rows[i][0]);	
 				}
 				
 				// Foreign-born Women chart
@@ -195,11 +234,66 @@
 						.attr("y1", (h-20)-(rows[i][13+x-1]*10))
 						.attr("x2", chartX[x])
 						.attr("y2", (h-20)-(rows[i][13+x]*10))
-						.attr("stroke", "#F7778F");		
+						.attr("stroke", "#F7778F")
+						.attr("id", rows[i][0]);		
 				}
 				
 			}
 		}
+		
+		// Compute average 2003 values
+		var nmTotal = 0.0;
+		var nmCount = 0;
+		var fbmTotal = 0.0;
+		var fbmCount = 0;
+		var nwTotal = 0.0;
+		var nwCount = 0;
+		var fbwTotal = 0.0;
+		var fbwCount = 0;
+		for(var i = 5; i < 17; i++){
+			if(rows[i][4] != ".."){
+				nmCount++;
+				nmTotal += parseFloat(rows[i][4]);
+			}
+			if(rows[i][8] != ".."){
+				fbmCount++;
+				fbmTotal += parseFloat(rows[i][8]);
+			}
+			if(rows[i][12] != ".."){
+				nwCount++;
+				nwTotal += parseFloat(rows[i][12]);
+			}
+			if(rows[i][16] != ".."){
+				fbwCount++;
+				fbwTotal += parseFloat(rows[i][16]);
+			}
+		}
+		
+		// Write labels for the categories
+		nm.append("text")
+			.attr("x", chartX[3]+ 10).attr("y", ((h-20)-(10*nmTotal/nmCount)))
+			.text("Native Men")
+			.attr("font-family", "monospace")
+			.attr("fill", "#0000FF");
+		
+		fbm.append("text")
+			.attr("x", chartX[3]+ 10).attr("y", ((h-20)-(10*fbmTotal/fbmCount)))
+			.text("Foreign-born Men")
+			.attr("font-family", "monospace")
+			.attr("fill", "#00B3FF");
+		
+		nw.append("text")
+			.attr("x", chartX[3]+ 10).attr("y", ((h-20)-(10*nwTotal/nwCount)))
+			.text("Native Women")
+			.attr("font-family", "monospace")
+			.attr("fill", "#FF0000");
+		
+		fbw.append("text")
+			.attr("x", chartX[3]+ 10).attr("y", ((h-20)-(10*fbwTotal/fbwCount)))
+			.text("Foreign-born Women")
+			.attr("font-family", "monospace")
+			.attr("fill", "#F7778F");
+		
 		
 	});
 	

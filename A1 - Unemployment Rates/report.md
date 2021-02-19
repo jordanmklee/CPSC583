@@ -18,14 +18,25 @@ Jordan Lee (30002218)
 
 ## Manipulate and Visualize the Data
 
-3. Sketches
+3. Sketches TODO
 
-4. Visualize
+4. Visualize TODO
 
 ## Reflect on Your Visualization
 
-5. Explain choice of visual language (refer to Bertin and Mackinlay)
+5. I chose to use position to represent the dataset information, in the form of line charts. Unemployment rate is a quantitative variable, and position is ranked first for quantitative data in Mackinlay's ranking of encodings. In my visualization, the mark's location on the y-axis represents the percentage of unemployment, which is expressive (the data is presented, and only the data) and effective (different values can be easily distinguished). The location on the x-axis shows the year, which is also a quantitative variable and follows the same design decisions as the percentage of unemployment. As well, the lines' orientation can easily show trends between years and countries. 
 
-6. Explain use of space (refer to Tuftes)
+   The nominal data of Native/Foreign-born Men/Women is effectively represented by colour hue, which indicates that different data is being shown between the line charts. Colour hue is ranked highly by Mackinlay for nominal data, but lowly for quantitative data. This is appropriate, as the selective/associative properties are used to differentiate the categories while the non-ordered property prevents an ordering from being applied to them.
 
-7. Explain what your visualization shows, note trends or outliers
+6. The line charts do not have labels for the axes since they can be easily inferred from the chart title, and include only the most important scale labels; minimum/maximum percentage values, and years (as the interval between data points are not the same). There are no graphics to minimize chart junk and to focus on the data. "Small multiples" was chosen over layering the charts because each line represents a single country, and would be too dense if all data was shown on one chart. 
+
+7. My visualization shows four line charts for the four categories of native/foreign-born men/women, and how they trend overall over time. However, the countries cannot be distinguished using the visualization, but the outliers can be cross-referenced with the dataset file to determine which country it is. Given more time, I would introduce functionality where by hovering over a datapoint would highlight it and display the value and country name, as well as highlight data corresponding to that country in other charts.
+
+   Overall, most countries indicated a downward trend in unemployment for all categories. Outliers include: 
+
+   - Spain in the Native Women category; although it has a similar trend to the other countries, the 1995 rate of unemployment is noticeably higher than the rest of the data. 
+   - Another is Slovak Republic in the Native Men and Native Women charts, where the unemployment rate is relatively high and increases over time. There is only data between 2003-2004 for this country.
+   - Finland and Germany shows a similar pattern in the Foreign-born Men chart, as they trend upwards while most others decrease. Also in this chart, Hungary only has one data point (2004) and it is particularly low. Slovak Republic also only has one data point (2004), and is relatively high. Notably, this is the only chart that seems to have an inflection point in the overall trend: many countries increase in unemployment of Foreign-born Men between 2000-2003 before continuing to decrease.
+   - As for the Foreign-born Women category, Finland and Germany again go against the grain and have an upwards trend over time compared to the downward trend of the other countries, and Slovak Republic's (only) data point for 2004 has an exceptionally high rate of unemployment - the highest of the entire dataset.
+
+   The same few countries seem to consistently behave differently compared to the rest, namely Slovak Republic, which has the least data of all countries. Along with the Slovak Republic, Germany does not follow the overall trend of decreasing unemployment. Further analysis may provide insight to why this is the case (eg. political events, economy, etc.).
