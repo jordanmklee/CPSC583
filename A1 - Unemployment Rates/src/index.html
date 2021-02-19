@@ -9,10 +9,9 @@
 
 <body>
 	<h1 style="font-family: monospace">Unemployment Rates of Various Countries from 1995-2004</h1>
-	
 	<div>
 		<svg id="native-men"></svg>
-		 <svg id="foreign-born-men"></svg>
+		<svg id="foreign-born-men"></svg>
 		<svg id="native-women"></svg>
 		<svg id="foreign-born-women"></svg>
 	</div>
@@ -60,6 +59,7 @@
 		.attr("stroke", "black");
 	
 	
+	
 	fbm.append("text")
 		.attr("x", 0).attr("y", 12)
 		.text("35%").attr("font-family", "monospace");
@@ -117,6 +117,7 @@
 		.attr("stroke", "black");
 	
 	
+	
 	fbw.append("text")
 		.attr("x", 0).attr("y", 12)
 		.text("35%").attr("font-family", "monospace");
@@ -143,6 +144,9 @@
 		.attr("x1", 30).attr("y1", h-20)
 		.attr("x2", w).attr("y2", h-20)
 		.attr("stroke", "black");
+	
+	
+	
 	
 	
 	
@@ -202,8 +206,7 @@
 							.attr("y2", (h-20)-(rows[i][1+x]*10))
 							.attr("stroke", "#0000FF")
 							.attr("id", rows[i][0]);
-			   }
-				
+				}
 				
 				// Foreign-born Men chart
 				if(rows[i][5+x] != ".." && rows[i][5+x-1] != ".."){
@@ -237,7 +240,6 @@
 						.attr("stroke", "#F7778F")
 						.attr("id", rows[i][0]);		
 				}
-				
 			}
 		}
 		
@@ -293,10 +295,7 @@
 			.text("Foreign-born Women")
 			.attr("font-family", "monospace")
 			.attr("fill", "#F7778F");
-		
-		
 	});
-	
 	
 </script>
 </html>
