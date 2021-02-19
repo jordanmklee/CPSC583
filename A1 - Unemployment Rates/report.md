@@ -1,4 +1,5 @@
 CPSC 583 - W2021
+
 Jordan Lee (30002218)
 
 # Assignment 1
@@ -13,14 +14,19 @@ Jordan Lee (30002218)
    - **Native/Foreign-born Men/Women** is a dimension and nominal variable, because they are categories and one category cannot be ranked above or below another.
 
    - **Unemployment rate** is a measure and a quantitative-ratio variable, as it is a percentage. There is a meaningful origin (0%) and it represents an amount.
-
 2. There are missing data points throughout the table, which may pose a challenge when representing the entire dataset. As well, the intervals between the years are not the same. The range is from 1995-2004, but years 1996-1999 and 2001-2002 are not present. There is also a large amount of countries, so if everything is overlaid in the visualization it could be difficult to distinguish between certain information.
 
 ## Manipulate and Visualize the Data
 
-3. Sketches TODO
+3. Sketches
 
-4. Visualize TODO
+![sketches](./report.assets/sketches.jpeg)
+
+![sketches-refined](./report.assets/sketches-refined.jpeg)
+
+4. Visualize
+
+![visualization](./report.assets/visualization.png)
 
 ## Reflect on Your Visualization
 
@@ -40,3 +46,4 @@ Jordan Lee (30002218)
    - As for the Foreign-born Women category, Finland and Germany again go against the grain and have an upwards trend over time compared to the downward trend of the other countries, and Slovak Republic's (only) data point for 2004 has an exceptionally high rate of unemployment - the highest of the entire dataset.
 
    The same few countries seem to consistently behave differently compared to the rest, namely Slovak Republic, which has the least data of all countries. Along with the Slovak Republic, Germany does not follow the overall trend of decreasing unemployment. Further analysis may provide insight to why this is the case (eg. political events, economy, etc.).
+
