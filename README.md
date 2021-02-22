@@ -6,7 +6,7 @@ Assignments and project completed for CPSC 583 - Data Visualization, taken at th
 
 ### A1 - Unemployment Rates
 
-TODO
+An information visualization created from tabular data. Potential ideas are explored using the 5+5 method, before being implemented in D3.js. Includes data analysis, and reflection on design choices as well as the visualization.
 
 ## Project
 
@@ -16,4 +16,4 @@ Proposal for a Tour de France historical dataset found on Kaggle. Explains datas
 
 ### P2 - Sketching
 
-TODO
+Exploring possible design directions by sketching subsets using the 10+10 method. Discusses creating sketchable subsets, process and results.
