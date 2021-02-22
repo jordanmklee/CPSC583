@@ -1,0 +1,2237 @@
+Date,Origin,Destination
+7/1/2017,Düsseldorf,Düsseldorf
+7/2/2017,Düsseldorf,Liège
+7/3/2017,Verviers,Longwy
+7/4/2017,Mondorf-les-Bains,Vittel
+7/5/2017,Vittel,La Planche des Belles Filles
+7/6/2017,Vesoul,Troyes
+7/7/2017,Troyes,Nuits-Saint-Georges
+7/8/2017,Dole,Station des Rousses
+7/9/2017,Nantua,Chambéry
+7/11/2017,Périgueux,Bergerac
+7/12/2017,Eymet,Pau
+7/13/2017,Pau,Peyragudes
+7/14/2017,Saint-Girons,Foix
+7/15/2017,Blagnac,Rodez
+7/16/2017,Laissac-Sévérac-l'Église,Le Puy-en-Velay
+7/18/2017,Le Puy-en-Velay,Romans-sur-Isère
+7/19/2017,La Mure,Serre Chevalier
+7/20/2017,Briançon,Col d'Izoard
+7/21/2017,Embrun,Salon-de-Provence
+7/22/2017,Marseille,Marseille
+7/23/2017,Montgeron,Paris
+7/2/2016,Mont Saint-Michel,Utah Beach
+7/3/2016,Saint-Lô,Cherbourg-en-Cotentin
+7/4/2016,Granville,Angers
+7/5/2016,Saumur,Limoges
+7/6/2016,Limoges,Le Lioran
+7/7/2016,Arpajon-sur-Cère,Montauban
+7/8/2016,L'Isle-Jourdain,Lac de Payolle
+7/9/2016,Pau,Bagnères-de-Luchon
+7/10/2016,Vielha Val d'Aran,Andorra-Arcalis
+7/12/2016,Escaldes-Engordany,Revel
+7/13/2016,Carcassonne,Montpellier
+7/14/2016,Montpellier,Chalet Reynard
+7/15/2016,Bourg-Saint-Andéol,La Caverne du Pont-d'Arc
+7/16/2016,Montélimar,Villars-les-Dombes
+7/17/2016,Bourg-en-Bresse,Culoz
+7/18/2016,Moirans-en-Montagne,Bern
+7/20/2016,Bern,Finhaut-Émosson
+7/21/2016,Sallanches,Megève
+7/22/2016,Albertville,Saint Gervais-les-Bains
+7/23/2016,Megève,Morzine
+7/24/2016,Chantilly,Paris
+7/4/2015,Utrecht,Utrecht
+7/5/2015,Utrecht,Zeeland
+7/6/2015,Antwerp,Huy
+7/7/2015,Seraing,Cambrai
+7/8/2015,Arras,Amiens
+7/9/2015,Abbeville,Le Havre
+7/10/2015,Livarot,Fougères
+7/11/2015,Rennes,Mûr-de-Bretagne
+7/12/2015,Vannes,Plumelec
+7/14/2015,Tarbes,La Pierre Saint-Martin
+7/15/2015,Pau,Cauterets
+7/16/2015,Lannemezan,Plateau de Beille
+7/17/2015,Muret,Rodez
+7/18/2015,Rodez,Mende
+7/19/2015,Mende,Valence
+7/20/2015,Bourg-de-Péage,Gap
+7/22/2015,Digne-les-Bains,Pra-Loup
+7/23/2015,Gap,Saint-Jean-de-Maurienne
+7/24/2015,Saint-Jean-de-Maurienne,La Toussuire - Les Sybelles
+7/25/2015,Modane,Alpe d'Huez
+7/26/2015,Sèvres,Paris
+7/5/2014,Leeds,Harrogate
+7/6/2014,York,Sheffield
+7/7/2014,Cambridge,London
+7/8/2014,Le Touquet-Paris-Plage,Lille Metropole
+7/9/2014,Ypres,Arenberg Porte du Hainaut
+7/10/2014,Arras,Reims
+7/11/2014,Épernay,Nancy
+7/12/2014,Tomblaine,Gérardmer La Mauselaine
+7/13/2014,Gérardmer,Mulhouse
+7/14/2014,Mulhouse,La Planche des Belles Filles
+7/16/2014,Besançon,Oyonnax
+7/17/2014,Bourg-en-Bresse,Saint-Étienne
+7/18/2014,Saint-Étienne,Chamrousse
+7/19/2014,Grenoble,Risoul
+7/20/2014,Tallard,Nîmes
+7/22/2014,Carcassonne,Bagnères-de-Luchon
+7/23/2014,Saint-Gaudens,Saint-Lary Pla d’Adet
+7/24/2014,Pau,Hautacam
+7/25/2014,Maubourguet Pays du Val d’Adour,Bergerac
+7/26/2014,Bergerac,Périgueux
+7/27/2014,Évry,Paris
+6/29/2013,Porto-Vecchio,Bastia
+6/30/2013,Bastia,Ajaccio
+7/1/2013,Ajaccio,Calvi
+7/2/2013,Nice,Nice
+7/3/2013,Cagnes-sur-Mer,Marseille
+7/4/2013,Aix-en-Provence,Montpellier
+7/5/2013,Montpellier,Albi
+7/6/2013,Castres,Ax 3 Domaines
+7/7/2013,Saint-Girons,Bagnères-de-Bigorre
+7/9/2013,Saint-Gildas-des-Bois,Saint-Malo
+7/10/2013,Avranches,Mont Saint-Michel
+7/11/2013,Fougères,Tours
+7/12/2013,Tours,Saint-Amand-Montrond
+7/13/2013,Saint-Pourçain-sur-Sioule,Lyon
+7/14/2013,Givors,Mont Ventoux
+7/16/2013,Vaison-la-Romaine,Gap
+7/17/2013,Embrun,Chorges
+7/18/2013,Gap,Alpe d'Huez
+7/19/2013,Le Bourg-d'Oisans,Le Grand-Bornand
+7/20/2013,Annecy,Semnoz
+7/21/2013,Versailles,Paris
+6/30/2012,Liège,Liège
+7/1/2012,Liège,Seraing
+7/2/2012,Visé,Tournai
+7/3/2012,Orchies,Boulogne-sur-Mer
+7/4/2012,Abbeville,Rouen
+7/5/2012,Rouen,Saint-Quentin
+7/6/2012,Épernay,Metz
+7/7/2012,Tomblaine,La Planche des Belles Filles
+7/8/2012,Belfort,Porrentruy
+7/9/2012,Arc-et-Senans,Besançon
+7/11/2012,Mâcon,Bellegarde-sur-Valserine
+7/12/2012,Albertville,La Toussuire-Les Sybelles
+7/13/2012,Saint-Jean-de-Maurienne,Annonay-Davézieux
+7/14/2012,Saint-Paul-Trois-Châteaux,Cap d'Agde
+7/15/2012,Limoux,Foix
+7/16/2012,Samatan,Pau
+7/18/2012,Pau,Bagnères-de-Luchon
+7/19/2012,Bagnères-de-Luchon,Peyragudes
+7/20/2012,Blagnac,Brive-la-Gaillarde
+7/21/2012,Bonneval,Chartres
+7/22/2012,Rambouillet,Paris
+7/2/2011,Passage du Gois,Mont des Alouettes
+7/3/2011,Les Essarts,Les Essarts
+7/4/2011,Olonne-sur-Mer,Redon
+7/5/2011,Lorient,Mûr-de-Bretagne
+7/6/2011,Carhaix,Cap Fréhel
+7/7/2011,Dinan,Lisieux
+7/8/2011,Le Mans,Châteauroux
+7/9/2011,Aigurande,Super Besse
+7/10/2011,Issoire,Saint-Flour
+7/12/2011,Aurillac,Carmaux
+7/13/2011,Blaye-les-Mines,Lavaur
+7/14/2011,Cugnaux,Luz Ardiden
+7/15/2011,Pau,Lourdes
+7/16/2011,Saint-Gaudens,Plateau de Beille
+7/17/2011,Limoux,Montpellier
+7/19/2011,Saint-Paul-Trois-Châteaux,Gap
+7/20/2011,Gap,Pinerolo
+7/21/2011,Pinerolo,Col du Galibier-Serre Chevalier
+7/22/2011,Modane,Alpe d'Huez
+7/23/2011,Grenoble,Grenoble
+7/24/2011,Créteil,Paris
+7/3/2010,Rotterdam,Rotterdam
+7/4/2010,Rotterdam,Brussels
+7/5/2010,Brussels,Spa
+7/6/2010,Wanze,Arenberg Porte du Hainaut
+7/7/2010,Cambrai,Reims
+7/8/2010,Épernay,Montargis
+7/9/2010,Montargis,Gueugnon
+7/10/2010,Tournus,Station des Rousses
+7/11/2010,Station des Rousses,Morzine-Avoriaz
+7/13/2010,Morzine-Avoriaz,Saint-Jean-de-Maurienne
+7/14/2010,Chambéry,Gap
+7/15/2010,Sisteron,Bourg-lès-Valence
+7/16/2010,Bourg-de-Péage,Mende
+7/17/2010,Rodez,Revel
+7/18/2010,Revel,Ax 3 Domaines
+7/19/2010,Pamiers,Bagnères-de-Luchon
+7/20/2010,Bagnères-de-Luchon,Pau
+7/22/2010,Pau,Col du Tourmalet
+7/23/2010,Salies-de-Béarn,Bordeaux
+7/24/2010,Bordeaux,Pauillac
+7/25/2010,Longjumeau,Paris
+7/4/2009,Monaco,Monaco
+7/5/2009,Monaco,Brignoles
+7/6/2009,Marseille,La Grande-Motte
+7/7/2009,Montpellier,Montpellier
+7/8/2009,Cap d'Agde,Perpignan
+7/9/2009,Girona,Barcelona
+7/10/2009,Barcelona,Andorra-Arcalis
+7/11/2009,Andorra la Vella,Saint-Girons
+7/12/2009,Saint-Gaudens,Tarbes
+7/14/2009,Limoges,Issoudun
+7/15/2009,Vatan,Saint-Fargeau
+7/16/2009,Tonnerre,Vittel
+7/17/2009,Vittel,Colmar
+7/18/2009,Colmar,Besançon
+7/19/2009,Pontarlier,Verbier
+7/21/2009,Martigny,Bourg-Saint-Maurice
+7/22/2009,Bourg-Saint-Maurice,Le Grand-Bornand
+7/23/2009,Annecy,Annecy
+7/24/2009,Bourgoin-Jallieu,Aubenas
+7/25/2009,Montélimar,Mont Ventoux
+7/26/2009,Montereau-Fault-Yonne,Paris
+7/5/2008,Brest,Plumelec
+7/6/2008,Auray,Saint-Brieuc
+7/7/2008,Saint-Malo,Nantes
+7/8/2008,Cholet,Cholet
+7/9/2008,Cholet,Châteauroux
+7/10/2008,Aigurande,Super-Besse Sancy
+7/11/2008,Brioude,Aurillac
+7/12/2008,Figeac,Toulouse
+7/13/2008,Toulouse,Bagnères-de-Bigorre
+7/14/2008,Pau,Hautacam
+7/16/2008,Lannemezan,Foix
+7/17/2008,Lavelanet,Narbonne
+7/18/2008,Narbonne,Nîmes
+7/19/2008,Nîmes,Digne-les-Bains
+7/20/2008,Embrun,Prato Nevoso
+7/22/2008,Cuneo,Jausiers
+7/23/2008,Embrun,Alpe d'Huez
+7/24/2008,Bourg-d'Oisans,Saint-Étienne
+7/25/2008,Roanne,Montluçon
+7/26/2008,Cérilly,Saint-Amand-Montrond
+7/27/2008,Étampes,Paris
+7/7/2007,London,London
+7/8/2007,London,Canterbury
+7/9/2007,Dunkirk,Ghent
+7/10/2007,Waregem - Compiègne,Waregem - Compiègne
+7/11/2007,Villers-Cotterêts,Joigny
+7/12/2007,Chablis,Autun
+7/13/2007,Semur-en-Auxois,Bourg-en-Bresse
+7/14/2007,Bourg-en-Bresse,Le Grand-Bornand
+7/15/2007,Le Grand-Bornand,Tignes
+7/17/2007,Val-d'Isère,Briançon
+7/18/2007,Tallard,Marseille
+7/19/2007,Marseille,Montpellier
+7/20/2007,Montpellier,Castres
+7/21/2007,Albi,Albi
+7/22/2007,Mazamet,Plateau-de-Beille
+7/23/2007,Foix,Loudenvielle
+7/25/2007,Orthez,Gourette–Col d'Aubisque
+7/26/2007,Pau,Castelsarrasin
+7/27/2007,Cahors,Angoulême
+7/28/2007,Cognac,Angoulême
+7/29/2007,Marcoussis,Paris
+7/1/2006,Strasbourg,Strasbourg
+7/2/2006,Strasbourg,Strasbourg
+7/3/2006,Obernai,Esch-sur-Alzette
+7/4/2006,Esch-sur-Alzette,Valkenburg
+7/5/2006,Huy,Saint-Quentin
+7/6/2006,Beauvais,Caen
+7/7/2006,Lisieux,Vitré
+7/8/2006,Saint Grégoire,Rennes
+7/9/2006,Saint-Méen-le-Grand,Lorient
+7/11/2006,Bordeaux,Dax
+7/12/2006,Cambo-les-Bains,Pau
+7/13/2006,Tarbes,Val d'Aran/Pla-de-Beret
+7/14/2006,Luchon,Carcassonne
+7/15/2006,Béziers,Montélimar
+7/16/2006,Montélimar,Gap
+7/18/2006,Gap,Alpe d'Huez
+7/19/2006,Le Bourg-d'Oisans,La Toussuire
+7/20/2006,Saint-Jean-de-Maurienne,Morzine
+7/21/2006,Morzine,Mâcon
+7/22/2006,Le Creusot,Montceau-les-Mines
+7/23/2006,Antony/Parc de Sceaux,Paris
+7/2/2005,Fromentine,Noirmoutier-en-l'Île
+7/3/2005,Challans,Les Essarts
+7/4/2005,La Châtaigneraie,Tours
+7/5/2005,Tours,Blois
+7/6/2005,Chambord,Montargis
+7/7/2005,Troyes,Nancy
+7/8/2005,Lunéville,Karlsruhe
+7/9/2005,Pforzheim,Gérardmer
+7/10/2005,Gérardmer,Mulhouse
+7/12/2005,Grenoble,Courchevel
+7/13/2005,Courchevel,Briançon
+7/14/2005,Briançon,Digne-les-Bains
+7/15/2005,Miramas,Montpellier
+7/16/2005,Agde,Ax 3 Domaines
+7/17/2005,Lézat-sur-Lèze,Saint-Lary-Soulan Pla d'Adet
+7/19/2005,Mourenx,Pau
+7/20/2005,Pau,Revel
+7/21/2005,Albi,Mende
+7/22/2005,Issoire,Le Puy-en-Velay
+7/23/2005,Saint-Étienne,Saint-Étienne
+7/24/2005,Corbeil-Essonnes,Paris
+7/3/2004,Liège,Liège
+7/4/2004,Liège,Charleroi
+7/5/2004,Charleroi,Namur
+7/6/2004,Waterloo,Wasquehal
+7/7/2004,Cambrai,Arras
+7/8/2004,Amiens,Chartres
+7/9/2004,Bonneval,Angers
+7/10/2004,Châteaubriant,Saint-Brieuc
+7/11/2004,Lamballe,Quimper
+7/13/2004,Saint-Léonard-de-Noblat,Guéret
+7/14/2004,Limoges,Saint-Flour
+7/15/2004,Saint-Flour,Figeac
+7/16/2004,Castelsarrasin,La Mongie
+7/17/2004,Lannemezan,Plateau de Beille
+7/18/2004,Carcassonne,Nîmes
+7/20/2004,Valréas,Villard-de-Lans
+7/21/2004,Le Bourg-d'Oisans,Alpe d'Huez
+7/22/2004,Le Bourg-d'Oisans,Le Grand-Bornand
+7/23/2004,Annemasse,Lons-le-Saunier
+7/24/2004,Besançon,Besançon
+7/25/2004,Montereau-Fault-Yonne,Paris
+7/5/2003,Paris,Paris
+7/6/2003,Saint-Denis,Meaux
+7/7/2003,La Ferté-sous-Jouarre,Sedan
+7/8/2003,Charleville-Mézières,Saint-Dizier
+7/9/2003,Joinville,Saint-Dizier
+7/10/2003,Troyes,Nevers
+7/11/2003,Nevers,Lyon
+7/12/2003,Lyon,Morzine
+7/13/2003,Sallanches,Alpe d'Huez
+7/14/2003,Le Bourg-d'Oisans,Gap
+7/15/2003,Gap,Marseille
+7/17/2003,Narbonne,Toulouse
+7/18/2003,Gaillac,Cap Découverte
+7/19/2003,Toulouse,Ax 3 Domaines
+7/20/2003,Saint-Girons,Loudenvielle
+7/21/2003,Bagnères-de-Bigorre,Luz Ardiden
+7/23/2003,Pau,Bayonne
+7/24/2003,Dax,Bordeaux
+7/25/2003,Bordeaux,Saint-Maixent-l'École
+7/26/2003,Pornic,Nantes
+7/27/2003,Ville-d'Avray,Paris
+7/6/2002,Luxembourg City,Luxembourg City
+7/7/2002,Luxembourg City,Luxembourg City
+7/8/2002,Luxembourg City,Saarbrücken
+7/9/2002,Metz,Reims
+7/10/2002,Épernay,Château-Thierry
+7/11/2002,Soissons,Rouen
+7/12/2002,Forges-les-Eaux,Alençon
+7/13/2002,Bagnoles-de-l'Orne,Avranches
+7/14/2002,Saint-Martin-de-Landelles,Plouay
+7/15/2002,Lanester,Lorient
+7/17/2002,Bazas,Pau
+7/18/2002,Pau,La Mongie
+7/19/2002,Lannemezan,Plateau de Beille
+7/20/2002,Lavelanet,Béziers
+7/21/2002,Lodève,Mont Ventoux
+7/23/2002,Vaison-la-Romaine,Les Deux Alpes
+7/24/2002,Les Deux Alpes,La Plagne
+7/25/2002,Aime,Cluses
+7/26/2002,Cluses,Bourg-en-Bresse
+7/27/2002,Régnié-Durette,Mâcon
+7/28/2002,Melun,Paris
+7/7/2001,Dunkirk,Dunkirk
+7/8/2001,Saint-Omer,Boulogne-sur-Mer
+7/9/2001,Calais,Antwerp
+7/10/2001,Antwerp,Seraing
+7/11/2001,Huy,Verdun
+7/12/2001,Verdun,Bar-le-Duc
+7/13/2001,Commercy,Strasbourg
+7/14/2001,Strasbourg,Colmar
+7/15/2001,Colmar,Pontarlier
+7/16/2001,Pontarlier,Aix-les-Bains
+7/17/2001,Aix-les-Bains,Alpe d'Huez
+7/18/2001,Grenoble,Chamrousse
+7/20/2001,Perpignan,Plateau de Bonascre
+7/21/2001,Foix,Saint-Lary-Soulan Pla d'Adet
+7/22/2001,Tarbes,Luz Ardiden
+7/24/2001,Pau,Lavaur
+7/25/2001,Castelsarrasin,Sarran
+7/26/2001,Brive-la-Gaillarde,Montluçon
+7/27/2001,Montluçon,Saint-Amand-Montrond
+7/28/2001,Orléans,Évry
+7/29/2001,Corbeil-Essonnes,Paris
+7/1/2000,Futuroscope,Futuroscope
+7/2/2000,Futuroscope,Loudun
+7/3/2000,Loudun,Nantes
+7/4/2000,Nantes,Saint-Nazaire
+7/5/2000,Vannes,Vitré
+7/6/2000,Vitré,Tours
+7/7/2000,Tours,Limoges
+7/8/2000,Limoges,Villeneuve-sur-Lot
+7/9/2000,Agen,Dax
+7/10/2000,Dax,Hautacam
+7/11/2000,Bagnères-de-Bigorre,Revel
+7/13/2000,Carpentras,Mont Ventoux
+7/14/2000,Avignon,Draguignan
+7/15/2000,Draguignan,Briançon
+7/16/2000,Briançon,Courchevel
+7/18/2000,Courchevel,Morzine
+7/19/2000,Évian-les-Bains,Lausanne
+7/20/2000,Lausanne,Freiburg
+7/21/2000,Freiburg,Mulhouse
+7/22/2000,Belfort,Troyes
+7/23/2000,Paris,Paris
+7/3/1999,Le Puy du Fou,Le Puy du Fou
+7/4/1999,Montaigu,Challans
+7/5/1999,Challans,Saint-Nazaire
+7/6/1999,Nantes,Laval
+7/7/1999,Laval,Blois
+7/8/1999,Bonneval,Amiens
+7/9/1999,Amiens,Maubeuge
+7/10/1999,Avesnes-sur-Helpe,Thionville
+7/11/1999,Metz,Metz
+7/13/1999,Le Grand-Bornand,Sestrières
+7/14/1999,Sestrières,Alpe d'Huez
+7/15/1999,Le Bourg-d'Oisans,Saint-Étienne
+7/16/1999,Saint-Galmier,Saint-Flour
+7/17/1999,Saint-Flour,Albi
+7/18/1999,Castres,Saint-Gaudens
+7/20/1999,Saint-Gaudens,Piau-Engaly
+7/21/1999,Lannemezan,Pau
+7/22/1999,Mourenx,Bordeaux
+7/23/1999,Jonzac,Futuroscope
+7/24/1999,Futuroscope,Futuroscope
+7/25/1999,Arpajon,Paris
+7/11/1998,Dublin,Dublin
+7/12/1998,Dublin,Dublin
+7/13/1998,Enniscorthy,Cork
+7/14/1998,Roscoff,Lorient
+7/15/1998,Plouay,Cholet
+7/16/1998,Cholet,Châteauroux
+7/17/1998,La Châtre,Brive-la-Gaillarde
+7/18/1998,Meyrignac-l'Église,Corrèze
+7/19/1998,Brive-la-Gaillarde,Montauban
+7/20/1998,Montauban,Pau
+7/21/1998,Pau,Luchon
+7/22/1998,Luchon,Plateau de Beille
+7/24/1998,Tarascon-sur-Ariège,Le Cap d'Agde
+7/25/1998,Frontignan la Peyrade,Carpentras
+7/26/1998,Valréas,Grenoble
+7/27/1998,Grenoble,Les Deux Alpes
+7/28/1998,Vizille,Albertville
+7/29/1998,Albertville,Aix-les-Bains
+7/30/1998,Aix-les-Bains,Neuchâtel
+7/31/1998,La Chaux-de-Fonds,Autun
+8/1/1998,Montceau-les-Mines,Le Creusot
+8/2/1998,Melun,Paris
+7/5/1997,Rouen,Rouen
+7/6/1997,Rouen,Forges-les-Eaux
+7/7/1997,Saint-Valery-en-Caux,Vire
+7/8/1997,Vire,Plumelec
+7/9/1997,Plumelec,Le Puy du Fou
+7/10/1997,Chantonnay,La Châtre
+7/11/1997,Le Blanc,Marennes
+7/12/1997,Marennes,Bordeaux
+7/13/1997,Sauternes,Pau
+7/14/1997,Pau,Loudenvielle
+7/15/1997,Luchon,Andorra Arcalis
+7/16/1997,Andorra Arcalis,Perpignan
+7/18/1997,Saint-Étienne,Saint-Étienne
+7/19/1997,Saint-Étienne,Alpe d'Huez
+7/20/1997,Le Bourg-d'Oisans,Courchevel
+7/21/1997,Courchevel,Morzine
+7/22/1997,Morzine,Fribourg
+7/23/1997,Fribourg,Colmar
+7/24/1997,Colmar,Montbéliard
+7/25/1997,Montbéliard,Dijon
+7/26/1997,Disneyland Paris,Disneyland Paris
+7/27/1997,Disneyland Paris,Paris
+6/29/1996,'s-Hertogenbosch,'s-Hertogenbosch
+6/30/1996,'s-Hertogenbosch,'s-Hertogenbosch
+7/1/1996,'s-Hertogenbosch,Wasquehal
+7/2/1996,Wasquehal,Nogent-sur-Oise
+7/3/1996,Soissons,Lac de Madine
+7/4/1996,Lac de Madine,Besançon
+7/5/1996,Arc-et-Senans,Aix-les-Bains
+7/6/1996,Chambéry,Les Arcs
+7/7/1996,Bourg-Saint-Maurice,Val d'Isère
+7/8/1996,Le Monêtier-les-Bains,Sestriere
+7/9/1996,Turin,Gap
+7/11/1996,Gap,Valence
+7/12/1996,Valence,Le Puy-en-Velay
+7/13/1996,Le Puy-en-Velay,Super Besse
+7/14/1996,Besse,Tulle
+7/15/1996,Brive-la-Gaillarde,Villeneuve-sur-Lot
+7/16/1996,Agen,Hautacam
+7/17/1996,Argelès-Gazost,Pamplona
+7/18/1996,Pamplona,Hendaye
+7/19/1996,Hendaye,Bordeaux
+7/20/1996,Bordeaux,Saint-Émilion
+7/21/1996,Palaiseau,Paris
+7/1/1995,Saint-Brieuc,Saint-Brieuc
+7/2/1995,Dinan,Lannion
+7/3/1995,Perros-Guirec,Vitre
+7/4/1995,Mayenne,Alençon
+7/5/1995,Alençon,Le Havre
+7/6/1995,Fécamp,Dunkirk
+7/7/1995,Dunkirk,Charleroi
+7/8/1995,Charleroi,Liège
+7/9/1995,Huy,Seraing
+7/11/1995,Le Grand-Bornand,La Plagne
+7/12/1995,La Plagne,L'Alpe d'Huez
+7/13/1995,Le Bourg-d'Oisans,Saint-Étienne
+7/14/1995,Saint-Étienne,Mende
+7/15/1995,Mende,Revel
+7/16/1995,Saint-Orens-de-Gameville,Guzet-Neige
+7/18/1995,Saint-Girons,Cauterets
+7/19/1995,Tarbes,Pau
+7/20/1995,Pau,Bordeaux
+7/21/1995,Montpon-Ménestérol,Limoges
+7/22/1995,Lac de Vassivière,Lac de Vassivière
+7/23/1995,Sainte-Geneviève-des-Bois,Paris
+7/2/1994,Lille,Lille
+7/3/1994,Lille,Armentières
+7/4/1994,Roubaix,Boulogne-sur-Mer
+7/5/1994,Calais,Eurotunnel
+7/6/1994,Dover, Brighton
+7/7/1994,Portsmouth,Portsmouth
+7/8/1994,Cherbourg,Rennes
+7/9/1994,Rennes,Futuroscope
+7/10/1994,Poitiers,Trélissac
+7/11/1994,Périgueux,Bergerac
+7/12/1994,Bergerac,Cahors
+7/13/1994,Cahors,Hautacam
+7/15/1994,Lourdes,Luz Ardiden
+7/16/1994,Bagnères-de-Bigorre,Albi
+7/17/1994,Castres,Montpellier
+7/18/1994,Montpellier,Carpentras
+7/19/1994,Valréas,Alpe d'Huez
+7/20/1994,Le Bourg-d'Oisans,Val Thorens
+7/21/1994,Moutiers,Cluses
+7/22/1994,Cluses,Avoriaz
+7/23/1994,Morzine,Lac Saint-Point
+7/24/1994,Disneyland Paris,Paris
+7/3/1993,Le Puy du Fou,Le Puy du Fou
+7/4/1993,Luçon,Les Sables-d'Olonne
+7/5/1993,Les Sables-d'Olonne,Vannes
+7/6/1993,Vannes,Dinard
+7/7/1993,Dinard,Avranches
+7/8/1993,Avranches,Évreux
+7/9/1993,Évreux,Amiens
+7/10/1993,Péronne,Châlons-sur-Marne
+7/11/1993,Châlons-sur-Marne,Verdun
+7/12/1993,Lac de Madine,Lac de Madine
+7/14/1993,Villard-de-Lans,Serre Chevalier
+7/15/1993,Serre Chevalier,Isola 2000
+7/16/1993,Isola,Marseille
+7/17/1993,Marseille,Montpellier
+7/18/1993,Montpellier,Perpignan
+7/19/1993,Perpignan,Pal
+7/21/1993,Andorra,Saint-Lary-Soulan Pla d'Adet
+7/22/1993,Tarbes,Pau
+7/23/1993,Orthez,Bordeaux
+7/24/1993,Brétigny-sur-Orge,Montlhéry
+7/25/1993,Viry-Châtillon,Paris
+7/4/1992,San Sebastián,San Sebastián
+7/5/1992,San Sebastián,San Sebastián
+7/6/1992,San Sebastián,Pau
+7/7/1992,Pau,Bordeaux
+7/8/1992,Libourne,Libourne
+7/9/1992,Nogent-sur-Oise,Wasquehal
+7/10/1992,Roubaix,Brussels
+7/11/1992,Brussels,Valkenburg
+7/12/1992,Valkenburg,Koblenz
+7/13/1992,Luxembourg City,Luxembourg City
+7/14/1992,Luxembourg City,Strasbourg
+7/15/1992,Strasbourg,Mulhouse
+7/16/1992,Dole,St Gervais
+7/18/1992,St Gervais,Sestriere
+7/19/1992,Sestriere,Alpe d'Huez
+7/20/1992,Le Bourg-d'Oisans,Saint-Étienne
+7/21/1992,Saint-Étienne,La Bourboule
+7/22/1992,La Bourboule,Montluçon
+7/23/1992,Montluçon,Tours
+7/24/1992,Tours,Blois
+7/25/1992,Blois,Nanterre
+7/26/1992,La Défense,Paris
+7/6/1991,Lyon,Lyon
+7/7/1991,Lyon,Lyon
+7/7/1991,Bron,Chassieu
+7/8/1991,Villeurbanne,Dijon
+7/9/1991,Dijon,Reims
+7/10/1991,Reims,Valenciennes
+7/11/1991,Arras,Le Havre
+7/12/1991,Le Havre,Argentan
+7/13/1991,Argentan,Alençon
+7/14/1991,Alençon,Rennes
+7/15/1991,Rennes,Quimper
+7/16/1991,Quimper,Saint-Herblain
+7/18/1991,Pau,Jaca
+7/19/1991,Jaca,Val-Louron
+7/20/1991,St Gaudens,Castres
+7/21/1991,Albi,Ales
+7/22/1991,Alès,Gap
+7/23/1991,Gap,Alpe d'Huez
+7/24/1991,Le Bourg-d'Oisans,Morzine
+7/25/1991,Morzine,Aix-les-Bains
+7/26/1991,Aix-les-Bains,Mâcon
+7/27/1991,Lugny,Mâcon
+7/28/1991,Melun,Paris
+6/30/1990,Futuroscope,Futuroscope
+7/1/1990,Futuroscope,Futuroscope
+7/1/1990,Futuroscope,Futuroscope
+7/2/1990,Poitiers,Nantes
+7/3/1990,Nantes,Mont Saint-Michel
+7/4/1990,Avranches,Rouen
+7/6/1990,Sarrebourg,Vittel
+7/7/1990,Vittel,Épinal
+7/8/1990,Épinal,Besançon
+7/9/1990,Besançon,Geneva
+7/10/1990,Geneva,Saint-Gervais
+7/11/1990,Saint-Gervais,Alpe d'Huez
+7/12/1990,Fontaine,Villard-de-Lans
+7/14/1990,Villard-de-Lans,Saint-Étienne
+7/15/1990,Le Puy-en-Velay,Millau
+7/16/1990,Millau,Revel
+7/17/1990,Blagnac,Luz Ardiden
+7/18/1990,Lourdes,Pau
+7/19/1990,Pau,Bordeaux
+7/20/1990,Castillon-la-Bataille,Limoges
+7/21/1990,Lac de Vassivière,Lac de Vassivière
+7/22/1990,Brétigny-sur-Orge,Paris
+7/1/1989,Luxembourg City,Luxembourg City
+7/2/1989,Luxembourg City,Luxembourg City
+7/2/1989,Luxembourg City,Luxembourg City
+7/3/1989,Luxembourg City,Spa
+7/4/1989,Liège,Wasquehal
+7/6/1989,Dinard,Rennes
+7/7/1989,Rennes,Futuroscope
+7/8/1989,Poitiers,Bordeaux
+7/9/1989,Labastide-d'Armagnac,Pau
+7/10/1989,Pau,Cauterets
+7/11/1989,Cauterets,Superbagnères
+7/12/1989,Luchon,Blagnac
+7/13/1989,Toulouse,Montpellier
+7/14/1989,Montpellier,Marseille
+7/15/1989,Marseille,Gap
+7/16/1989,Gap,Orcières-Merlette
+7/18/1989,Gap,Briançon
+7/19/1989,Briançon,Alpe d'Huez
+7/20/1989,Le Bourg-d'Oisans,Villard-de-Lans
+7/21/1989,Villard-de-Lans,Aix-les-Bains
+7/22/1989,Aix-les-Bains,L'Isle-d'Abeau
+7/23/1989,Versailles,Paris
+7/3/1988,Pornichet,La Baule
+7/4/1988,Pontchâteau,Machecoul
+7/4/1988,La Haie-Fouassière,Ancenis
+7/5/1988,Nantes,Le Mans
+7/6/1988,Le Mans,Évreux
+7/7/1988,Neufchâtel-en-Bray,Liévin
+7/8/1988,Liévin,Wasquehal
+7/9/1988,Wasquehal,Reims
+7/10/1988,Reims,Nancy
+7/11/1988,Nancy,Strasbourg
+7/12/1988,Belfort,Besançon
+7/13/1988,Besançon,Morzine
+7/14/1988,Morzine,Alpe d'Huez
+7/15/1988,Grenoble,Villard-de-Lans
+7/17/1988,Blagnac,Guzet-Neige
+7/18/1988,Saint-Girons,Luz Ardiden
+7/19/1988,Luz Ardiden,Pau
+7/19/1988,Pau,Bordeaux
+7/20/1988,Ruelle-sur-Touvre,Limoges
+7/21/1988,Limoges,Puy de Dôme
+7/22/1988,Clermont-Ferrand,Chalon-sur-Saône
+7/23/1988,Santenay,Santenay
+7/24/1988,Nemours,Paris
+7/1/1987,West Berlin,West Berlin
+7/2/1987,West Berlin,West Berlin
+7/2/1987,West Berlin,West Berlin
+7/4/1987,Karlsruhe,Stuttgart
+7/5/1987,Stuttgart,Pforzheim
+7/5/1987,Pforzheim,Strasbourg
+7/6/1987,Strasbourg,Épinal
+7/7/1987,Épinal,Troyes
+7/8/1987,Troyes,Épinay-sous-Sénart
+7/9/1987,Orléans,Renazé
+7/10/1987,Saumur,Futuroscope
+7/11/1987,Poitiers,Chaumeil
+7/12/1987,Brive,Bordeaux
+7/13/1987,Bayonne,Pau
+7/14/1987,Pau,Luz Ardiden
+7/15/1987,Tarbes,Blagnac
+7/16/1987,Blagnac,Millau
+7/17/1987,Millau,Avignon
+7/19/1987,Carpentras,Mont Ventoux
+7/20/1987,Valréas,Villard-de-Lans
+7/21/1987,Villard-de-Lans,Alpe d'Huez
+7/22/1987,Le Bourg-d'Oisans,La Plagne
+7/23/1987,La Plagne,Morzine
+7/24/1987,Saint-Julien-en-Genevois,Dijon
+7/25/1987,Dijon,Dijon
+7/26/1987,Créteil,Paris
+7/4/1986,Boulogne-Billancourt,Boulogne-Billancourt
+7/5/1986,Nanterre,Sceaux
+7/5/1986,Meudon,Saint-Quentin-en-Yvelines
+7/6/1986,Levallois-Perret,Liévin
+7/7/1986,Liévin,Évreux
+7/8/1986,Evreux,Villers-sur-Mer
+7/9/1986,Villers-sur-Mer,Cherbourg
+7/10/1986,Cherbourg,Saint-Hilaire-du-Harcouët
+7/11/1986,Saint-Hilaire-du-Harcouët,Nantes
+7/12/1986,Nantes,Nantes
+7/13/1986,Nantes,Futuroscope
+7/14/1986,Futuroscope,Bordeaux
+7/15/1986,Bayonne,Pau
+7/16/1986,Pau,Superbagnères
+7/17/1986,Superbagnères,Blagnac
+7/18/1986,Carcassonne,Nîmes
+7/19/1986,Nîmes,Gap
+7/20/1986,Gap,Serre Chevalier
+7/21/1986,Briançon,Alpe d'Huez
+7/23/1986,Villard-de-Lans,Saint-Étienne
+7/24/1986,Saint-Étienne,Saint-Étienne
+7/25/1986,Saint-Étienne,Puy de Dôme
+7/26/1986,Clermont-Ferrand,Nevers
+7/27/1986,Cosne-sur-Loire,Paris
+6/28/1985,Plumelec,Plumelec
+6/29/1985,Vannes,Lanester
+6/30/1985,Lorient,Vitre
+7/1/1985,Vitre,Fougères
+7/2/1985,Fougères,Pont-Audemer
+7/3/1985,Neufchâtel-en-Bray,Roubaix
+7/4/1985,Roubaix,Reims
+7/5/1985,Reims,Nancy
+7/6/1985,Sarrebourg,Strasbourg
+7/7/1985,Strasbourg,Épinal
+7/8/1985,Épinal,Pontarlier
+7/9/1985,Pontarlier,Morzine Avoriaz
+7/10/1985,Morzine Avoriaz,Lans-en-Vercors
+7/11/1985,Villard-de-Lans,Villard-de-Lans
+7/13/1985,Autrans,Saint-Étienne
+7/14/1985,Saint-Étienne,Aurillac
+7/15/1985,Aurillac,Toulouse
+7/16/1985,Toulouse,Luz Ardiden
+7/17/1985,Luz-Saint-Sauveur,Aubisque
+7/17/1985,Laruns,Pau
+7/18/1985,Pau,Bordeaux
+7/19/1985,Montpon-Ménestérol,Limoges
+7/20/1985,Lac de Vassivière,Lac de Vassivière
+7/21/1985,Orléans,Paris
+6/29/1984,Montreuil,Noisy-le-Sec
+6/30/1984,Bondy,Saint-Denis
+7/1/1984,Bobigny,Louvroil
+7/2/1984,Louvroil,Valenciennes
+7/2/1984,Valenciennes,Béthune
+7/3/1984,Béthune,Cergy-Pontoise
+7/4/1984,Cergy-Pontoise,Alençon
+7/5/1984,Alençon,Le Mans
+7/6/1984,Le Mans,Nantes
+7/7/1984,Nantes,Bordeaux
+7/8/1984,Langon,Pau
+7/9/1984,Pau,Guzet-Neige
+7/10/1984,Saint-Girons,Blagnac
+7/11/1984,Blagnac,Rodez
+7/12/1984,Rodez,Domaine du Rouret
+7/13/1984,Domaine du Rouret,Grenoble
+7/15/1984,Les Échelles,La Ruchère
+7/16/1984,Grenoble,Alpe d'Huez
+7/17/1984,Le Bourg-d'Oisans,La Plagne
+7/18/1984,La Plagne,Morzine
+7/19/1984,Morzine,Crans-Montana
+7/20/1984,Crans-Montana,Villefranche-sur-Saône
+7/21/1984,Villié-Morgon,Villefranche-sur-Saône
+7/22/1984,Pantin,Paris
+7/1/1983,Fontenay-sous-Bois,Fontenay-sous-Bois
+7/2/1983,Nogent-sur-Marne,Créteil
+7/3/1983,Soissons,Fontaine-au-Pire
+7/4/1983,Valenciennes,Roubaix
+7/5/1983,Roubaix,Le Havre
+7/6/1983,Le Havre,Le Mans
+7/7/1983,Châteaubriant,Nantes
+7/8/1983,Nantes,Île d'Oléron
+7/9/1983,La Rochelle,Bordeaux
+7/10/1983,Bordeaux,Pau
+7/11/1983,Pau,Bagnères-de-Luchon
+7/12/1983,Bagnères-de-Luchon,Fleurance
+7/13/1983,Fleurance,Roquefort-sur-Soulzon
+7/14/1983,Roquefort-sur-Soulzon,Aurillac
+7/15/1983,Aurillac,Issoire
+7/16/1983,Clermont-Ferrand,Puy de Dôme
+7/17/1983,Issoire,Saint-Étienne
+7/18/1983,La Tour-du-Pin,Alpe d'Huez
+7/20/1983,Le Bourg-d'Oisans,Morzine
+7/21/1983,Morzine,Avoriaz
+7/22/1983,Morzine,Dijon
+7/23/1983,Dijon,Dijon
+7/24/1983,Alfortville,Paris
+7/2/1982,Basel,Basel
+7/3/1982,Basel,Möhlin
+7/4/1982,Basel,Nancy
+7/5/1982,Nancy,Longwy
+7/6/1982,Beauraing,Mouscron
+7/7/1982,Orchies,Fontaine-au-Pire
+7/8/1982,Lille,Lille
+7/10/1982,Cancale,Concarneau
+7/11/1982,Concarneau,Châteaulin
+7/12/1982,Lorient,Plumelec
+7/12/1982,Plumelec,Nantes
+7/13/1982,Saintes,Bordeaux
+7/14/1982,Valence d'Agen,Valence d'Agen
+7/15/1982,Fleurance,Pau
+7/16/1982,Pau,Saint-Lary-Soulan Pla d'Adet
+7/18/1982,Martigues,Martigues
+7/19/1982,Manosque,Orcières-Merlette
+7/20/1982,Orcières-Merlette,Alpe d'Huez
+7/21/1982,Le Bourg-d'Oisans,Morzine
+7/22/1982,Morzine,Saint-Priest
+7/23/1982,Saint-Priest,Saint-Priest
+7/24/1982,Sens,Aulnay-sous-Bois
+7/25/1982,Fontenay-sous-Bois,Paris
+6/25/1981,Nice,Nice
+6/26/1981,Nice,Nice
+6/26/1981,Nice,Nice
+6/27/1981,Nice,Martigues
+6/28/1981,Martigues,Narbonne
+6/29/1981,Narbonne,Carcassonne
+6/30/1981,Saint-Gaudens,Pla d'Adet
+7/1/1981,Nay,Pau
+7/2/1981,Pau,Bordeaux
+7/3/1981,Rochefort,Nantes
+7/5/1981,Nantes,Le Mans
+7/6/1981,Le Mans,Aulnay-sous-Bois
+7/7/1981,Compiègne,Roubaix
+7/8/1981,Roubaix,Brussels
+7/8/1981,Brussels,Circuit Zolder
+7/9/1981,Beringen,Hasselt
+7/10/1981,Mulhouse,Mulhouse
+7/11/1981,Besançon,Thonon-les-Bains
+7/12/1981,Thonon-les-Bains,Morzine
+7/14/1981,Morzine,Alpe d'Huez
+7/15/1981,Le Bourg-d'Oisans,Le Pleynet
+7/16/1981,Veurey,Saint-Priest
+7/17/1981,Saint-Priest,Saint-Priest
+7/18/1981,Auxerre,Fontenay-sous-Bois
+7/19/1981,Fontenay-sous-Bois,Paris
+6/26/1980,Frankfurt,Frankfurt
+6/27/1980,Frankfurt,Wiesbaden
+6/27/1980,Wiesbaden,Frankfurt
+6/28/1980,Frankfurt,Metz
+6/29/1980,Metz,Liège
+6/30/1980,Spa,Spa
+7/1/1980,Liège,Lille
+7/2/1980,Lille,Compiègne
+7/3/1980,Compiègne,Beauvais
+7/3/1980,Beauvais,Rouen
+7/4/1980,Flers,Saint-Malo
+7/6/1980,Saint-Malo,Nantes
+7/7/1980,Rochefort,Bordeaux
+7/8/1980,Damazan,Laplume
+7/9/1980,Agen,Pau
+7/10/1980,Pau,Bagnères-de-Luchon
+7/11/1980,Lézignan-Corbières,Montpellier
+7/12/1980,Montpellier,Martigues
+7/13/1980,Trets,Pra-Loup
+7/14/1980,Serre Chevalier,Morzine
+7/16/1980,Morzine,Prapoutel
+7/17/1980,Voreppe,Saint-Étienne
+7/18/1980,Saint-Étienne,Saint-Étienne
+7/19/1980,Auxerre,Fontenay-sous-Bois
+7/20/1980,Fontenay-sous-Bois,Paris
+6/27/1979,Fleurance,Fleurance
+6/28/1979,Fleurance,Luchon
+6/29/1979,Luchon,Superbagnères
+6/30/1979,Luchon,Pau
+7/1/1979,Captieux,Bordeaux
+7/2/1979,Neuville-de-Poitou,Angers
+7/3/1979,Angers,Saint-Brieuc
+7/4/1979,Saint-Hilaire-du-Harcouët,Deauville
+7/5/1979,Deauville,Le Havre
+7/6/1979,Amiens,Roubaix
+7/7/1979,Roubaix,Brussels
+7/8/1979,Brussels,Brussels
+7/9/1979,Rochefort,Metz
+7/10/1979,Metz,Ballon d'Alsace
+7/11/1979,Belfort,Évian-les-Bains
+7/12/1979,Évian-les-Bains,Morzine Avoriaz
+7/13/1979,Morzine Avoriaz,Les Menuires
+7/15/1979,Les Menuires,Alpe d'Huez
+7/16/1979,Alpe d'Huez,Alpe d'Huez
+7/17/1979,Alpe d'Huez,Saint-Priest
+7/18/1979,Saint-Priest,Dijon
+7/19/1979,Dijon,Dijon
+7/20/1979,Dijon,Auxerre
+7/21/1979,Auxerre,Nogent-sur-Marne
+7/22/1979,Le Perreux-sur-Marne,Paris
+6/29/1978,Leiden,Leiden
+6/30/1978,Leiden,Sint Willebrord
+6/30/1978,Sint Willebrord,Brussels
+7/1/1978,Brussels,Saint-Amand-les-Eaux
+7/2/1978,Saint-Amand-les-Eaux,Saint-Germain-en-Laye
+7/3/1978,Évreux,Caen
+7/4/1978,Caen,Mazé-Montgeoffroy
+7/5/1978,Mazé-Montgeoffroy,Poitiers
+7/6/1978,Poitiers,Bordeaux
+7/7/1978,Saint-Émilion,Sainte-Foy-la-Grande
+7/8/1978,Bordeaux,Biarritz
+7/10/1978,Biarritz,Pau
+7/11/1978,Pau,Saint-Lary-Soulan Pla d'Adet
+7/12/1978,Tarbes,Valence d'Agen
+7/12/1978,Valence d'Agen,Toulouse
+7/13/1978,Figeac,Super Besse
+7/14/1978,Besse-en-Chandesse,Puy de Dôme
+7/15/1978,Saint-Dier-d'Auvergne,Saint-Étienne
+7/16/1978,St-Étienne,Alpe d'Huez
+7/18/1978,Grenoble,Morzine
+7/19/1978,Morzine,Lausanne
+7/20/1978,Lausanne,Belfort
+7/21/1978,Metz,Nancy
+7/22/1978,Epernay,Senlis
+7/23/1978,Saint Germain en Laye,Paris
+6/30/1977,Fleurance,Fleurance
+7/1/1977,Fleurance,Auch
+7/2/1977,Auch,Pau
+7/3/1977,Oloron-Sainte-Marie,Vitoria-Gasteiz
+7/4/1977,Vitoria-Gasteiz,Seignosse le Penon
+7/5/1977,Morcenx,Bordeaux
+7/5/1977,Bordeaux,Bordeaux
+7/7/1977,Bordeaux,Limoges
+7/8/1977,Jaunay-Clan,Angers
+7/8/1977,Angers,Angers
+7/9/1977,Angers,Lorient
+7/10/1977,Lorient,Rennes
+7/11/1977,Bagnoles-de-l'Orne,Rouen
+7/12/1977,Rouen,Roubaix
+7/13/1977,Roubaix,Charleroi
+7/14/1977,Freiburg,Freiburg
+7/14/1977,Altkirch ,Besançon
+7/16/1977,Besançon,Thonon-les-Bains
+7/17/1977,Thonon-les-Bains,Morzine
+7/17/1977,Morzine,Avoriaz
+7/18/1977,Morzine,Chamonix
+7/19/1977,Chamonix,Alpe d'Huez
+7/20/1977,Rossignol Voiron,Saint-Étienne
+7/21/1977,Saint-Trivier-sur-Moignans,Dijon
+7/22/1977,Dijon,Dijon
+7/23/1977,Montereau-Fault-Yonne,Versailles
+7/24/1977,Paris,Paris
+7/24/1977,Paris,Paris
+6/24/1976,Saint-Jean-de-Monts,Saint-Jean-de-Monts
+6/25/1976,Saint-Jean-de-Monts,Angers
+6/26/1976,Angers,Caen
+6/27/1976,Le Touquet-Paris-Plage,Le Touquet-Paris-Plage
+6/28/1976,Le Touquet-Paris-Plage,Bornem
+6/29/1976,Leuven,Leuven
+6/29/1976,Leuven,Verviers
+6/30/1976,Bastogne,Nancy
+7/1/1976,Nancy,Mulhouse
+7/2/1976,Valentigney,Divonne-les-Bains
+7/4/1976,Divonne-les-Bains,Alpe d'Huez
+7/5/1976,Le Bourg-d'Oisans,Montgenèvre
+7/6/1976,Montgenèvre,Manosque
+7/8/1976,Le Barcarès,Pyrénées 2000
+7/9/1976,Font-Romeu-Odeillo-Via,Saint-Gaudens
+7/10/1976,Saint-Gaudens,Saint-Lary-Soulan
+7/11/1976,Saint-Lary-Soulan,Pau
+7/12/1976,Pau,Fleurance
+7/13/1976,Fleurance,Auch
+7/14/1976,Auch,Langon
+7/14/1976,Langon,Lacanau
+7/14/1976,Lacanau,Bordeaux
+7/15/1976,Sainte-Foy-la-Grande,Tulle
+7/16/1976,Tulle,Puy de Dôme
+7/17/1976,Montargis,Versailles
+7/18/1976,Paris,Paris
+7/18/1976,Paris,Paris
+6/26/1975,Charleroi,Charleroi
+6/27/1975,Charleroi,Molenbeek
+6/27/1975,Molenbeek,Roubaix
+6/28/1975,Roubaix,Amiens
+6/29/1975,Amiens,Versailles
+6/30/1975,Versailles,Le Mans
+7/2/1975,Sablé-sur-Sarthe,Merlin-Plage
+7/2/1975,Merlin-Plage,Merlin-Plage
+7/3/1975,Saint-Gilles-Croix-de-Vie,Angoulême
+7/4/1975,Angoulême,Bordeaux
+7/5/1975,Langon,Fleurance
+7/5/1975,Fleurance,Auch
+7/7/1975,Auch,Pau
+7/8/1975,Pau,Saint-Lary-Soulan Pla d'Adet
+7/9/1975,Tarbes,Albi
+7/10/1975,Albi,Super-Lioran
+7/11/1975,Aurillac,Puy de Dôme
+7/13/1975,Nice,Pra-Loup
+7/14/1975,Barcelonnette,Serre Chevalier
+7/15/1975,Valloire,Morzine Avoriaz
+7/16/1975,Morzine,Châtel
+7/17/1975,Thonon-les-Bains,Chalon-sur-Saône
+7/18/1975,Pouilly-en-Auxois,Melun
+7/19/1975,Melun,Senlis
+7/20/1975,Paris,Paris
+6/27/1974,Brest,Brest
+6/28/1974,Brest,Saint-Pol-de-Léon
+6/29/1974,Plymouth,Plymouth
+6/30/1974,Morlaix,Saint-Malo
+7/1/1974,Saint-Malo,Caen
+7/2/1974,Caen,Dieppe
+7/3/1974,Dieppe,Harelbeke
+7/3/1974,Harelbeke,Harelbeke
+7/4/1974,Mons,Châlons-sur-Marne
+7/5/1974,Châlons-sur-Marne,Chaumont
+7/5/1974,Chaumont,Besançon
+7/6/1974,Besançon,Gaillard
+7/7/1974,Gaillard,Aix-les-Bains
+7/8/1974,Aix-les-Bains,Serre Chevalier
+7/10/1974,Savines-le-Lac,Orange
+7/11/1974,Avignon,Montpellier
+7/12/1974,Lodève,Colomiers
+7/14/1974,Colomiers,La Seu d'Urgell
+7/15/1974,La Seu d'Urgell,Saint-Lary-Soulan Pla d'Adet
+7/16/1974,Saint-Lary-Soulan,La Mongie
+7/17/1974,Bagnères-de-Bigorre,Pau
+7/18/1974,Pau,Bordeaux
+7/18/1974,Bordeaux,Bordeaux
+7/19/1974,Saint-Gilles-Croix-de-Vie,Nantes
+7/20/1974,Vouvray,Orléans
+7/20/1974,Orléans,Orléans
+7/21/1974,Orléans,Paris
+6/30/1973,Scheveningen,Scheveningen
+7/1/1973,Scheveningen,Rotterdam
+7/1/1973,Rotterdam,Sint-Niklaas
+7/2/1973,Sint-Niklaas,Sint-Niklaas
+7/2/1973,Sint-Niklaas,Roubaix
+7/3/1973,Roubaix,Reims
+7/4/1973,Reims,Nancy
+7/5/1973,Nancy,Mulhouse
+7/6/1973,Mulhouse,Divonne-les-Bains
+7/8/1973,Divonne-les-Bains,Gaillard
+7/8/1973,Gaillard,Méribel
+7/9/1973,Moûtiers,Les Orres
+7/10/1973,Embrun,Nice
+7/11/1973,Nice,Aubagne
+7/12/1973,Montpellier,Argelès-sur-Mer
+7/13/1973,Perpignan,Thuir
+7/13/1973,Thuir,Pyrénées 2000
+7/15/1973,Bourg-Madame,Luchon
+7/16/1973,Luchon,Pau
+7/17/1973,Pau,Fleurance
+7/18/1973,Fleurance,Bordeaux
+7/18/1973,Bordeaux,Bordeaux
+7/19/1973,Sainte-Foy-la-Grande,Brive-la-Gaillarde
+7/20/1973,Brive-la-Gaillarde,Puy de Dôme
+7/21/1973,Bourges,Versailles
+7/22/1973,Versailles,Versailles
+7/22/1973,Versailles,Paris
+7/1/1972,Angers,Angers
+7/2/1972,Angers,Saint-Brieuc
+7/3/1972,Saint-Brieuc,La Baule
+7/4/1972,Pornichet,Saint-Jean-de-Monts
+7/4/1972,Merlin-Plage,Merlin-Plage
+7/5/1972,Merlin-Plage,Royan
+7/6/1972,Royan,Bordeaux
+7/6/1972,Bordeaux,Bordeaux
+7/7/1972,Bordeaux,Bayonne
+7/9/1972,Bayonne,Pau
+7/10/1972,Pau,Luchon
+7/11/1972,Luchon,Colomiers
+7/12/1972,Castres,La Grande-Motte
+7/13/1972,Carnon-Plage,Mont Ventoux
+7/14/1972,Carpentras,Orcières
+7/16/1972,Orcières,Briançon
+7/17/1972,Briançon,Valloire
+7/17/1972,Valloire,Aix-les-Bains
+7/18/1972,Aix-les-Bains,Le Revard
+7/19/1972,Aix-les-Bains,Pontarlier
+7/20/1972,Pontarlier,Ballon d’Alsace
+7/21/1972,Vesoul,Auxerre
+7/22/1972,Auxerre,Versailles
+7/23/1972,Versailles,Versailles
+7/23/1972,Versailles,Paris
+6/26/1971,Mulhouse,Mulhouse
+6/27/1971,Mulhouse,Basel
+6/27/1971,Basel,Freiburg
+6/27/1971,Freiburg,Mulhouse
+6/28/1971,Mulhouse,Strasbourg
+6/29/1971,Strasbourg,Nancy
+6/30/1971,Nancy,Marche-en-Famenne
+7/1/1971,Dinant,Roubaix
+7/2/1971,Roubaix,Amiens
+7/2/1971,Amiens,Le Touquet
+7/4/1971,Rungis,Nevers
+7/5/1971,Nevers,Puy de Dôme
+7/6/1971,Clermont-Ferrand,Saint-Étienne
+7/7/1971,Saint-Étienne,Grenoble
+7/8/1971,Grenoble,Orcières
+7/10/1971,Orcières,Marseille
+7/11/1971,Albi,Albi
+7/12/1971,Revel,Luchon
+7/13/1971,Luchon,Superbagnères
+7/14/1971,Luchon,Gourette
+7/14/1971,Gourette,Pau
+7/15/1971,Mont-de-Marsan,Bordeaux
+7/16/1971,Bordeaux,Poitiers
+7/17/1971,Blois,Versailles
+7/18/1971,Versailles,Paris
+6/27/1970,Limoges,Limoges
+6/27/1970,Limoges,La Rochelle
+6/28/1970,La Rochelle,Angers
+6/29/1970,Angers,Angers
+6/29/1970,Angers,Rennes
+6/30/1970,Rennes,Lisieux
+7/1/1970,Lisieux,Rouen
+7/1/1970,Rouen,Amiens
+7/2/1970,Amiens,Valenciennes
+7/3/1970,Valenciennes,Forest
+7/3/1970,Forest,Forest
+7/4/1970,Ciney,Felsberg
+7/5/1970,Saarlouis,Mulhouse
+7/6/1970,Belfort,Divonne-les-Bains
+7/7/1970,Divonne-les-Bains,Divonne-les-Bains
+7/7/1970,Divonne-les-Bains,Thonon-les-Bains
+7/8/1970,Thonon-les-Bains,Grenoble
+7/9/1970,Grenoble,Gap
+7/10/1970,Gap,Mont Ventoux
+7/11/1970,Carpentras,Montpellier
+7/12/1970,Montpellier,Toulouse
+7/13/1970,Toulouse,Saint-Gaudens
+7/14/1970,Saint-Gaudens,La Mongie
+7/15/1970,Bagnères-de-Bigorre,Mourenx
+7/16/1970,Mourenx,Bordeaux
+7/16/1970,Bordeaux,Bordeaux
+7/17/1970,Ruffec,Tours
+7/18/1970,Tours,Versailles
+7/19/1970,Versailles,Paris
+6/28/1969,Roubaix,Roubaix
+6/29/1969,Roubaix,Sint-Pieters-Woluwe
+6/29/1969,Sint-Pieters-Woluwe,Sint-Pieters-Woluwe
+6/30/1969,Sint-Pieters-Woluwe,Maastricht
+7/1/1969,Maastricht,Charleville-Mézières
+7/2/1969,Charleville-Mézières,Nancy
+7/3/1969,Nancy,Mulhouse
+7/4/1969,Mulhouse,Ballon d’Alsace
+7/5/1969,Belfort,Divonne-les-Bains
+7/6/1969,Divonne-les-Bains,Divonne-les-Bains
+7/6/1969,Divonne-les-Bains,Thonon-les-Bains
+7/7/1969,Thonon-les-Bains,Chamonix
+7/8/1969,Chamonix,Briançon
+7/9/1969,Briançon,Digne
+7/10/1969,Digne,Aubagne
+7/11/1969,Aubagne,La Grande-Motte
+7/12/1969,La Grande-Motte,Revel
+7/13/1969,Revel,Revel
+7/14/1969,Castelnaudary,Luchon
+7/15/1969,Luchon,Mourenx
+7/16/1969,Mourenx,Bordeaux
+7/17/1969,Bordeaux,Brive
+7/18/1969,Brive,Puy de Dôme
+7/19/1969,Clermont-Ferrand,Montargis
+7/20/1969,Montargis,Créteil
+7/20/1969,Créteil,Paris
+6/27/1968,Vittel,Vittel
+6/28/1968,Vittel,Esch-sur-Alzette
+6/29/1968,Arlon,Forest
+6/30/1968,Forest,Forest
+6/30/1968,Forest,Roubaix
+7/1/1968,Roubaix,Rouen
+7/2/1968,Rouen,Bagnoles-de-l'Orne
+7/2/1968,Bagnoles-de-l'Orne,Dinard
+7/3/1968,Dinard,Lorient
+7/4/1968,Lorient,Nantes
+7/5/1968,Nantes,Royan
+7/7/1968,Royan,Bordeaux
+7/8/1968,Bordeaux,Bayonne
+7/9/1968,Bayonne,Pau
+7/10/1968,Pau,Saint-Gaudens
+7/11/1968,Saint-Gaudens,La Seu d'Urgell
+7/12/1968,La Seu d'Urgell,Perpignan
+7/14/1968,Font-Romeu-Odeillo-Via,Albi
+7/15/1968,Albi,Aurillac
+7/16/1968,Aurillac,Saint-Étienne
+7/17/1968,Saint-Étienne,Grenoble
+7/18/1968,Grenoble,Sallanches
+7/19/1968,Sallanches,Besançon
+7/20/1968,Besançon,Auxerre
+7/21/1968,Auxerre,Melun
+7/21/1968,Melun,Paris
+6/29/1967,Angers,Angers
+6/30/1967,Angers,Saint-Malo
+7/1/1967,Saint-Malo,Caen
+7/2/1967,Caen,Amiens
+7/3/1967,Amiens,Roubaix
+7/4/1967,Roubaix,Jambes
+7/4/1967,Jambes,Jambes
+7/5/1967,Jambes,Metz
+7/6/1967,Metz,Strasbourg
+7/7/1967,Strasbourg,Belfort/Ballon d’Alsace
+7/9/1967,Belfort,Divonne-les-Bains
+7/10/1967,Divonne-les-Bains,Briançon
+7/11/1967,Briançon,Digne
+7/12/1967,Digne,Marseille
+7/13/1967,Marseille,Carpentras
+7/14/1967,Carpentras,Sète
+7/16/1967,Sète,Toulouse
+7/17/1967,Toulouse,Luchon
+7/18/1967,Luchon,Pau
+7/19/1967,Pau,Bordeaux
+7/20/1967,Bordeaux,Limoges
+7/21/1967,Limoges,Puy de Dôme
+7/22/1967,Clermont-Ferrand,Fontainebleau
+7/23/1967,Fontainebleau,Versailles
+7/23/1967,Versailles,Paris
+6/21/1966,Nancy,Charleville
+6/22/1966,Charleville,Tournai
+6/23/1966,Tournai,Tournai
+6/23/1966,Tournai,Dunkirk
+6/24/1966,Dunkirk,Dieppe
+6/25/1966,Dieppe,Caen
+6/26/1966,Caen,Angers
+6/27/1966,Angers,Royan
+6/28/1966,Royan,Bordeaux
+6/29/1966,Bordeaux,Bayonne
+6/30/1966,Bayonne,Pau
+7/1/1966,Pau,Luchon
+7/3/1966,Luchon,Revel
+7/4/1966,Revel,Sète
+7/5/1966,Montpellier,Vals-les-Bains
+7/5/1966,Vals-les-Bains,Vals-les-Bains
+7/6/1966,Privas,Le Bourg-d'Oisans
+7/7/1966,Le Bourg-d'Oisans,Briançon
+7/8/1966,Briançon,Turin
+7/10/1966,Ivrea,Chamonix
+7/11/1966,Chamonix,Saint-Étienne
+7/12/1966,Saint-Étienne,Montluçon
+7/13/1966,Montluçon,Orléans
+7/14/1966,Orléans,Rambouillet
+7/14/1966,Rambouillet,Paris
+6/22/1965,Cologne,Liège
+6/22/1965,Liège,Liège
+6/23/1965,Liège,Roubaix
+6/24/1965,Roubaix,Rouen
+6/25/1965,Caen,Saint-Brieuc
+6/26/1965,Saint-Brieuc,Châteaulin
+6/26/1965,Châteaulin,Châteaulin
+6/27/1965,Quimper,La Baule
+6/28/1965,La Baule,La Rochelle
+6/29/1965,La Rochelle,Bordeaux
+6/30/1965,Dax,Bagnères-de-Bigorre
+7/1/1965,Bagnères-de-Bigorre,Ax-les-Thermes
+7/2/1965,Ax-les-Thermes,Barcelona
+7/4/1965,Barcelona,Perpignan
+7/5/1965,Perpignan,Montpellier
+7/6/1965,Montpellier,Mont Ventoux
+7/7/1965,Carpentras,Gap
+7/8/1965,Gap,Briançon
+7/9/1965,Briançon,Aix-les-Bains
+7/10/1965,Aix-les-Bains,Le Revard
+7/11/1965,Aix-les-Bains,Lyon
+7/12/1965,Lyon,Auxerre
+7/13/1965,Auxerre,Versailles
+7/14/1965,Versailles,Paris
+6/22/1964,Rennes,Lisieux
+6/23/1964,Lisieux,Amiens
+6/24/1964,Amiens,Forest
+6/24/1964,Forest,Forest
+6/25/1964,Forest,Metz
+6/26/1964,Lunéville,Freiburg
+6/27/1964,Freiburg,Besançon
+6/28/1964,Besançon,Thonon-les-Bains
+6/29/1964,Thonon-les-Bains,Briançon
+6/30/1964,Briançon,Monaco
+7/1/1964,Monaco,Hyères
+7/1/1964,Hyères,Toulon
+7/2/1964,Toulon,Montpellier
+7/3/1964,Montpellier,Perpignan
+7/4/1964,Perpignan,Andorra
+7/6/1964,Andorra,Toulouse
+7/7/1964,Toulouse,Luchon
+7/8/1964,Luchon,Pau
+7/9/1964,Peyrehorade,Bayonne
+7/10/1964,Bayonne,Bordeaux
+7/11/1964,Bordeaux,Brive
+7/12/1964,Brive,Puy de Dôme
+7/13/1964,Clermont-Ferrand,Orléans
+7/14/1964,Orléans,Versailles
+7/14/1964,Versailles,Paris
+6/23/1963,Paris,Épernay
+6/24/1963,Reims,Jambes
+6/24/1963,Jambes,Jambes
+6/25/1963,Jambes,Roubaix
+6/26/1963,Roubaix,Rouen
+6/27/1963,Rouen,Rennes
+6/28/1963,Rennes,Angers
+6/28/1963,Angers,Angers
+6/29/1963,Angers,Limoges
+6/30/1963,Limoges,Bordeaux
+7/1/1963,Bordeaux,Pau
+7/2/1963,Pau,Bagnères-de-Bigorre
+7/3/1963,Bagnères-de-Bigorre,Luchon
+7/4/1963,Luchon,Toulouse
+7/5/1963,Toulouse,Aurillac
+7/7/1963,Aurillac,Saint-Étienne
+7/8/1963,Saint-Étienne,Grenoble
+7/9/1963,Grenoble,Val d'Isère
+7/10/1963,Val d'Isère,Chamonix
+7/11/1963,Chamonix,Lons-le-Saunier
+7/12/1963,Arbois,Besançon
+7/13/1963,Besançon,Troyes
+7/14/1963,Troyes,Paris
+6/24/1962,Nancy,Spa
+6/25/1962,Spa,Herentals
+6/25/1962,Herentals,Herentals
+6/26/1962,Brussels,Amiens
+6/27/1962,Amiens,Le Havre
+6/28/1962,Pont l'Evêque,Saint-Malo
+6/29/1962,Dinard,Brest
+6/30/1962,Quimper,Saint-Nazaire
+7/1/1962,Saint-Nazaire,Luçon
+7/1/1962,Luçon,La Rochelle
+7/2/1962,La Rochelle,Bordeaux
+7/3/1962,Bordeaux,Bayonne
+7/4/1962,Bayonne,Pau
+7/5/1962,Pau,Saint-Gaudens
+7/6/1962,Luchon,Superbagnères
+7/7/1962,Luchon,Carcassonne
+7/8/1962,Carcassonne,Montpellier
+7/9/1962,Montpellier,Aix-en-Provence
+7/10/1962,Aix-en-Provence,Antibes
+7/11/1962,Antibes,Briançon
+7/12/1962,Briançon,Aix-les-Bains
+7/13/1962,Bourgoin,Lyon
+7/14/1962,Lyon,Nevers
+7/15/1962,Nevers,Paris
+6/25/1961,Rouen,Versailles
+6/25/1961,Versailles,Versailles
+6/26/1961,Pontoise,Roubaix
+6/27/1961,Roubaix,Charleroi
+6/28/1961,Charleroi,Metz
+6/29/1961,Metz,Strasbourg
+6/30/1961,Strasbourg,Belfort
+7/1/1961,Belfort,Chalon-sur-Saône
+7/2/1961,Chalon-sur-Saône,Saint-Étienne
+7/3/1961,Saint-Étienne,Grenoble
+7/4/1961,Grenoble,Turin
+7/5/1961,Turin,Antibes
+7/6/1961,Antibes,Aix-en-Provence
+7/7/1961,Aix-en-Provence,Montpellier
+7/9/1961,Montpellier,Perpignan
+7/10/1961,Perpignan,Toulouse
+7/11/1961,Toulouse,Superbagnères
+7/12/1961,Luchon,Pau
+7/13/1961,Pau,Bordeaux
+7/14/1961,Bergerac,Périgueux
+7/15/1961,Périgueux,Tours
+7/16/1961,Tours,Paris
+6/26/1960,Lille,Brussels
+6/26/1960,Brussels,Brussels
+6/27/1960,Brussels,Dunkirk
+6/28/1960,Dunkirk,Dieppe
+6/29/1960,Dieppe,Caen
+6/30/1960,Caen,Saint-Malo
+7/1/1960,Saint-Malo,Lorient
+7/2/1960,Lorient,Angers
+7/3/1960,Angers,Limoges
+7/4/1960,Limoges,Bordeaux
+7/5/1960,Mont-de-Marsan,Pau
+7/6/1960,Pau,Luchon
+7/7/1960,Luchon,Toulouse
+7/8/1960,Toulouse,Millau
+7/10/1960,Millau,Avignon
+7/11/1960,Avignon,Gap
+7/12/1960,Gap,Briançon
+7/13/1960,Briançon,Aix-les-Bains
+7/14/1960,Aix-les-Bains,Thonon-les-Bains
+7/15/1960,Pontarlier,Besançon
+7/16/1960,Besançon,Troyes
+7/17/1960,Troyes,Paris
+6/25/1959,Mulhouse,Metz
+6/26/1959,Metz,Namur
+6/27/1959,Namur,Roubaix
+6/28/1959,Roubaix,Rouen
+6/29/1959,Rouen,Rennes
+6/30/1959,Blain,Nantes
+7/1/1959,Nantes,La Rochelle
+7/2/1959,La Rochelle,Bordeaux
+7/3/1959,Bordeaux,Bayonne
+7/5/1959,Bayonne,Bagnères-de-Bigorre
+7/6/1959,Bagnères-de-Bigorre,Saint-Gaudens
+7/7/1959,Saint-Gaudens,Albi
+7/8/1959,Albi,Aurillac
+7/9/1959,Aurillac,Clermont-Ferrand
+7/10/1959,Puy de Dôme,Puy de Dôme
+7/11/1959,Clermont-Ferrand,Saint-Étienne
+7/13/1959,Saint-Étienne,Grenoble
+7/14/1959,Grenoble,Saint-Vincent
+7/15/1959,Saint-Vincent,Annecy
+7/16/1959,Annecy,Chalon-sur-Saône
+7/17/1959,Seurre,Dijon
+7/18/1959,Dijon,Paris
+6/26/1958,Brussels,Ghent
+6/27/1958,Ghent,Dunkirk
+6/28/1958,Dunkirk,Mers-les-Bains
+6/29/1958,Le Tréport,Versailles
+6/30/1958,Versailles,Caen
+7/1/1958,Caen,Saint-Brieuc
+7/2/1958,Saint-Brieuc,Brest
+7/3/1958,Châteaulin,Châteaulin
+7/4/1958,Quimper,Saint-Nazaire
+7/5/1958,Saint-Nazaire,Royan
+7/6/1958,Royan,Bordeaux
+7/7/1958,Bordeaux,Dax
+7/8/1958,Dax,Pau
+7/9/1958,Pau,Luchon
+7/10/1958,Luchon,Toulouse
+7/11/1958,Toulouse,Béziers
+7/12/1958,Béziers,Nîmes
+7/13/1958,Bédoin,Mont-Ventoux
+7/14/1958,Carpentras,Gap
+7/15/1958,Gap,Briançon
+7/16/1958,Briançon,Aix-les-Bains
+7/17/1958,Aix-les-Bains,Besançon
+7/18/1958,Besançon,Dijon
+7/19/1958,Dijon,Paris
+6/27/1957,Nantes,Granville
+6/28/1957,Granville,Caen
+6/29/1957,"Circuit de la Prairie, Caen","Circuit de la Prairie, Caen"
+6/29/1957,Caen,Rouen
+6/30/1957,Rouen,Roubaix
+7/1/1957,Roubaix,Charleroi
+7/2/1957,Charleroi,Metz
+7/3/1957,Metz,Colmar
+7/4/1957,Colmar,Besançon
+7/5/1957,Besançon,Thonon-les-Bains
+7/7/1957,Thonon-les-Bains,Briançon
+7/8/1957,Briançon,Cannes
+7/9/1957,Cannes,Marseille
+7/10/1957,Marseille,Alès
+7/11/1957,Alès,Perpignan
+7/12/1957,Perpignan,Barcelona
+7/12/1957,Montjuïc circuit,Montjuïc circuit
+7/14/1957,Barcelona ,Ax-les-Thermes
+7/15/1957,Ax-les-Thermes,Saint-Gaudens
+7/16/1957,Saint-Gaudens,Pau
+7/17/1957,Pau,Bordeaux
+7/18/1957,Bordeaux,Libourne
+7/19/1957,Libourne,Tours
+7/20/1957,Tours,Paris
+7/5/1956,Reims,Liège
+7/6/1956,Liège,Lille
+7/7/1956,Lille,Rouen
+7/8/1956,Circuit de Rouen-Les-Essarts,Circuit de Rouen-Les-Essarts
+7/8/1956,Rouen,Caen
+7/9/1956,Caen,Saint-Malo
+7/10/1956,Saint-Malo,Lorient
+7/11/1956,Lorient,Angers
+7/12/1956,Angers,La Rochelle
+7/13/1956,La Rochelle,Bordeaux
+7/15/1956,Bordeaux,Bayonne
+7/16/1956,Bayonne,Pau
+7/17/1956,Pau,Luchon
+7/18/1956,Luchon,Toulouse
+7/19/1956,Toulouse,Montpellier
+7/20/1956,Montpellier,Aix-en-Provence
+7/22/1956,Aix-en-Provence,Gap
+7/23/1956,Gap,Turin
+7/24/1956,Turin,Grenoble
+7/25/1956,Grenoble,Saint-Étienne
+7/26/1956,Saint-Étienne,Lyon
+7/27/1956,Lyon,Montluçon
+7/28/1956,Montluçon,Paris
+7/7/1955,Le Havre,Dieppe
+7/7/1955,Dieppe,Dieppe
+7/8/1955,Dieppe,Roubaix
+7/9/1955,Roubaix,Namur
+7/10/1955,Namur,Metz
+7/11/1955,Metz,Colmar
+7/12/1955,Colmar,Zürich
+7/13/1955,Zürich,Thonon-les-Bains
+7/14/1955,Thonon-les-Bains,Briançon
+7/15/1955,Briançon,Monaco
+7/16/1955,Monaco,Marseille
+7/18/1955,Marseille,Avignon
+7/19/1955,Avignon,Millau
+7/20/1955,Millau,Albi
+7/21/1955,Albi,Narbonne
+7/22/1955,Narbonne,Ax-les-Thermes
+7/24/1955,Ax-les-Thermes,Toulouse
+7/25/1955,Toulouse,Saint-Gaudens
+7/26/1955,Saint-Gaudens,Pau
+7/27/1955,Pau,Bordeaux
+7/28/1955,Bordeaux,Poitiers
+7/29/1955,Châtellerault,Tours
+7/30/1955,Tours,Paris
+7/8/1954,Amsterdam,Brasschaat
+7/9/1954,Beveren,Lille
+7/10/1954,Lille,Rouen
+7/11/1954,Rouen,Circuit des Essarts
+7/11/1954,Rouen,Caen
+7/12/1954,Caen,Saint-Brieuc
+7/13/1954,Saint-Brieuc,Brest
+7/14/1954,Brest,Vannes
+7/15/1954,Vannes,Angers
+7/16/1954,Angers,Bordeaux
+7/18/1954,Bordeaux,Bayonne
+7/19/1954,Bayonne,Pau
+7/20/1954,Pau,Luchon
+7/21/1954,Luchon,Toulouse
+7/22/1954,Toulouse,Millau
+7/23/1954,Millau,Le Puy
+7/24/1954,Le Puy,Lyon
+7/26/1954,Lyon,Grenoble
+7/27/1954,Grenoble,Briançon
+7/28/1954,Briançon,Aix-les-Bains
+7/29/1954,Aix les Bains,Besançon
+7/30/1954,Besançon,Épinal
+7/30/1954,Epinal,Nancy
+7/31/1954,Nancy,Troyes
+8/1/1954,Troyes,Paris
+7/3/1953,Strasbourg,Metz
+7/4/1953,Metz,Liège
+7/5/1953,Liège,Lille
+7/6/1953,Lille,Dieppe
+7/7/1953,Dieppe,Caen
+7/8/1953,Caen,Le Mans
+7/9/1953,Le Mans,Nantes
+7/10/1953,Nantes,Bordeaux
+7/12/1953,Bordeaux,Pau
+7/13/1953,Pau,Cauterets
+7/14/1953,Cauterets,Luchon
+7/15/1953,Luchon,Albi
+7/16/1953,Albi,Béziers
+7/17/1953,Béziers,Nîmes
+7/18/1953,Nîmes,Marseille
+7/19/1953,Marseille,Monaco
+7/21/1953,Monaco,Gap
+7/22/1953,Gap,Briançon
+7/23/1953,Briançon,Lyon
+7/24/1953,Lyon,St. Etienne
+7/25/1953,St. Etienne,Montluçon
+7/26/1953,Montluçon,Paris
+6/25/1952,Brest,Rennes
+6/26/1952,Rennes,Le Mans
+6/27/1952,Le Mans,Rouen
+6/28/1952,Rouen,Roubaix
+6/29/1952,Roubaix,Namur
+6/30/1952,Namur,Metz
+7/1/1952,Metz,Nancy
+7/2/1952,Nancy,Mulhouse
+7/3/1952,Mulhouse,Lausanne
+7/4/1952,Lausanne,Alpe d'Huez
+7/6/1952,Le Bourg-d'Oisans,Sestriere
+7/7/1952,Sestriere,Monaco
+7/8/1952,Monaco,Aix-en-Provence
+7/9/1952,Aix-en-Provence,Avignon
+7/10/1952,Avignon,Perpignan
+7/11/1952,Perpignan,Toulouse
+7/13/1952,Toulouse,Bagnères-de-Bigorre
+7/14/1952,Bagnères-de-Bigorre,Pau
+7/15/1952,Pau,Bordeaux
+7/16/1952,Bordeaux,Limoges
+7/17/1952,Limoges,Puy de Dôme
+7/18/1952,Clermont-Ferrand,Vichy
+7/19/1952,Vichy,Paris
+7/4/1951,Metz,Reims
+7/5/1951,Reims,Ghent
+7/6/1951,Ghent,Le Tréport
+7/7/1951,Le Tréport,Paris
+7/8/1951,Paris,Caen
+7/9/1951,Caen,Rennes
+7/10/1951,La Guerche-de-Bretagne,Angers
+7/11/1951,Angers,Limoges
+7/13/1951,Limoges,Clermont-Ferrand
+7/14/1951,Clermont-Ferrand,Brive
+7/15/1951,Brive,Agen
+7/16/1951,Agen,Dax
+7/17/1951,Dax,Tarbes
+7/18/1951,Tarbes,Luchon
+7/19/1951,Luchon,Carcassonne
+7/20/1951,Carcassonne,Montpellier
+7/22/1951,Montpellier,Avignon
+7/23/1951,Avignon,Marseille
+7/24/1951,Marseille,Gap
+7/25/1951,Gap,Briançon
+7/26/1951,Briançon,Aix-les-Bains
+7/27/1951,Aix-les-Bains,Geneva
+7/28/1951,Geneva,Dijon
+7/29/1951,Dijon,Paris
+7/13/1950,Paris,Metz
+7/14/1950,Metz,Liège
+7/15/1950,Liège,Lille
+7/16/1950,Lille,Rouen
+7/17/1950,Rouen,Dinard
+7/19/1950,Dinard,St. Brieuc
+7/20/1950,St. Brieuc,Angers
+7/21/1950,Angers,Niort
+7/22/1950,Niort,Bordeaux
+7/23/1950,Bordeaux,Pau
+7/25/1950,Pau,St. Gaudens
+7/26/1950,Saint-Gaudens,Perpignan
+7/27/1950,Perpignan,Nîmes
+7/28/1950,Nîmes,Toulon
+7/29/1950,Toulon,Menton
+7/30/1950,Menton,Nice
+8/1/1950,Nice,Gap
+8/2/1950,Gap,Briançon
+8/3/1950,Briançon,Saint-Étienne
+8/5/1950,Saint-Étienne,Lyon
+8/6/1950,Lyon,Dijon
+8/7/1950,Dijon,Paris
+6/30/1949,Paris,Reims
+7/1/1949,Reims,Brussels
+7/2/1949,Brussels,Boulogne-sur-Mer
+7/3/1949,Boulogne-sur-Mer,Rouen
+7/4/1949,Rouen,Saint-Malo
+7/5/1949,Saint-Malo,Les Sables-d'Olonne
+7/7/1949,Les Sables-d'Olonne,La Rochelle
+7/8/1949,La Rochelle,Bordeaux
+7/9/1949,Bordeaux,San Sebastián
+7/10/1949,San Sebastián,Pau
+7/12/1949,Pau,Luchon
+7/13/1949,Luchon,Toulouse
+7/14/1949,Toulouse,Nîmes
+7/15/1949,Nîmes,Marseille
+7/16/1949,Marseille,Cannes
+7/18/1949,Cannes,Briançon
+7/19/1949,Briançon,Aosta
+7/21/1949,Aosta,Lausanne
+7/22/1949,Lausanne,Colmar
+7/23/1949,Colmar,Nancy
+7/24/1949,Nancy,Paris
+6/30/1948,Paris,Trouville
+7/1/1948,Trouville,Dinard
+7/2/1948,Dinard,Nantes
+7/3/1948,Nantes,La Rochelle
+7/4/1948,La Rochelle,Bordeaux
+7/5/1948,Bordeaux,Biarritz
+7/7/1948,Biarritz,Lourdes
+7/8/1948,Lourdes,Toulouse
+7/10/1948,Toulouse,Montpellier
+7/11/1948,Montpellier,Marseille
+7/12/1948,Marseille,Sanremo
+7/13/1948,Sanremo,Cannes
+7/15/1948,Cannes,Briançon
+7/16/1948,Briançon,Aix-les-Bains
+7/18/1948,Aix-les-Bains,Lausanne
+7/19/1948,Lausanne,Mulhouse
+7/21/1948,Mulhouse,Strasbourg
+7/22/1948,Strasbourg,Metz
+7/23/1948,Metz,Liège
+7/24/1948,Liège,Roubaix
+7/25/1948,Roubaix,Paris
+6/25/1947,Paris,Lille
+6/26/1947,Lille,Brussels
+6/27/1947,Brussels,Luxembourg City
+6/28/1947,Luxembourg City,Strasbourg
+6/29/1947,Strasbourg,Besançon
+7/1/1947,Besançon,Lyon
+7/2/1947,Lyon,Grenoble
+7/3/1947,Grenoble,Briançon
+7/5/1947,Briançon,Digne
+7/6/1947,Digne,Nice
+7/8/1947,Nice,Marseille
+7/9/1947,Marseille,Montpellier
+7/10/1947,Montpellier,Carcassonne
+7/11/1947,Carcassonne,Luchon
+7/13/1947,Luchon,Pau
+7/14/1947,Pau,Bordeaux
+7/15/1947,Bordeaux,Les Sables-d'Olonne
+7/16/1947,Les Sables-d'Olonne,Vannes
+7/18/1947,Vannes,Saint-Brieuc
+7/19/1947,Saint-Brieuc,Caen
+7/20/1947,Caen,Paris
+7/10/1939,Paris,Caen
+7/11/1939,Caen,Vire
+7/11/1939,Vire,Rennes
+7/12/1939,Rennes,Brest
+7/13/1939,Brest,Lorient
+7/14/1939,Lorient,Nantes
+7/15/1939,Nantes,La Rochelle
+7/15/1939,La Rochelle,Royan
+7/17/1939,Royan,Bordeaux
+7/18/1939,Bordeaux,Salies-de-Béarn
+7/18/1939,Salies-de-Béarn,Pau
+7/19/1939,Pau,Toulouse
+7/21/1939,Toulouse,Narbonne
+7/21/1939,Narbonne,Béziers
+7/21/1939,Béziers,Montpellier
+7/22/1939,Montpellier,Marseille
+7/23/1939,Marseille,Saint-Raphaël
+7/23/1939,Saint-Raphaël,Monaco
+7/24/1939,Monaco,Monaco
+7/25/1939,Monaco,Digne
+7/26/1939,Digne,Briançon
+7/27/1939,Briançon,Briançon
+7/27/1939,Bonneval,Bourg-Saint-Maurice
+7/27/1939,Bourg-Saint-Maurice,Annecy
+7/29/1939,Annecy,Dôle
+7/29/1939,Dôle,Dijon
+7/30/1939,Dijon,Troyes
+7/30/1939,Troyes,Paris
+7/5/1938,Paris,Caen
+7/6/1938,Caen,Saint-Brieuc
+7/7/1938,Saint-Brieuc,Nantes
+7/8/1938,Nantes,La Roche-sur-Yon
+7/8/1938,La Roche-sur-Yon,La Rochelle
+7/8/1938,La Rochelle,Royan
+7/10/1938,Royan,Bordeaux
+7/11/1938,Bordeaux,Arcachon
+7/11/1938,Arcachon,Bayonne
+7/12/1938,Bayonne,Pau
+7/14/1938,Pau,Luchon
+7/16/1938,Luchon,Perpignan
+7/17/1938,Perpignan,Narbonne
+7/17/1938,Narbonne,Béziers
+7/17/1938,Béziers,Montpellier
+7/18/1938,Montpellier,Marseille
+7/19/1938,Marseille,Cannes
+7/21/1938,Cannes,Digne
+7/22/1938,Digne,Briançon
+7/23/1938,Briançon,Aix-les-Bains
+7/25/1938,Aix-les-Bains,Besançon
+7/26/1938,Besançon,Belfort
+7/26/1938,Belfort,Strasbourg
+7/27/1938,Strasbourg,Metz
+7/28/1938,Metz,Reims
+7/30/1938,Reims,Laon
+7/30/1938,Laon,Saint-Quentin
+7/30/1938,Saint-Quentin,Lille
+7/31/1938,Lille,Paris
+6/30/1937,Paris,Lille
+7/1/1937,Lille,Charleville
+7/2/1937,Charleville,Metz
+7/3/1937,Metz,Belfort
+7/4/1937,Belfort,Lons-le-Saunier
+7/4/1937,Lons-le-Saunier,Champagnole
+7/4/1937,Champagnole,Geneva
+7/6/1937,Geneva,Aix-les-Bains
+7/7/1937,Aix-les-Bains,Grenoble
+7/8/1937,Grenoble,Briançon
+7/9/1937,Briançon,Digne
+7/11/1937,Digne,Nice
+7/13/1937,Nice,Toulon
+7/13/1937,Toulon,Marseille
+7/14/1937,Marseille,Nîmes
+7/14/1937,Nîmes,Montpellier
+7/15/1937,Montpellier,Narbonne
+7/15/1937,Narbonne,Perpignan
+7/17/1937,Perpignan,Bourg-Madame
+7/17/1937,Bourg-Madame,Ax-les-Thermes
+7/17/1937,Ax-les-Thermes,Luchon
+7/19/1937,Luchon,Pau
+7/21/1937,Pau,Bordeaux
+7/22/1937,Bordeaux,Royan
+7/22/1937,Royan,Saintes
+7/22/1937,Saintes,La Rochelle
+7/23/1937,La Rochelle,La Roche-sur-Yon
+7/23/1937,La Roche-sur-Yon,Rennes
+7/24/1937,Rennes,Vire
+7/24/1937,Vire,Caen
+7/25/1937,Caen,Paris
+7/7/1936,Paris,Lille
+7/8/1936,Lille,Charleville
+7/9/1936,Charleville,Metz
+7/10/1936,Metz,Belfort
+7/11/1936,Belfort,Évian-les-Bains
+7/13/1936,Évian-les-Bains,Aix-les-Bains
+7/14/1936,Aix-les-Bains,Grenoble
+7/15/1936,Grenoble,Briançon
+7/16/1936,Briançon,Digne
+7/18/1936,Digne,Nice
+7/19/1936,Nice,Cannes
+7/21/1936,Cannes,Marseille
+7/22/1936,Marseille,Nîmes
+7/22/1936,Nîmes,Montpellier
+7/23/1936,Montpellier,Narbonne
+7/23/1936,Narbonne,Perpignan
+7/25/1936,Perpignan,Luchon
+7/27/1936,Luchon,Pau
+7/29/1936,Pau,Bordeaux
+7/30/1936,Bordeaux,Saintes
+7/30/1936,Saintes,La Rochelle
+7/31/1936,La Rochelle,La Roche-sur-Yon
+7/31/1936,La Roche-sur-Yon,Cholet
+7/31/1936,Cholet,Angers
+8/1/1936,Angers,Vire
+8/1/1936,Vire,Caen
+8/2/1936,Caen,Paris
+7/4/1935,Paris,Lille
+7/5/1935,Lille,Charleville
+7/6/1935,Charleville,Metz
+7/7/1935,Metz,Belfort
+7/8/1935,Belfort,"Geneva, Switzerland"
+7/8/1935,Geneva,Evian
+7/10/1935,Evian,Aix-les-Bains
+7/11/1935,Aix-les-Bains,Grenoble
+7/12/1935,Grenoble,Gap
+7/13/1935,Gap,Digne
+7/14/1935,Digne,Nice
+7/16/1935,Nice,Cannes
+7/17/1935,Cannes,Marseille
+7/18/1935,Marseille,Nîmes
+7/18/1935,Nîmes,Montpellier
+7/19/1935,Montpellier,Narbonne
+7/19/1935,Narbonne,Perpignan
+7/20/1935,Perpignan,Luchon
+7/22/1935,Luchon,Pau
+7/24/1935,Pau,Bordeaux
+7/25/1935,Bordeaux,Rochefort
+7/25/1935,Rochefort,La Rochelle
+7/26/1935,La Rochelle,La Roche sur Yon
+7/26/1935,La Roche sur Yon,Nantes
+7/27/1935,Nantes,Vire
+7/27/1935,Vire,Caen
+7/28/1935,Caen,Paris
+7/3/1934,Paris,Lille
+7/4/1934,Lille,Charleville
+7/5/1934,Charleville,Metz
+7/6/1934,Metz,Belfort
+7/7/1934,Belfort,Evian
+7/9/1934,Evian,Aix-les-Bains
+7/10/1934,Aix-les-Bains,Grenoble
+7/11/1934,Grenoble,Gap
+7/12/1934,Gap,Digne
+7/13/1934,Digne,Nice
+7/15/1934,Nice,Cannes
+7/16/1934,Cannes,Marseille
+7/17/1934,Marseille,Montpellier
+7/18/1934,Montpellier,Perpignan
+7/20/1934,Perpignan,Ax-les-Thermes
+7/21/1934,Ax-les-Thermes,Luchon
+7/22/1934,Luchon,Tarbes
+7/23/1934,Tarbes,Pau
+7/25/1934,Pau,Bordeaux
+7/26/1934,Bordeaux,La Rochelle
+7/27/1934,La Rochelle,La Roche sur Yon
+7/27/1934,La Roche sur Yon,Nantes
+7/28/1934,Nantes,Caen
+7/29/1934,Caen,Paris
+6/27/1933,Paris,Lille
+6/28/1933,Lille,Charleville
+6/29/1933,Charleville,Metz
+6/30/1933,Metz,Belfort
+7/1/1933,Belfort,Evian
+7/3/1933,Evian,Aix-les-Bains
+7/4/1933,Aix-les-Bains,Grenoble
+7/5/1933,Grenoble,Gap
+7/6/1933,Gap,Digne
+7/7/1933,Digne,Nice
+7/9/1933,Nice,Cannes
+7/10/1933,Cannes,Marseille
+7/11/1933,Marseille,Montpellier
+7/12/1933,Montpellier,Perpignan
+7/14/1933,Perpignan,Ax-les-Thermes
+7/15/1933,Ax-les-Thermes,Luchon
+7/16/1933,Luchon,Tarbes
+7/17/1933,Tarbes,Pau
+7/19/1933,Pau,Bordeaux
+7/20/1933,Bordeaux,La Rochelle
+7/21/1933,La Rochelle,Rennes
+7/22/1933,Rennes,Caen
+7/23/1933,Caen,Paris
+7/6/1932,Paris,Caen
+7/7/1932,Caen,Nantes
+7/9/1932,Nantes,Bordeaux
+7/11/1932,Bordeaux,Pau
+7/12/1932,Pau,Luchon
+7/14/1932,Luchon,Perpignan
+7/16/1932,Perpignan,Montpellier
+7/17/1932,Montpellier,Marseille
+7/18/1932,Marseille,Cannes
+7/19/1932,Cannes,Nice
+7/21/1932,Nice,Gap
+7/22/1932,Gap,Grenoble
+7/23/1932,Grenoble,Aix-les-Bains
+7/24/1932,Aix-les-Bains,Evian
+7/25/1932,Evian,Belfort
+7/26/1932,Belfort,Strasbourg
+7/27/1932,Strasbourg,Metz
+7/28/1932,Metz,Charleville
+7/29/1932,Charleville,Malo-les-Bains
+7/30/1932,Malo-les-Bains,Amiens
+7/31/1932,Amiens,Paris
+6/30/1931,Paris,Caen
+7/1/1931,Caen,Dinan
+7/2/1931,Dinan,Brest
+7/3/1931,Brest,Vannes
+7/4/1931,Vannes,Les Sables d'Olonne
+7/5/1931,Les Sables d'Olonne,Bordeaux
+7/6/1931,Bordeaux,Bayonne
+7/7/1931,Bayonne,Pau
+7/8/1931,Pau,Luchon
+7/10/1931,Luchon,Perpignan
+7/12/1931,Perpignan,Montpellier
+7/13/1931,Montpellier,Marseille
+7/14/1931,Marseille,Cannes
+7/15/1931,Cannes,Nice
+7/17/1931,Nice,Gap
+7/18/1931,Gap,Grenoble
+7/19/1931,Grenoble,Aix-les-Bains
+7/20/1931,Aix-les-Bains,Evian
+7/21/1931,Evian,Belfort
+7/22/1931,Belfort,Colmar
+7/23/1931,Colmar,Metz
+7/24/1931,Metz,Charleville
+7/25/1931,Charleville,Malo-les-Bains
+7/26/1931,Malo-les-Bains,Paris
+7/2/1930,Paris,Caen
+7/3/1930,Caen,Dinan
+7/4/1930,Dinan,Brest
+7/5/1930,Brest,Vannes
+7/6/1930,Vannes,Les Sables d'Olonne
+7/7/1930,Les Sables d'Olonne,Bordeaux
+7/8/1930,Bordeaux,Hendaye
+7/9/1930,Hendaye,Pau
+7/10/1930,Pau,Luchon
+7/12/1930,Luchon,Perpignan
+7/14/1930,Perpignan,Montpellier
+7/15/1930,Montpellier,Marseille
+7/16/1930,Marseille,Cannes
+7/17/1930,Cannes,Nice
+7/19/1930,Nice,Grenoble
+7/21/1930,Grenoble,Evian
+7/23/1930,Evian,Belfort
+7/24/1930,Belfort,Metz
+7/25/1930,Metz,Charleville
+7/26/1930,Charleville,Malo-les-Bains
+7/27/1930,Malo-les-Bains,Paris
+6/30/1929,Paris,Caen
+7/1/1929,Caen,Cherbourg
+7/2/1929,Cherbourg,Dinan
+7/3/1929,Dinan,Brest
+7/4/1929,Brest,Vannes
+7/5/1929,Vannes,Les Sables d'Olonne
+7/6/1929,Les Sables d'Olonne,Bordeaux
+7/7/1929,Bordeaux,Bayonne
+7/9/1929,Bayonne,Luchon
+7/11/1929,Luchon,Perpignan
+7/13/1929,Perpignan,Marseille
+7/15/1929,Marseille,Cannes
+7/16/1929,Cannes,Nice
+7/18/1929,Nice,Grenoble
+7/20/1929,Grenoble,Evian
+7/22/1929,Evian,Belfort
+7/23/1929,Belfort,Strasbourg
+7/24/1929,Strasbourg,Metz
+7/25/1929,Metz,Charleville
+7/26/1929,Charleville,Malo-les-Bains
+7/27/1929,Malo-les-Bains,Dieppe
+7/28/1929,Dieppe,Paris
+6/17/1928,Paris,Caen
+6/18/1928,Caen,Cherbourg
+6/19/1928,Cherbourg,Dinan
+6/20/1928,Dinan,Brest
+6/21/1928,Brest,Vannes
+6/22/1928,Vannes,Les Sables d'Olonne
+6/23/1928,Les Sables d'Olonne,Bordeaux
+6/24/1928,Bordeaux,Hendaye
+6/26/1928,Hendaye,Luchon
+6/28/1928,Luchon,Perpignan
+6/30/1928,Perpignan,Marseille
+7/2/1928,Marseille,Nice
+7/4/1928,Nice,Grenoble
+7/6/1928,Grenoble,Evian
+7/8/1928,Evian,Pontarlier
+7/9/1928,Pontarlier,Belfort
+7/10/1928,Belfort,Strasbourg
+7/11/1928,Strasbourg,Metz
+7/12/1928,Metz,Charleville
+7/13/1928,Charleville,Malo-les-Bains
+7/14/1928,Malo-les-Bains,Dieppe
+7/15/1928,Dieppe,Paris
+6/19/1927,Paris,Dieppe
+6/20/1927,Dieppe,Le Havre
+6/21/1927,Le Havre,Caen
+6/22/1927,Caen,Cherbourg
+6/23/1927,Cherbourg,Dinan
+6/24/1927,Dinan,Brest
+6/25/1927,Brest,Vannes
+6/26/1927,Vannes,Les Sables d'Olonne
+6/27/1927,Les Sables d'Olonne,Bordeaux
+6/28/1927,Bordeaux,Bayonne
+6/30/1927,Bayonne,Luchon
+7/2/1927,Luchon,Perpignan
+7/4/1927,Perpignan,Marseille
+7/5/1927,Marseille,Toulon
+7/6/1927,Toulon,Nice
+7/8/1927,Nice,Briançon
+7/9/1927,Briançon,Evian
+7/11/1927,Evian,Pontarlier
+7/12/1927,Pontarlier,Belfort
+7/13/1927,Belfort,Strasbourg
+7/14/1927,Strasbourg,Metz
+7/15/1927,Metz,Charleville
+7/16/1927,Charleville,Dunkerque
+7/17/1927,Dunkerque,Paris
+6/20/1926,Evian,Mülhausen
+6/22/1926,Mülhausen,Metz
+6/24/1926,Metz,Dunkerque
+6/26/1926,Dunkerque,Le Havre
+6/28/1926,Le Havre,Cherbourg
+6/30/1926,Cherbourg,Brest
+7/2/1926,Brest,Les Sables d'Olonne
+7/3/1926,Les Sables d'Olonne,Bordeaux
+7/4/1926,Bordeaux,Bayonne
+7/6/1926,Bayonne,Luchon
+7/8/1926,Luchon,Perpignan
+7/10/1926,Perpignan,Toulon
+7/12/1926,Toulon,Nice
+7/14/1926,Nice,Briançon
+7/16/1926,Briançon,Evian
+7/17/1926,Evian,Dijon
+7/18/1926,Dijon,Paris
+6/21/1925,Paris,Le Havre
+6/23/1925,Le Havre,Cherbourg
+6/25/1925,Cherbourg,Brest
+6/26/1925,Brest,Vannes
+6/27/1925,Vannes,Les Sables-d'Olonne
+6/28/1925,Les Sables-d'Olonne,Bordeaux
+6/29/1925,Bordeaux,Bayonne
+7/1/1925,Bayonne,Luchon
+7/3/1925,Luchon,Perpignan
+7/4/1925,Perpignan,Nîmes
+7/5/1925,Nîmes,Toulon
+7/7/1925,Toulon,Nice
+7/9/1925,Nice,Briançon
+7/11/1925,Briançon,Evian
+7/13/1925,Evian,Mulhouse
+7/15/1925,Mulhouse,Metz
+7/17/1925,Metz,Dunkerque
+7/19/1925,Dunkerque,Paris
+6/22/1924,Paris,Le Havre
+6/24/1924,Le Havre,Cherbourg
+6/26/1924,Cherbourg,Brest
+6/28/1924,Brest,Les Sables-d'Olonne
+6/30/1924,Les Sables-d'Olonne,Bayonne
+7/2/1924,Bayonne,Luchon
+7/4/1924,Luchon,Perpignan
+7/6/1924,Perpignan,Toulon
+7/8/1924,Toulon,Nice
+7/10/1924,Nice,Briançon
+7/12/1924,Briançon,Gex
+7/14/1924,Gex,Strasbourg
+7/16/1924,Strasbourg,Metz
+7/18/1924,Metz,Dunkerque
+7/20/1924,Dunkerque,Paris
+6/24/1923,Paris,Le Havre
+6/26/1923,Le Havre,Cherbourg
+6/28/1923,Cherbourg,Brest
+6/30/1923,Brest,Les Sables d'Olonne
+7/2/1923,Les Sables d'Olonne,Bayonne
+7/4/1923,Bayonne,Luchon
+7/6/1923,Luchon,Perpignan
+7/8/1923,Perpignan,Toulon
+7/10/1923,Toulon,Nice
+7/12/1923,Nice,Briançon
+7/14/1923,Briançon,Geneva
+7/16/1923,Geneva,Strasbourg
+7/18/1923,Strasbourg,Metz
+7/20/1923,Metz,Dunkerque
+7/22/1923,Dunkerque,Paris
+6/25/1922,Paris,Le Havre
+6/27/1922,Le Havre,Cherbourg
+6/29/1922,Cherbourg,Brest
+7/1/1922,Brest,Les Sables d'Olonne
+7/3/1922,Les Sables d'Olonne,Bayonne
+7/5/1922,Bayonne,Luchon
+7/7/1922,Luchon,Perpignan
+7/9/1922,Perpignan,Toulon
+7/11/1922,Toulon,Nice
+7/13/1922,Nice,Briançon
+7/15/1922,Briançon,Geneva
+7/17/1922,Geneva,Strasbourg
+7/19/1922,Strasbourg,Metz
+7/21/1922,Metz,Dunkerque
+7/23/1922,Dunkerque,Paris
+6/26/1921,Paris,Le Havre
+6/28/1921,Le Havre,Cherbourg
+6/30/1921,Cherbourg,Brest
+7/2/1921,Brest,Les Sables-d'Olonne
+7/4/1921,Les Sables-d'Olonne,Bayonne
+7/6/1921,Bayonne,Luchon
+7/8/1921,Luchon,Perpignan
+7/10/1921,Perpignan,Toulon
+7/12/1921,Toulon,Nice
+7/14/1921,Nice,Grenoble
+7/16/1921,Grenoble,Geneva
+7/18/1921,Geneva,Strasbourg
+7/20/1921,Strasbourg,Metz
+7/22/1921,Metz,Dunkerque
+7/24/1921,Dunkerque,Paris
+6/27/1920,Paris,Le Havre
+6/29/1920,Le Havre,Cherbourg
+7/1/1920,Cherbourg,Brest
+7/3/1920,Brest,Les Sables d'Olonne
+7/5/1920,Les Sables d'Olonne,Bayonne
+7/7/1920,Bayonne,Luchon
+7/9/1920,Luchon,Perpignan
+7/11/1920,Perpignan,Aix-en-Provence
+7/14/1920,Aix-en-Provence,Nice
+7/16/1920,Nice,Grenoble
+7/18/1920,Grenoble,Gex
+7/20/1920,Gex,Strasbourg
+7/22/1920,Strasbourg,Metz
+7/24/1920,Metz,Dunkerque
+7/27/1920,Dunkerque,Paris
+6/29/1919,Paris,Le Havre
+7/1/1919,Le Havre,Cherbourg
+7/3/1919,Cherbourg,Brest
+7/5/1919,Brest,Les Sables-d'Olonne
+7/7/1919,Les Sables-d'Olonne,Bayonne
+7/9/1919,Bayonne,Luchon
+7/11/1919,Luchon,Perpignan
+7/13/1919,Perpignan,Marseille
+7/15/1919,Marseille,Nice
+7/17/1919,Nice,Grenoble
+7/19/1919,Grenoble,Geneva
+7/21/1919,Geneva,Strasbourg
+7/23/1919,Strasbourg,Metz
+7/25/1919,Metz,Dunkerque
+7/27/1919,Dunkerque,Paris
+6/28/1914,Paris,Le Havre
+6/30/1914,Le Havre,Cherbourg
+7/2/1914,Cherbourg,Brest
+7/4/1914,Brest,La Rochelle
+7/6/1914,La Rochelle,Bayonne
+7/8/1914,Bayonne,Luchon
+7/10/1914,Luchon,Perpignan
+7/12/1914,Perpignan,Marseille
+7/14/1914,Marseille,Nice
+7/16/1914,Nice,Grenoble
+7/18/1914,Grenoble,Geneva
+7/20/1914,Geneva,Belfort
+7/22/1914,Belfort,Longwy
+7/24/1914,Longwy,Dunkerque
+7/26/1914,Dunkerque,Paris
+6/29/1913,Paris,Le Havre
+7/1/1913,Le Havre,Cherbourg
+7/3/1913,Cherbourg,Brest
+7/5/1913,Brest,La Rochelle
+7/7/1913,La Rochelle,Bayonne
+7/9/1913,Bayonne,Luchon
+7/11/1913,Luchon,Perpignan
+7/13/1913,Perpignan,Aix-en-Provence
+7/15/1913,Aix-en-Provence,Nice
+7/17/1913,Nice,Grenoble
+7/19/1913,Grenoble,Geneva
+7/21/1913,Geneva,Belfort
+7/23/1913,Belfort,Longwy
+7/25/1913,Longwy,Dunkerque
+7/27/1913,Dunkerque,Paris
+6/30/1912,Paris,Dunkerque
+7/2/1912,Dunkerque,Longwy
+7/4/1912,Longwy,Belfort
+7/6/1912,Belfort,Chamonix
+7/8/1912,Chamonix,Grenoble
+7/10/1912,Grenoble,Nice
+7/12/1912,Nice,Marseille
+7/14/1912,Marseille,Perpignan
+7/16/1912,Perpignan,Luchon
+7/18/1912,Luchon,Bayonne
+7/20/1912,Bayonne,La Rochelle
+7/21/1912,La Rochelle,Brest
+7/24/1912,Brest,Cherbourg
+7/26/1912,Cherbourg,Le Havre
+7/28/1912,Le Havre,Paris
+7/2/1911,Paris,Dunkerque
+7/4/1911,Dunkerque,Longwy
+7/6/1911,Longwy,Belfort
+7/8/1911,Belfort,Chamonix
+7/10/1911,Chamonix,Grenoble
+7/12/1911,Grenoble,Nice
+7/14/1911,Nice,Marseille
+7/16/1911,Marseille,Perpignan
+7/18/1911,Perpignan,Luchon
+7/20/1911,Luchon,Bayonne
+7/22/1911,Bayonne,La Rochelle
+7/23/1911,La Rochelle,Brest
+7/26/1911,Brest,Cherbourg
+7/28/1911,Cherbourg,Le Havre
+7/30/1911,Le Havre,Paris
+7/3/1910,Paris,Roubaix
+7/5/1910,Roubaix,Metz
+7/7/1910,Metz,Belfort
+7/9/1910,Belfort,Lyon
+7/11/1910,Lyon,Grenoble
+7/13/1910,Grenoble,Nice
+7/15/1910,Nice,Nîmes
+7/17/1910,Nîmes,Perpignan
+7/19/1910,Perpignan,Luchon
+7/21/1910,Luchon,Bayonne
+7/23/1910,Bayonne,Bordeaux
+7/25/1910,Bordeaux,Nantes
+7/27/1910,Nantes,Brest
+7/29/1910,Brest,Caen
+7/31/1910,Caen,Paris
+7/5/1909,Paris,Roubaix
+7/7/1909,Roubaix,Metz
+7/9/1909,Metz,Belfort
+7/11/1909,Belfort,Lyon
+7/13/1909,Lyon,Grenoble
+7/15/1909,Grenoble,Nice
+7/17/1909,Nice,Nîmes
+7/19/1909,Nîmes,Toulouse
+7/21/1909,Toulouse,Bayonne
+7/23/1909,Bayonne,Bordeaux
+7/25/1909,Bordeaux,Nantes
+7/27/1909,Nantes,Brest
+7/29/1909,Brest,Caen
+8/1/1909,Caen,Paris
+7/13/1908,Paris,Roubaix
+7/15/1908,Roubaix,Metz
+7/17/1908,Metz,Belfort
+7/19/1908,Belfort,Lyon
+7/21/1908,Lyon,Grenoble
+7/23/1908,Grenoble,Nice
+7/25/1908,Nice,Nîmes
+7/27/1908,Nîmes,Toulouse
+7/29/1908,Toulouse,Bayonne
+7/31/1908,Bayonne,Bordeaux
+8/2/1908,Bordeaux,Nantes
+8/4/1908,Nantes,Brest
+8/6/1908,Brest,Caen
+8/9/1908,Caen,Paris
+7/8/1907,Paris,Roubaix
+7/10/1907,Roubaix,Metz
+7/12/1907,Metz,Belfort
+7/14/1907,Belfort,Lyon
+7/16/1907,Lyon,Grenoble
+7/18/1907,Grenoble,Nice
+7/20/1907,Nice,Nîmes
+7/22/1907,Nîmes,Toulouse
+7/24/1907,Toulouse,Bayonne
+7/26/1907,Bayonne,Bordeaux
+7/28/1907,Bordeaux,Nantes
+7/30/1907,Nantes,Brest
+8/1/1907,Brest,Caen
+8/4/1907,Caen,Paris
+7/4/1906,Paris,Lille
+7/6/1906,Douai,Nancy
+7/8/1906,Nancy,Dijon
+7/10/1906,Dijon,Grenoble
+7/12/1906,Grenoble,Nice
+7/14/1906,Nice,Marseille
+7/16/1906,Marseille,Toulouse
+7/18/1906,Toulouse,Bayonne
+7/20/1906,Bayonne,Bordeaux
+7/22/1906,Bordeaux,Nantes
+7/24/1906,Nantes,Brest
+7/26/1906,Brest,Caen
+7/29/1906,Caen,Paris
+7/9/1905,Paris,Nancy
+7/11/1905,Nancy,Besançon
+7/14/1905,Besançon,Grenoble
+7/16/1905,Grenoble,Toulon
+7/18/1905,Toulon,Nîmes
+7/20/1905,Nîmes,Toulouse
+7/22/1905,Toulouse,Bordeaux
+7/24/1905,Bordeaux,La Rochelle
+7/26/1905,La Rochelle,Rennes
+7/28/1905,Rennes,Caen
+7/29/1905,Caen,Paris
+7/2/1904,Montgeron,Lyon
+7/9/1904,Lyon,Marseille
+7/13/1904,Marseille,Toulouse
+7/17/1904,Toulouse,Bordeaux
+7/20/1904,Bordeaux,Nantes
+7/23/1904,Nantes,Paris
+7/1/1903,Paris,Lyon
+7/5/1903,Lyon,Marseille
+7/8/1903,Marseille,Toulouse
+7/12/1903,Toulouse,Bordeaux
+7/13/1903,Bordeaux,Nantes
+7/18/1903,Nantes,Paris
