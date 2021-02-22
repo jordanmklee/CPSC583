@@ -12,11 +12,17 @@ The focus for subset 1 was to show how stage distances of the Tour de France cha
 
 However, this subset is still too large to sketch in its entirety, so sketches were based on a smaller subset. Certain sketches showed data for a few years at a time, or a limited selection of stages. I also explored the idea of visualizing a single year, and comparing it to the rest of the data through averages, minimum/maximum values, etc.
 
+See [./subset1.csv](./subset1.csv)
+
+<br/>
+
 ### Subset 2: Origin/Destination City, and Date
 
 Subset 2 includes the origin and destination cities, and dates. This subset contains data for every single tour (recorded in this dataset). Although date is included, there is less emphasis on how they change over time and more on the year that they were involved. Being a host city can bring prestige and an economic boom to the area, and visualizations of this subset can be helpful for further analysis.
 
 This subset is of similar size to Subset 1, but due to the categorical nature of the data I found it easier to include the entire subset in my sketches. Some sketches visualize only one year in comparison to the data, and some sketches do not include date at all and focuses on the frequency of popular cities included in the Tour. 
+
+See [./subset2.csv](./subset2.csv)
 
 <div style="page-break-after: always;"></div>
 
@@ -49,6 +55,7 @@ Experimenting with colour made it apparent that there were not enough distinguis
 As well, the visualizations focused only on the subset and may not work as well if the subset was expanded to include other variables. The refined sketches have ideas that are specialized to represent that information, and introducing another column to the subset is difficult.
 
 <div style="page-break-after: always;"></div>
+
 ## Conclusion
 
 From the sketches done, showing stage numbers and distances over years is likely best with a line or bar chart. Representing the large amount of data all at once in an easily comparable and comprehensible manner is a challenging task, and this traditional visualization is a compact way of accomplishing it. For Subset 2, cities are commonly shown on a map, and by leveraging this familiarity an effective visualization can be created. 
@@ -78,6 +85,8 @@ On the other hand, non-traditional visualizations are not without their strength
 ![subset-2-refined-1](./report.assets/subset-2-refined-1.jpeg)
 
 ![subset-2-refined-2](./report.assets/subset-2-refined-2.jpeg)
+
+<div style="page-break-after: always;"></div>
 
 ### Buddy System 
 
