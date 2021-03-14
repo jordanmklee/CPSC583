@@ -620,9 +620,7 @@ function axis(orient, scale) {
         line = tick.select("line"),
         text = tick.select("text");
 
-    path = path.merge(path.enter().insert("path", ".tick")
-        .attr("class", "domain")
-        .attr("stroke", "currentColor"));
+	  // TODO REMOVED AXES
 
     tick = tick.merge(tickEnter);
 
@@ -12436,7 +12434,7 @@ function linearish(scale) {
 
   scale.ticks = function(count) {
     var d = domain();
-    return ticks(d[0], d[d.length - 1], count == null ? 10 : count);
+    return ticks(d[0], d[d.length - 1], count == null ? 4 : count);
   };
 
   scale.tickFormat = function(count, specifier) {
@@ -12654,7 +12652,8 @@ function loggish(transform) {
     if (typeof specifier !== "function") specifier = exports.format(specifier);
     if (count === Infinity) return specifier;
     if (count == null) count = 10;
-    var k = Math.max(1, base * count / scale.ticks().length); // TODO fast estimate?
+    var k = Math.max(1, base * count / scale.ticks().length);
+	  
     return function(d) {
       var i = d / pows(Math.round(logs(d)));
       if (i * base < base - 0.5) i *= base;
