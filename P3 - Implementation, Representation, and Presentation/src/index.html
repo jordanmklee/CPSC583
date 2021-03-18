@@ -32,12 +32,7 @@
 	<div style="text-align: center; font-family: Verdana; font-size: 36px; color: yellow; padding: 20px">Host Cities of Tour de France</div>
 	
 	<svg style="display: block; margin: auto" width=700 height=700>
-		<g id="visualization">
-			<g id="circle"></g>
-			<g id="labels"></g>
-			<g id="spokes"></g>
-			<g id="spokeBG"></g>
-		</g>
+		<g id="circle"></g>
 	</svg>
 	
 	<div id="yearDisplay" style="text-align: center; font-family: Verdana; font-size: 36px; color: yellow"></div>
@@ -57,12 +52,44 @@
 
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
-		update();
 	}
+	
+	slider.onchange = function(){
+		update(this.value);
+	}
+	
+	// Updates the visualization on slider move
+	function update(year){
+		svg.select("#labels").remove();
+		svg.select("#spokeBG").remove();
+		svg.select("#spokes").remove();
+		
+		d3.csv("stages_TDF.csv").then(showData);
+	}
+	
+	
+	
 	
 	// D3
 	var svg = d3.select("svg");
 	var data = d3.csv("stages_TDF.csv").then(showData);
+	
+	// Circle variables
+	var circleX = 350;
+	var circleY = circleX;
+	var radius = 150;
+	
+	// Draw circle
+	var circle = d3.select("#circle")
+					.append("circle")
+					.attr("cx", circleX)
+					.attr("cy", circleY)
+					.attr("r", radius)
+					.style("fill", "none")
+					.style("stroke", "gray")
+					.style("stroke-width", 5);
+	
+	
 	
 	// Returns the array of a city name in array
 	function indexOfCity(cities, newCity){
@@ -77,10 +104,12 @@
 	// Print stage data
 	function showData(stages){
 		var selectedYearCities = new Array();
+		var selectedYear = yearDisplay.innerHTML;
+		
 		
 		// Generate list of selected year's cities for labels
 		for(var stage of stages){
-			if(stage.Date < "2018" && stage.Date > "2017"){				// TODO magic numbers here
+			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
 				if(indexOfCity(selectedYearCities, stage.Origin) == -1){
 					selectedYearCities.push({"name":stage.Origin, "value":0});
 				}
@@ -102,32 +131,13 @@
 			}
 		}
 		
-		console.log(selectedYearCities);
-		
 		var scaleX = d3.scaleBand()
 						.domain(selectedYearCities.map(city => city.name))
 						.range([0, 360])
 		
-		
-		// Circle variables
-		var circleX = 350;
-		var circleY = circleX;
-		var radius = 150;
-		
-		
-		
-		// Draw circle
-		var circle = d3.select("#circle")
-						.append("circle")
-						.attr("cx", circleX)
-						.attr("cy", circleY)
-						.attr("r", radius)
-						.style("fill", "none")
-						.style("stroke", "gray")
-						.style("stroke-width", 5);
-		
 		// Draw labels
-		var labels = d3.select("#labels")
+		var labels = svg.append("g")
+						.attr("id", "labels")
 						.selectAll("text")
 						.data(selectedYearCities).enter()
 						.append("text")
@@ -145,14 +155,14 @@
 		
 		// Calculate the frequency of the most common host city
 		var max = d3.max(selectedYearCities, city => city.value);
-		console.log(max);
 		
 		var scaleSpoke = d3.scaleLinear()
 							.domain([0, max])
 							.range([0, radius]);
 		
 		// Draw spoke background
-		var spokeBG = d3.select("#spokeBG")
+		var spokeBG = svg.append("g")
+						.attr("id", "spokeBG")
 						.selectAll("rect")
 						.data(selectedYearCities).enter()
 						.append("rect")
@@ -164,7 +174,8 @@
 						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
 		// Draw spokes (length is frequency)
-		var spokes = d3.select("#spokes")
+		var spokes = svg.append("g")
+						.attr("id", "spokes")
 						.selectAll("rect")
 						.data(selectedYearCities).enter()
 						.append("rect")
