@@ -195,5 +195,21 @@
 						.style("fill", "rgb(255,255,0)")
 						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
 		
+		
+		// Draw message for missing years due to World Wars
+		var ww1 = (selectedYear >= 1915) && (selectedYear <= 1918);
+		var ww2 = (selectedYear >= 1940) && (selectedYear <= 1946);
+		if(ww1 || ww2){
+			svg.select("#labels")
+				.append("text")
+				.text("No Tour in " + selectedYear + " due to World War " + ((ww1) ? "1" : "2"))
+				.attr("x", circleX)
+				.attr("y", circleY)
+				.style("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", "24px")
+				.attr("text-anchor", "middle");
+		}
+		
 	}
 </script>
