@@ -19,3 +19,15 @@ TODO live version on pages.cpsc.ucalgary.ca/jordan.lee2
 ## Process of Implementing Representation and Presentation
 
 TODO 250 writeup about the process of coding alternatives and thoughts about results
+
+
+
+
+
+Seeing the entire dataset would be overwhelming (over 700 unique locations), so had to limit to each year (around 21 usually)
+
+Wheel idea: ordering starts like a clock
+
+Map with flags?
+
+Say something about the official tour colours used
