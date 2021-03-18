@@ -38,7 +38,7 @@
 </head>
 
 <body>
-	<div>CITIES OF THE TOUR DE FRANCE</div>
+	<div>TOUR DE FRANCE HOST LOCATIONS</div>
 	
 	<svg style="display: block; margin: auto" width=700 height=700>
 		<g id="circle"></g>
@@ -49,8 +49,6 @@
 	<div class="slidercontainer">
 		<input id="year" class="slider" type="range" min="1903" max="2017" value="2017">
 	</div>
-
-	
 </body>
 
 <script>
@@ -103,14 +101,13 @@
 	// Returns the array of a city name in array
 	function indexOfCity(cities, newCity){
 		for(var i = 0; i < cities.length; i++){
-			if(cities[i].name == newCity){
+			if(cities[i].name == newCity)
 				return i;
-			}
 		}
 		return -1;
 	}
 	
-	// Print stage data
+	// Draw stage data for year selected on slider
 	function showData(stages){
 		var selectedYearCities = new Array();
 		var selectedYear = yearDisplay.innerHTML;
@@ -119,28 +116,27 @@
 		// Generate list of selected year's cities for labels
 		for(var stage of stages){
 			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
-				if(indexOfCity(selectedYearCities, stage.Origin) == -1){
+				if(indexOfCity(selectedYearCities, stage.Origin) == -1)
 					selectedYearCities.push({"name":stage.Origin, "value":0});
-				}
-				if(indexOfCity(selectedYearCities, stage.Destination) == -1){
+				if(indexOfCity(selectedYearCities, stage.Destination) == -1)
 					selectedYearCities.push({"name":stage.Destination, "value":0});
-				}
 			}
 		}
+		
 		
 		// Compute frequency of each city as host
 		for(var stage of stages){
 			var originIndex = indexOfCity(selectedYearCities, stage.Origin);
-			if(originIndex != -1){
+			if(originIndex != -1)
 				selectedYearCities[originIndex].value++;
-			}
+			
 			var destinationIndex = indexOfCity(selectedYearCities, stage.Destination);
-			if(destinationIndex != -1){
+			if(destinationIndex != -1)
 				selectedYearCities[destinationIndex].value++;
-			}
 		}
 		
-		var scaleX = d3.scaleBand()
+		// Scale number of cities to go around circle
+		var scaleAngle = d3.scaleBand()
 						.domain(selectedYearCities.map(city => city.name))
 						.range([-90, 270])
 		
@@ -156,10 +152,10 @@
 						.attr("fill", "rgb(255,255,255)")
 						.attr("font-family", "Open sans")
 						.attr("dominant-baseline", "central")
-						.attr("text-anchor", function(d) {return (scaleX(d.name) > 90) ? "end" : "start"})
-						.attr("transform", function(d) {return (scaleX(d.name) > 90) ? 
-								"rotate(" + (scaleX(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
-							   	"rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+						.attr("text-anchor", function(d) {return (scaleAngle(d.name) > 90) ? "end" : "start"})
+						.attr("transform", function(d) {return (scaleAngle(d.name) > 90) ? 
+								"rotate(" + (scaleAngle(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
+							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
 		
 		
 		
@@ -167,6 +163,7 @@
 		// Calculate the frequency of the most common host city
 		var max = d3.max(selectedYearCities, city => city.value);
 		
+		// Scale bar ("spoke") length
 		var scaleSpoke = d3.scaleLinear()
 							.domain([0, max])
 							.range([0, radius]);
@@ -183,9 +180,9 @@
 						.attr("width", radius)
 						.style("fill", "rgb(105,105,105)")
 						.style("fill-opacity", 0.3)
-						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ")"});
+						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
-		// Draw spokes (length is frequency)
+		// Draw spokes (length as frequency)
 		var spokes = svg.append("g")
 						.attr("id", "spokes")
 						.selectAll("rect")
@@ -193,10 +190,10 @@
 						.append("rect")
 						.attr("x", circleX)
 						.attr("y", circleY)
-						.attr("height", 5)
+						.attr("height", 3)
 						.attr("width", function(d) {return scaleSpoke(d.value)})
 						.style("fill", "rgb(255,255,0)")
-						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
+						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
 		
 	}
 </script>
