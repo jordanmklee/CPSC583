@@ -28,12 +28,16 @@
 </style>
 </head>
 
-<body style="background-color: rgb(36,36,36)">
+<body style="background-color: rgb(100,100,100)">
 	<div style="text-align: center; font-family: Verdana; font-size: 36px; color: yellow; padding: 20px">Host Cities of Tour de France</div>
 	
 	<svg style="display: block; margin: auto" width=700 height=700>
-		<g id="circle"></g>
-		<g id="labels"></g>
+		<g id="visualization">
+			<g id="circle"></g>
+			<g id="labels"></g>
+			<g id="spokes"></g>
+			<g id="spokeBG"></g>
+		</g>
 	</svg>
 	
 	<div id="yearDisplay" style="text-align: center; font-family: Verdana; font-size: 36px; color: yellow"></div>
@@ -46,61 +50,69 @@
 </body>
 
 <script>
-	
-	
-	
 	// Year slider functionality
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
-	
+
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
+		update();
 	}
 	
-	
-	
-	// D3 to draw spokes
+	// D3
+	var svg = d3.select("svg");
 	var data = d3.csv("stages_TDF.csv").then(showData);
 	
-	
-	// Checks array objects if it contains a city
-	function containsCity(cities, newCity){
+	// Returns the array of a city name in array
+	function indexOfCity(cities, newCity){
 		for(var i = 0; i < cities.length; i++){
 			if(cities[i].name == newCity){
-				return true;
+				return i;
 			}
 		}
-		return false;
+		return -1;
 	}
 	
 	// Print stage data
 	function showData(stages){
-		var uniqueCities = new Array();
-		var currentYearStages = new Array();
+		var selectedYearCities = new Array();
 		
+		// Generate list of selected year's cities for labels
 		for(var stage of stages){
 			if(stage.Date < "2018" && stage.Date > "2017"){				// TODO magic numbers here
-				if(!containsCity(uniqueCities, stage.Origin)){
-					uniqueCities.push({"name":stage.Origin});
+				if(indexOfCity(selectedYearCities, stage.Origin) == -1){
+					selectedYearCities.push({"name":stage.Origin, "value":0});
 				}
-				if(!containsCity(uniqueCities, stage.Destination)){
-					uniqueCities.push({"name":stage.Destination});
+				if(indexOfCity(selectedYearCities, stage.Destination) == -1){
+					selectedYearCities.push({"name":stage.Destination, "value":0});
 				}
-			currentYearStages.push(stage);
 			}
 		}
 		
-		console.log(uniqueCities);
+		// Compute frequency of each city as host
+		for(var stage of stages){
+			var originIndex = indexOfCity(selectedYearCities, stage.Origin);
+			if(originIndex != -1){
+				selectedYearCities[originIndex].value++;
+			}
+			var destinationIndex = indexOfCity(selectedYearCities, stage.Destination);
+			if(destinationIndex != -1){
+				selectedYearCities[destinationIndex].value++;
+			}
+		}
+		
+		console.log(selectedYearCities);
 		
 		var scaleX = d3.scaleBand()
-						.domain(uniqueCities.map(city => city.name))
+						.domain(selectedYearCities.map(city => city.name))
 						.range([0, 360])
 		
 		
+		// Circle variables
 		var circleX = 350;
 		var circleY = circleX;
-		var radius = 200;
+		var radius = 150;
 		
 		
 		
@@ -117,7 +129,7 @@
 		// Draw labels
 		var labels = d3.select("#labels")
 						.selectAll("text")
-						.data(uniqueCities).enter()
+						.data(selectedYearCities).enter()
 						.append("text")
 						.attr("x", circleX)
 						.attr("y", circleY)
@@ -131,29 +143,37 @@
 		
 		
 		
+		// Calculate the frequency of the most common host city
+		var max = d3.max(selectedYearCities, city => city.value);
+		console.log(max);
 		
+		var scaleSpoke = d3.scaleLinear()
+							.domain([0, max])
+							.range([0, radius]);
 		
+		// Draw spoke background
+		var spokeBG = d3.select("#spokeBG")
+						.selectAll("rect")
+						.data(selectedYearCities).enter()
+						.append("rect")
+						.attr("x", circleX)
+						.attr("y", circleY)
+						.attr("height", 2)
+						.attr("width", radius)
+						.style("fill-opacity", 0.3)
+						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
-		
-		/*
-		var x = d3.scaleBand()
-			.range([0, 360])
-			.align(0)
-			.domain(stages.map(d => d))
-		
-		var svg = d3.select("svg");
-		
-		svg.selectAll("text.label")
-			.data(selectedYearCities).enter()
-			.append("text")
-			.attr("class", "label")
-			.attr("x", "200")
-			.attr("y", "200")
-			.attr("fill", "yellow")
-			.text(function(d) {return d})
-			.attr("text-anchor", "middle")
-			.attr("transform", "rotate(" + x(d) + ")");
-			*/
+		// Draw spokes (length is frequency)
+		var spokes = d3.select("#spokes")
+						.selectAll("rect")
+						.data(selectedYearCities).enter()
+						.append("rect")
+						.attr("x", circleX)
+						.attr("y", circleY)
+						.attr("height", 5)
+						.attr("width", function(d) {return scaleSpoke(d.value)})
+						.style("fill", "red")
+						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
 		
 	}
 </script>
