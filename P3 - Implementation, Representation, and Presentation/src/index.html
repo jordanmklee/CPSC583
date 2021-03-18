@@ -133,7 +133,7 @@
 		
 		var scaleX = d3.scaleBand()
 						.domain(selectedYearCities.map(city => city.name))
-						.range([0, 360])
+						.range([-90, 270])
 		
 		// Draw labels
 		var labels = svg.append("g")
@@ -146,9 +146,11 @@
 						.text(function(d) {return d.name})
 						.attr("fill", "yellow")
 						.attr("font-family", "Verdana")
-						.attr("text-anchor", "start")
 						.attr("dominant-baseline", "central")
-						.attr("transform", function(d) {return "rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ") translate(" + (radius + 10) + ", 0)"});
+						.attr("text-anchor", function(d) {return (scaleX(d.name) > 90) ? "end" : "start"})
+						.attr("transform", function(d) {return (scaleX(d.name) > 90) ? 
+								"rotate(" + (scaleX(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
+							   	"rotate(" + scaleX(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
 		
 		
 		
