@@ -53,7 +53,7 @@
 	<div id="yearDisplay"></div>
 	
 	<div class="slidercontainer">
-		<input id="year" class="slider" type="range" min="1903" max="2017" value="2017">
+		<input id="year" class="slider" type="range" min="1903" max="2017" value="1903">
 	</div>
 </body>
 
@@ -74,8 +74,7 @@
 	// Updates the visualization on slider move
 	function update(year){
 		svg.select("#labels").remove();
-		svg.select("#spokeBG").remove();
-		svg.select("#spokes").remove();
+		svg.select("#paths").remove();
 		
 		d3.csv("stages_TDF.csv").then(showData);
 	}
@@ -113,33 +112,35 @@
 		return -1;
 	}
 	
+	
 	// Draw stage data for year selected on slider
 	function showData(stages){
 		var selectedYearCities = new Array();
 		var selectedYear = yearDisplay.innerHTML;
+		var selectedYearStages = new Array();
 		
-		
-		// Generate list of selected year's cities for labels
+		// Generate list of selected year information
 		for(var stage of stages){
 			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
+				// Add to city label list
 				if(indexOfCity(selectedYearCities, stage.Origin) == -1)
-					selectedYearCities.push({"name":stage.Origin, "value":0});
+					selectedYearCities.push({"name":stage.Origin});
 				if(indexOfCity(selectedYearCities, stage.Destination) == -1)
-					selectedYearCities.push({"name":stage.Destination, "value":0});
+					selectedYearCities.push({"name":stage.Destination});
+				
+				selectedYearStages.push(stage);		// Add stage information to selected year array
 			}
 		}
 		
+		// Sort displayed cities by alphabetical order
+		selectedYearCities.sort(function(a, b){
+			if(a.name < b.name)
+				return -1;
+			if(a.name > b.name)
+				return 1;
+			return 0;
+		});
 		
-		// Compute frequency of each city as host
-		for(var stage of stages){
-			var originIndex = indexOfCity(selectedYearCities, stage.Origin);
-			if(originIndex != -1)
-				selectedYearCities[originIndex].value++;
-			
-			var destinationIndex = indexOfCity(selectedYearCities, stage.Destination);
-			if(destinationIndex != -1)
-				selectedYearCities[destinationIndex].value++;
-		}
 		
 		// Scale number of cities to go around circle
 		var scaleAngle = d3.scaleBand()
@@ -165,41 +166,33 @@
 		
 		
 		
+		// Draw paths
+		// Coordinates of start/end points calculated by the following, where A is the angle of label
+		// Angle is multiplied by pi/180 to convert to radians, since scaleAngle outputs in degrees
+		// x = r * cos(A) + x0
+		// y = r * sin(A) + y0
+		svg.append("g")
+			.attr("id", "paths")
+			.selectAll("path")
+			.data(selectedYearStages).enter()
+			.append("path")
+			.attr("stroke", "yellow")
+			.attr("fill", "none")
+			.attr("d", function(d){return "M " + 													// Start point of path
+				(radius * Math.cos(scaleAngle(d.Origin) * (Math.PI/180)) + circleX) + " " +
+				(radius * Math.sin(scaleAngle(d.Origin) * (Math.PI/180)) + circleY) + 
+				" Q " +	circleX + " " + circleY + " " +								 				// Control point of curve
+				(radius * Math.cos(scaleAngle(d.Destination) * (Math.PI/180)) + circleX) + " " + 	// End point of path
+				(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)});
 		
-		// Calculate the frequency of the most common host city
-		var max = d3.max(selectedYearCities, city => city.value);
 		
-		// Scale bar ("spoke") length
-		var scaleSpoke = d3.scaleLinear()
-							.domain([0, max])
-							.range([0, radius]);
 		
-		// Draw spoke background
-		var spokeBG = svg.append("g")
-						.attr("id", "spokeBG")
-						.selectAll("rect")
-						.data(selectedYearCities).enter()
-						.append("rect")
-						.attr("x", circleX)
-						.attr("y", circleY)
-						.attr("height", 2)
-						.attr("width", radius)
-						.style("fill", "rgb(105,105,105)")
-						.style("fill-opacity", 0.3)
-						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
-		// Draw spokes (length as frequency)
-		var spokes = svg.append("g")
-						.attr("id", "spokes")
-						.selectAll("rect")
-						.data(selectedYearCities).enter()
-						.append("rect")
-						.attr("x", circleX)
-						.attr("y", circleY)
-						.attr("height", 3)
-						.attr("width", function(d) {return scaleSpoke(d.value)})
-						.style("fill", "rgb(255,255,0)")
-						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
+		
+		
+		
+		
+		
 		
 		
 		// Draw message for missing years due to World Wars
