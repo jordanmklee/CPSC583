@@ -62,6 +62,7 @@
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
+	slider.focus();
 
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
@@ -165,6 +166,14 @@
 							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
 		
 		
+		// Vary path by distance
+		var distances = selectedYearStages.map(stage => parseFloat(stage.Distance))
+		var maxDistance = Math.max.apply(Math, distances);
+		var minDistance = Math.min.apply(Math, distances);
+		var scaleDistance = d3.scaleLinear()
+								.domain([minDistance, maxDistance])
+								.range([0.2, 1]);
+		
 		
 		// Draw paths
 		// Coordinates of start/end points calculated by the following, where A is the angle of label
@@ -177,21 +186,16 @@
 			.data(selectedYearStages).enter()
 			.append("path")
 			.attr("stroke", "yellow")
+			.attr("stroke-width", function(d){return scaleDistance(d.Distance)})
 			.attr("fill", "none")
 			.attr("d", function(d){return "M " + 													// Start point of path
 				(radius * Math.cos(scaleAngle(d.Origin) * (Math.PI/180)) + circleX) + " " +
 				(radius * Math.sin(scaleAngle(d.Origin) * (Math.PI/180)) + circleY) + 
-				" Q " +	circleX + " " + circleY + " " +								 				// Control point of curve
+				" Q " +																 				// Control point of curve
+				((radius * scaleDistance(d.Distance)) * Math.cos((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleX) + " " +
+				((radius * scaleDistance(d.Distance)) * Math.sin((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleY) + " " +
 				(radius * Math.cos(scaleAngle(d.Destination) * (Math.PI/180)) + circleX) + " " + 	// End point of path
 				(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)});
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		

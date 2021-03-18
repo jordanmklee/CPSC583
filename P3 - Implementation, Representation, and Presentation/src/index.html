@@ -62,7 +62,8 @@
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
-
+	slider.focus();
+	
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
 	}
