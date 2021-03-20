@@ -94,11 +94,14 @@
 	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
 	var radius = circleY/2;
 	
+	var gray1 = "rgb(105,105,105)"
 	
 	
 	// D3
 	var svg = d3.select("svg");
 	var data = d3.csv("stages_TDF.csv").then(showData);
+	var legend = svg.append("g")
+					.attr("id", "legend")
 	
 	// Draw circle
 	var circle = d3.select("#circle")
@@ -107,8 +110,39 @@
 					.attr("cy", circleY)
 					.attr("r", radius)
 					.style("fill", "none")
-					.style("stroke", "rgb(105,105,105)")
+					.style("stroke", gray1)
 					.style("stroke-width", 5);
+	
+	// Draw distance scale
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95))
+	// Graduations
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 10)
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 7)
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 10)
 	
 	
 	
@@ -140,38 +174,58 @@
 		}
 		
 		
-		// Compute frequency of each city as host
-		for(var stage of stages){
-			var originIndex = indexOfCity(selectedYearCities, stage.Origin);
-			if(originIndex != -1)
-				selectedYearCities[originIndex].value++;
-			
-			var destinationIndex = indexOfCity(selectedYearCities, stage.Destination);
-			if(destinationIndex != -1)
-				selectedYearCities[destinationIndex].value++;
-		}
+		// Calculate the maximum distance of stages
+		var max = d3.max(selectedYearStages.map(stage => parseFloat(stage.Distance)));
 		
 		// Scale number of cities to go around circle
 		var scaleAngle = d3.scaleBand()
 						.domain(selectedYearCities.map(city => city.name))
 						.range([-90, 270])
 		
+		
+		
 		// Draw labels
 		var labels = svg.append("g")
 						.attr("id", "labels")
-						.selectAll("text")
-						.data(selectedYearCities).enter()
-						.append("text")
-						.attr("x", circleX)
-						.attr("y", circleY)
-						.text(function(d) {return d.name})
-						.attr("fill", "rgb(255,255,255)")
-						.attr("font-family", "Open sans")
-						.attr("dominant-baseline", "central")
-						.attr("text-anchor", function(d) {return (scaleAngle(d.name) > 90) ? "end" : "start"})
-						.attr("transform", function(d) {return (scaleAngle(d.name) > 90) ? 
-								"rotate(" + (scaleAngle(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
-							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+		labels.selectAll("text")
+				.data(selectedYearCities).enter()
+				.append("text")
+				.attr("x", circleX)
+				.attr("y", circleY)
+				.text(function(d) {return d.name})
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("dominant-baseline", "central")
+				.attr("text-anchor", function(d) {return (scaleAngle(d.name) > 90) ? "end" : "start"})
+				.attr("transform", function(d) {return (scaleAngle(d.name) > 90) ? 
+						"rotate(" + (scaleAngle(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
+						"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+
+		// Draw distance scale legend
+		labels.append("text")
+				.text("0")
+				.attr("x", (parseFloat(svg.style("width"))/2) - (radius/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
+		labels.append("text")
+				.text(max/2)
+				.attr("x", (parseFloat(svg.style("width"))/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")	
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
+		labels.append("text")
+				.text(max)
+				.attr("x", (parseFloat(svg.style("width"))/2) + (radius/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
 		
 		
 		
@@ -193,7 +247,7 @@
 						.attr("y", circleY)
 						.attr("height", 2)
 						.attr("width", radius)
-						.style("fill", "rgb(105,105,105)")
+						.style("fill", gray1)
 						.style("fill-opacity", 0.3)
 						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
