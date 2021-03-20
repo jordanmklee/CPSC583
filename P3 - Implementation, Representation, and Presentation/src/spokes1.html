@@ -203,7 +203,7 @@
 
 		// Draw distance scale legend
 		labels.append("text")
-				.text("0")
+				.text("0 km")
 				.attr("x", (parseFloat(svg.style("width"))/2) - (radius/2))
 				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
 				.attr("text-anchor", "middle")
@@ -211,15 +211,7 @@
 				.attr("font-family", "Open sans")
 				.attr("font-size", 14);
 		labels.append("text")
-				.text(max/2)
-				.attr("x", (parseFloat(svg.style("width"))/2))
-				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
-				.attr("text-anchor", "middle")	
-				.attr("fill", "rgb(255,255,255)")
-				.attr("font-family", "Open sans")
-				.attr("font-size", 14);
-		labels.append("text")
-				.text(max)
+				.text(max + " km")
 				.attr("x", (parseFloat(svg.style("width"))/2) + (radius/2))
 				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
 				.attr("text-anchor", "middle")

@@ -59,17 +59,15 @@
 
 <script>
 	// Scale svg window to screen size
-	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
+	//document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
+	document.getElementsByTagName("svg")[0].setAttribute("width", 900);
 	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.7);
 	
 	
 	
-	
-	
-	
 	// Circle variables
-	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
-	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
+	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width") * 0.5;
+	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height") * 0.4;
 	var radius = circleY/2;
 	
 	// Spoke colours
@@ -356,7 +354,7 @@
 
 		// Draw distance scale legend
 		labels.append("text")
-				.text("0")
+				.text("0 km")
 				.attr("x", (parseFloat(svg.style("width"))/2) - (radius/2))
 				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
 				.attr("text-anchor", "middle")
@@ -364,15 +362,7 @@
 				.attr("font-family", "Open sans")
 				.attr("font-size", 14);
 		labels.append("text")
-				.text(max/2)
-				.attr("x", (parseFloat(svg.style("width"))/2))
-				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
-				.attr("text-anchor", "middle")	
-				.attr("fill", "rgb(255,255,255)")
-				.attr("font-family", "Open sans")
-				.attr("font-size", 14);
-		labels.append("text")
-				.text(max)
+				.text(max + " km")
 				.attr("x", (parseFloat(svg.style("width"))/2) + (radius/2))
 				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
 				.attr("text-anchor", "middle")
