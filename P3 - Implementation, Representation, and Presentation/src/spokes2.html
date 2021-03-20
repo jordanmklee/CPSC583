@@ -122,9 +122,9 @@
 	
 	// Returns a colour based on stage type
 	function typeToColour(stageType){
-		var ttColour 	= "rgb(0,0,255)";
-		var flatColour 	= "rgb(0,255,0)";
-		var mtnColour 	= "rgb(255,0,0)";
+		var ttColour 	= "rgb(90,100,255)";
+		var flatColour 	= "rgb(120,255,120)";
+		var mtnColour 	= "rgb(255,150,150)";
 		var hillyColour = "rgb(255,255,0)";
 		var otherColour = "rgb(255,255,255)";
 		
@@ -160,6 +160,86 @@
 		return otherColour;
 	}
 	
+	// Returns an emoji flag for a country
+	function countryToFlag(country){
+		if(country.includes("AUS"))
+			return "🇦🇺";
+		else if(country.includes("AUT"))
+			return "🇦🇹";
+		else if(country.includes("BEL"))
+			return "🇧🇪";
+		else if(country.includes("BRA"))
+			return "🇧🇷";
+		else if(country.includes("CAN"))
+			return "🇨🇦";
+		else if(country.includes("COL"))
+			return "🇨🇴";
+		else if(country.includes("CZE"))
+			return "🇨🇿";
+		else if(country.includes("DEN"))
+			return "🇩🇰";
+		else if(country.includes("ESP"))
+			return "🇪🇸";
+		else if(country.includes("EST"))
+			return "🇪🇪";
+		else if(country.includes("FRA"))
+			return "🇫🇷";
+		else if(country.includes("FRG"))
+			return "🇩🇪";					// West Germany
+		else if(country.includes("GBR"))
+			return "🇬🇧";
+		else if(country.includes("GDR"))
+			return "🇩🇪";					// East Germany
+		else if(country.includes("GER"))
+			return "🇩🇪";
+		else if(country.includes("IRE"))
+			return "🇮🇪";
+		else if(country.includes("IRL"))
+			return "🇮🇪";					// Also Ireland
+		else if(country.includes("ITA"))
+			return "🇮🇹";
+		else if(country.includes("KAZ"))
+			return "🇰🇿";
+		else if(country.includes("LAT"))
+			return "🇱🇻";
+		else if(country.includes("LTU"))
+			return "🇱🇹";
+		else if(country.includes("LUX"))
+			return "🇱🇺";
+		else if(country.includes("MEX"))
+			return "🇲🇽";
+		else if(country.includes("NED"))
+			return "🇳🇱";
+		else if(country.includes("NOR"))
+			return "🇳🇴";
+		else if(country.includes("POL"))
+			return "🇵🇱";
+		else if(country.includes("POR"))
+			return "🇵🇹";
+		else if(country.includes("RSA"))
+			return "🇿🇦";
+		else if(country.includes("RUS"))
+			return "🇷🇺";
+		else if(country.includes("SLO"))
+			return "🇸🇮";
+		else if(country.includes("SUI"))
+			return "🇨🇭";
+		else if(country.includes("SVK"))
+			return "🇸🇰";
+		else if(country.includes("SWE"))
+			return "🇸🇪";
+		else if(country.includes("UKR"))
+			return "🇺🇦";
+		else if(country.includes("URS"))
+			return "🇷🇺";					// Soviet Union
+		else if(country.includes("USA"))
+			return "🇺🇸";
+		else if(country.includes("UZB"))
+			return "🇺🇿";
+		
+		return "";
+	}
+	
 	// Draw stage data for year selected on slider
 	function showData(stages){
 		var selectedYearStages = new Array();
@@ -167,9 +247,8 @@
 		
 		// Generate list of selected year's stages for labels
 		for(var stage of stages){
-			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
+			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear)
 				selectedYearStages.push(stage);
-			}
 		}
 		// Scale number of cities to go around circle
 		var scaleAngle = d3.scaleBand()
@@ -184,14 +263,16 @@
 						.append("text")
 						.attr("x", circleX)
 						.attr("y", circleY)
-						.text(function(d) {return "Stage " + d.Stage})
+						.text(function(d) {return (scaleAngle(d.Stage) > 90) ? 
+								countryToFlag(d.Winner_Country) + " - " + "Stage " + d.Stage : 
+								"Stage " + d.Stage + " - " + countryToFlag(d.Winner_Country)	})
 						.attr("fill", "rgb(255,255,255)")
 						.attr("font-family", "Open sans")
 						.attr("dominant-baseline", "central")
 						.attr("text-anchor", function(d) {return (scaleAngle(d.Stage) > 90) ? "end" : "start"})
 						.attr("transform", function(d) {return (scaleAngle(d.Stage) > 90) ? 
 								"rotate(" + (scaleAngle(d.Stage)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
-							   	"rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+							   	"rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)"	});
 		
 		
 		
