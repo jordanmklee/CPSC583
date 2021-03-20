@@ -118,7 +118,7 @@
 	function showData(stages){
 		var selectedYearCities = new Array();
 		var selectedYear = yearDisplay.innerHTML;
-		
+		var selectedYearStages = new Array();
 		
 		// Generate list of selected year's cities for labels
 		for(var stage of stages){
@@ -127,6 +127,8 @@
 					selectedYearCities.push({"name":stage.Origin, "value":0});
 				if(indexOfCity(selectedYearCities, stage.Destination) == -1)
 					selectedYearCities.push({"name":stage.Destination, "value":0});
+				
+				selectedYearStages.push(stage);
 			}
 		}
 		
@@ -167,16 +169,13 @@
 		
 		
 		
-		// Calculate the frequency of the most common host city
-		var max = d3.max(selectedYearCities, city => city.value);
+		// Calculate the maximum distance of stages
+		var max = d3.max(selectedYearStages.map(stage => parseFloat(stage.Distance)));
 		
-		// TODO Scale spoke length by stage distance instead
-		// TODO longer spokes are lighter, to allow shorter overlapping spokes to be seen
 		// Scale bar ("spoke") length
 		var scaleSpoke = d3.scaleLinear()
 							.domain([0, max])
-							.range([0, radius]);
-		
+							.range([0, radius-20]);
 		// Draw spoke background
 		var spokeBG = svg.append("g")
 						.attr("id", "spokeBG")
@@ -191,18 +190,18 @@
 						.style("fill-opacity", 0.3)
 						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")"});
 		
-		// Draw spokes (length as frequency)
+		// Draw spokes (length as stage distance)
 		var spokes = svg.append("g")
 						.attr("id", "spokes")
 						.selectAll("rect")
-						.data(selectedYearCities).enter()
+						.data(selectedYearStages).enter()
 						.append("rect")
 						.attr("x", circleX)
 						.attr("y", circleY)
 						.attr("height", 3)
-						.attr("width", function(d) {return scaleSpoke(d.value)})
+						.attr("width", function(d) {return scaleSpoke(d.Distance)})
 						.style("fill", "rgb(255,255,0)")
-						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.value)) + ", 0)"});
+						.attr("transform", function(d) {return "rotate(" + (scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.Distance)) + ", 0)"});
 		
 		
 		// Draw message for missing years due to World Wars
