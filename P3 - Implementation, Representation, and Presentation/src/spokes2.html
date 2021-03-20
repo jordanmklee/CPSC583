@@ -58,6 +58,38 @@
 </body>
 
 <script>
+	// Scale svg window to screen size
+	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
+	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.7);
+	
+	
+	
+	
+	
+	
+	// Circle variables
+	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
+	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
+	var radius = circleY/2;
+	
+	// Spoke colours
+	var typeColours = new Array("rgb(90,100,255)", 
+								"rgb(120,255,120)",
+								"rgb(255,150,150)",
+								"rgb(255,255,0)",
+								"rgb(255,255,255)");
+	var gray1 = "rgb(105,105,105)"
+	// Label text for legends
+	var legendLabels = new Array("Time Trial",
+								 "Flat Stage",
+								 "Mountain Stage",
+								 "Hilly Stage",
+								 "Other");
+	
+	
+	
+	
+	
 	// Year slider functionality
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
@@ -85,25 +117,13 @@
 	
 	
 	
-	// Scale svg window to screen size
-	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
-	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.7);
 	
-	// Circle variables
-	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
-	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
-	var radius = circleY/2;
-	
-	// Spoke colours
-	var typeColours = new Array("rgb(90,100,255)", 
-								"rgb(120,255,120)",
-								"rgb(255,150,150)",
-								"rgb(255,255,0)",
-								"rgb(255,255,255)");
 	
 	// D3
 	var svg = d3.select("svg");
 	var data = d3.csv("stages_TDF.csv").then(showData);
+	var legend = svg.append("g")
+					.attr("id", "legend")
 	
 	// Draw circle
 	var circle = d3.select("#circle")
@@ -112,31 +132,57 @@
 					.attr("cy", circleY)
 					.attr("r", radius)
 					.style("fill", "none")
-					.style("stroke", "rgb(105,105,105)")
+					.style("stroke", gray1)
 					.style("stroke-width", 5);
 	
 	// Draw spoke colour legend
-	var legendLabels = new Array("Time Trial", "Flat Stage", "Mountain Stage", "Hilly Stage", "Other");
-	var legend = svg.append("g")
-					.attr("id", "legend")
-	
 	for(var i = 0; i < legendLabels.length; i++){
 		legend.append("rect")
 			.attr("x", (i+1) * (parseFloat(svg.style("width")) * 0.17) - 20)
-			.attr("y", parseFloat(svg.style("height")) * 0.95)
+			.attr("y", parseFloat(svg.style("height")) * 0.88)
 			.attr("height", 10)
 			.attr("width", 10)
 			.style("fill", typeColours[i])
 		legend.append("text")
 			.attr("dominant-baseline", "central")
 			.attr("x", (i+1) * parseFloat(svg.style("width")) * 0.17)
-			.attr("y", (parseFloat(svg.style("height")) * 0.95) + 5)
+			.attr("y", (parseFloat(svg.style("height")) * 0.88) + 5)
 			.attr("fill", "rgb(255,255,255)")
 			.attr("font-family", "Open sans")
 			.attr("font-size", 14)
 			.text(legendLabels[i])
 	}
 	
+	// Draw distance scale
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95))
+	// Graduations
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) - (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 10)
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 7)
+	legend.append("line")
+			.attr("stroke", gray1)
+			.attr("stroke-width", 2)
+			.attr("x1", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y1", (parseFloat(svg.style("height")) * 0.95))
+			.attr("x2", (parseFloat(svg.style("width"))/2) + (radius/2))
+			.attr("y2", (parseFloat(svg.style("height")) * 0.95) - 10)
 	
 	
 	
@@ -279,28 +325,6 @@
 						.domain(selectedYearStages.map(stage => stage.Stage))
 						.range([-90, 270])
 		
-		// Draw labels
-		var labels = svg.append("g")
-						.attr("id", "labels")
-						.selectAll("text")
-						.data(selectedYearStages).enter()
-						.append("text")
-						.attr("x", circleX)
-						.attr("y", circleY)
-						.text(function(d) {return (scaleAngle(d.Stage) > 90) ? 
-								countryToFlag(d.Winner_Country) + " - " + "Stage " + d.Stage : 
-								"Stage " + d.Stage + " - " + countryToFlag(d.Winner_Country)	})
-						.attr("fill", "rgb(255,255,255)")
-						.attr("font-family", "Open sans")
-						.attr("dominant-baseline", "central")
-						.attr("text-anchor", function(d) {return (scaleAngle(d.Stage) > 90) ? "end" : "start"})
-						.attr("transform", function(d) {return (scaleAngle(d.Stage) > 90) ? 
-								"rotate(" + (scaleAngle(d.Stage)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
-							   	"rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)"	});
-		
-		
-		
-		
 		// Calculate the maximum distance of stages
 		var max = d3.max(selectedYearStages.map(stage => parseFloat(stage.Distance)));
 		
@@ -308,6 +332,52 @@
 		var scaleSpoke = d3.scaleLinear()
 							.domain([0, max])
 							.range([0, radius-20]);
+		
+		// Draw labels
+		var labels = svg.append("g")
+						.attr("id", "labels");
+		labels.selectAll("text")
+				.data(selectedYearStages).enter()
+				.append("text")
+				.attr("x", circleX)
+				.attr("y", circleY)
+				.text(function(d) {return (scaleAngle(d.Stage) > 90) ? 
+						countryToFlag(d.Winner_Country) + " - " + "Stage " + d.Stage : 
+						"Stage " + d.Stage + " - " + countryToFlag(d.Winner_Country)	})
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("dominant-baseline", "central")
+				.attr("text-anchor", function(d) {return (scaleAngle(d.Stage) > 90) ? "end" : "start"})
+				.attr("transform", function(d) {return (scaleAngle(d.Stage) > 90) ? 
+						"rotate(" + (scaleAngle(d.Stage)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
+						"rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)"	});
+
+		
+		// Draw distance scale legend
+		labels.append("text")
+				.text("0")
+				.attr("x", (parseFloat(svg.style("width"))/2) - (radius/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
+		labels.append("text")
+				.text(max/2)
+				.attr("x", (parseFloat(svg.style("width"))/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")	
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
+		labels.append("text")
+				.text(max)
+				.attr("x", (parseFloat(svg.style("width"))/2) + (radius/2))
+				.attr("y", (parseFloat(svg.style("height")) * 0.95) + 15)
+				.attr("text-anchor", "middle")
+				.attr("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", 14);
 		
 		// Draw spoke background
 		var spokeBG = svg.append("g")
@@ -319,7 +389,7 @@
 						.attr("y", circleY)
 						.attr("height", 2)
 						.attr("width", radius)
-						.style("fill", "rgb(105,105,105)")
+						.style("fill", gray1)
 						.style("fill-opacity", 0.3)
 						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ")"});
 		
