@@ -86,15 +86,20 @@
 	
 	
 	// Scale svg window to screen size
-	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.7);
-	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.5);
+	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
+	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.7);
 	
 	// Circle variables
 	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
 	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
 	var radius = circleY/2;
 	
-	
+	// Spoke colours
+	var typeColours = new Array("rgb(90,100,255)", 
+								"rgb(120,255,120)",
+								"rgb(255,150,150)",
+								"rgb(255,255,0)",
+								"rgb(255,255,255)");
 	
 	// D3
 	var svg = d3.select("svg");
@@ -110,6 +115,30 @@
 					.style("stroke", "rgb(105,105,105)")
 					.style("stroke-width", 5);
 	
+	// Draw spoke colour legend
+	var legendLabels = new Array("Time Trial", "Flat Stage", "Mountain Stage", "Hilly Stage", "Other");
+	var legend = svg.append("g")
+					.attr("id", "legend")
+	
+	for(var i = 0; i < legendLabels.length; i++){
+		legend.append("rect")
+			.attr("x", (i+1) * (parseFloat(svg.style("width")) * 0.17) - 20)
+			.attr("y", parseFloat(svg.style("height")) * 0.95)
+			.attr("height", 10)
+			.attr("width", 10)
+			.style("fill", typeColours[i])
+		legend.append("text")
+			.attr("dominant-baseline", "central")
+			.attr("x", (i+1) * parseFloat(svg.style("width")) * 0.17)
+			.attr("y", (parseFloat(svg.style("height")) * 0.95) + 5)
+			.attr("fill", "rgb(255,255,255)")
+			.attr("font-family", "Open sans")
+			.attr("font-size", 14)
+			.text(legendLabels[i])
+	}
+	
+	
+	
 	
 	// Returns the array of a city name in array
 	function indexOfCity(cities, newCity){
@@ -122,23 +151,18 @@
 	
 	// Returns a colour based on stage type
 	function typeToColour(stageType){
-		var ttColour 	= "rgb(90,100,255)";
-		var flatColour 	= "rgb(120,255,120)";
-		var mtnColour 	= "rgb(255,150,150)";
-		var hillyColour = "rgb(255,255,0)";
-		var otherColour = "rgb(255,255,255)";
 		
 		if(stageType == "Individual time trial" ||
 		  	stageType == "Team time trial" ||
 		  	stageType == "Mountain time trial"){
-			return ttColour;
+			return typeColours[0];
 		}
 		else if(stageType == "Flat stage" ||
 			   	stageType == "Plain stage" ||
 			   	stageType == "Flat Stage" ||
 			   	stageType == "Flat cobblestone stage" ||
 			   	stageType == "Plain stage with cobblestones"){
-			return flatColour;
+			return typeColours[1]
 		}
 		else if(stageType == "Medium mountain stage" ||
 			   	stageType == "High mountain stage" ||
@@ -146,18 +170,18 @@
 			   	stageType == "Mountain Stage" ||
 			   	stageType == "Stage with mountain(s)" ||
 			   	stageType == "Stage with mountain"){
-			return mtnColour;
+			return typeColours[2]
 		}
 		else if(stageType == "Hilly stage"){
-			return hillyColour;
+			return typeColours[3]
 		}
 		else if(stageType == "Transition stage" ||
 			   	stageType == "Intermediate stage" ||
 			   	stageType == "Half Stage"){
-			return otherColour;
+			return typeColours[4]
 		}
 		
-		return otherColour;
+		return typeColours[4]
 	}
 	
 	// Returns an emoji flag for a country
