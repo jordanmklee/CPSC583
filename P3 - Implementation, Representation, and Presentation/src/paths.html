@@ -63,34 +63,42 @@
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
 	slider.focus();
-
+	
+	// Display slider value
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
 	}
 	
+	// Updates visualization on slider move
 	slider.onchange = function(){
 		update(this.value);
 	}
 	
-	// Updates the visualization on slider move
+	// Deletes current visualization and redraws it based on year
 	function update(year){
 		svg.select("#labels").remove();
-		svg.select("#paths").remove();
+		svg.select("#spokeBG").remove();
+		svg.select("#spokes").remove();
 		
 		d3.csv("stages_TDF.csv").then(showData);
 	}
 	
 	
 	
+	// Scale svg window to screen size
+	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.7);
+	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.5);
+	
+	// Circle variables
+	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
+	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
+	var radius = circleY/2;
+	
+	
 	
 	// D3
 	var svg = d3.select("svg");
 	var data = d3.csv("stages_TDF.csv").then(showData);
-	
-	// Circle variables
-	var circleX = 350;
-	var circleY = circleX;
-	var radius = 150;
 	
 	// Draw circle
 	var circle = d3.select("#circle")

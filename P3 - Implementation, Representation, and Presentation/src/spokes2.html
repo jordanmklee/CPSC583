@@ -64,15 +64,17 @@
 	yearDisplay.innerHTML = slider.value;
 	slider.focus();
 	
+	// Display slider value
 	slider.oninput = function(){
 		yearDisplay.innerHTML = this.value;
 	}
 	
+	// Updates visualization on slider move
 	slider.onchange = function(){
 		update(this.value);
 	}
 	
-	// Updates the visualization on slider move
+	// Deletes current visualization and redraws it based on year
 	function update(year){
 		svg.select("#labels").remove();
 		svg.select("#spokeBG").remove();
@@ -83,15 +85,20 @@
 	
 	
 	
-	
-	// D3
-	var svg = d3.select("svg");
-	var data = d3.csv("stages_TDF.csv").then(showData);
+	// Scale svg window to screen size
+	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.7);
+	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.5);
 	
 	// Circle variables
 	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
 	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
 	var radius = circleY/2;
+	
+	
+	
+	// D3
+	var svg = d3.select("svg");
+	var data = d3.csv("stages_TDF.csv").then(showData);
 	
 	// Draw circle
 	var circle = d3.select("#circle")
@@ -102,7 +109,6 @@
 					.style("fill", "none")
 					.style("stroke", "rgb(105,105,105)")
 					.style("stroke-width", 5);
-	
 	
 	
 	// Returns the array of a city name in array
@@ -116,10 +122,10 @@
 	
 	// Returns a colour based on stage type
 	function typeToColour(stageType){
-		var ttColour = "rgb(0,0,255)";
-		var flatColour = "rgb(0,255,0)";
-		var mtnColour = "rgb(255,0,0)";
-		var hillyColour = "yellow";
+		var ttColour 	= "rgb(0,0,255)";
+		var flatColour 	= "rgb(0,255,0)";
+		var mtnColour 	= "rgb(255,0,0)";
+		var hillyColour = "rgb(255,255,0)";
 		var otherColour = "rgb(255,255,255)";
 		
 		if(stageType == "Individual time trial" ||
@@ -159,15 +165,12 @@
 		var selectedYearStages = new Array();
 		var selectedYear = yearDisplay.innerHTML;
 		
-		
 		// Generate list of selected year's stages for labels
 		for(var stage of stages){
 			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
 				selectedYearStages.push(stage);
 			}
 		}
-		
-		
 		// Scale number of cities to go around circle
 		var scaleAngle = d3.scaleBand()
 						.domain(selectedYearStages.map(stage => stage.Stage))
@@ -227,6 +230,8 @@
 						.attr("width", function(d) {return scaleSpoke(d.Distance)})
 						.style("fill", function(d) {return typeToColour(d.Type)})
 						.attr("transform", function(d) {return "rotate(" + scaleAngle(d.Stage) + ", " + circleX + " ," + circleY + ")" + "translate(" + (radius - scaleSpoke(d.Distance)) + ", 0)"});
+		
+		
 		
 		
 		// Draw message for missing years due to World Wars
