@@ -62,7 +62,6 @@
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
-	slider.focus();
 	
 	// Display slider value
 	slider.oninput = function(){
@@ -77,8 +76,7 @@
 	// Deletes current visualization and redraws it based on year
 	function update(year){
 		svg.select("#labels").remove();
-		svg.select("#spokeBG").remove();
-		svg.select("#spokes").remove();
+		svg.select("#paths").remove();
 		
 		d3.csv("stages_TDF.csv").then(showData);
 	}
