@@ -6,17 +6,15 @@ Jordan Lee (30002218)
 
 ## General Design Direction
 
-![image-20210321022417032](./report.assets/image-20210321022417032.png)
-
 The circular visualization idea as sketched in P2 was chosen as the main design inspiration for this project component. In the original P2 sketch, year information as well as origin and destination locations were shown, and stage distance has been included for this refined design.
 
-TODO draw this on paper better
+<img src="./report.assets/image-20210321120903397.png" style="height: 300px"/>
 
 Locations of Tour de France stages are distributed around the circumference of the circle, and for each race stage, a line connects the origin  location with the destination. The curvature of the line varies with the distance, with longer stages curving towards the centre of the circle before reaching the destination node on the circumference, and shorter stages represented with a line that is more straight.
 
 A year selector below the visualization allows a specific year's race stage lines to be highlighted in colour among the many other stages, as well as the locations involved in that year's Tour de France. By tracing the path that is created by the highlighted lines, one can follow the order of locations in the Tour. 
 
-
+<div style="page-break-after: always; break-after: page;"></div>
 
 ## Variations
 
@@ -26,29 +24,41 @@ The following design variations were implemented using D3.js, and can be found a
 
 https://jordanmklee.github.io/CPSC583-P3/paths.html
 
+<img src="./report.assets/image-20210321121050277.png" style="zoom:60%"/>
+
 Locations are labelled around the circle and stages are represented as a curved line between two locations. The stage locations are arranged in order of appearance in a given year, selected with a slider under the visualization, which produces a visual with minimal overlapping lines since a stage's origin and destination labels are adjacent to one another. Stage distance is represented by the length of the curved line between two locations. Clock-face conventions are followed: the first stage of that year's Tour is located at the 12 o'clock (the intuitive "start" of a circle), with subsequent stages arranged in clockwise.
+
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### Variation 2 - Spokes 1
 
 https://jordanmklee.github.io/CPSC583-P3/spokes1.html
 
+<img src="./report.assets/image-20210321121114968.png" style="zoom:60%"/>
+
 A bicycle wheel themed visualization in evolved from Variation 1. Bars (in the style of spokes) are used instead of paths, where the length of each bar represents that stage distance. A distance scale is added to improve readability and context for bar length. Each bar is located in the same place as the curved line in the previous variation; ie. the bar representing a stage and it's distance is located between the origin and destination location label. 
+
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### Variation 3 - Spokes 2
 
 https://jordanmklee.github.io/CPSC583-P3/spokes2.html
 
+<img src="./report.assets/image-20210321121125108.png" style="zoom:60%"/>
+
 An improved version of Variation 2 with the labels around the circumference representing stage numbers rather than locations, producing a more uniform distribution of "spokes" and improved aesthetics. Origin/destination location information for each stage was omitted from the labels due to readability issues, but was replaced with a flag denoting the country of the stage winner. Also, each spoke is encoded with the stage type using colours loosely inspired by the tour jersey colours (eg. red for mountain stages; red polka dot jersey for leader in the mountains competition), explained with a legend below.
+
+<div style="page-break-after: always; break-after: page;"></div>
 
 ## Process of Implementing Representation and Presentation
 
 An early implementation showed that there were over 700 unique locations, and, if placed along the circumference of the circle as sketched, the location labels would overlap one another and be near impossible to read. As well, the lines between the locations were much too dense and equally as unreadable. Therefore, following implementations focused on the data for one year of the Tour de France at a time, which consisted of a much smaller number of locations; an average of 21 locations visualized at one time.
 
-![image-20210321020112428](./report.assets/image-20210321020112428.png)
+<img src="./report.assets/image-20210321020112428.png" style="zoom:60%"/>
 
 Initially, arranging the locations in alphabetical order seemed logical. However, this resulted in a confusing mess of lines connecting stage origin and destinations. The path created by the stage lines was not easily comprehensible, especially with years of the Tour with more locations.
 
-![image-20210321020220701](./report.assets/image-20210321020220701.png)
+<img src="./report.assets/image-20210321020220701.png" style="zoom:60%"/>
 
 After implementing a visualization with locations arranged in order of occurrence (Variation 1), it produced a wheel-like appearance that was unintended with the sketches, and inspired the bicycle-wheel-themed visualizations of the next two variations. 
 
