@@ -24,4 +24,6 @@ Exploring possible design directions by sketching subsets using the 10+10 method
 
 ### P3 - Implementation, Representation, & Presentation
 
+Live demo: https://jordanmklee.github.io/CPSC583-P3/
+
 Implemented 3 variations following the design direction from P2's refined sketches, with focus on representation/presentation and minimal interaction. Reflects on design process so far, and how implementation plays a role in revisions.
