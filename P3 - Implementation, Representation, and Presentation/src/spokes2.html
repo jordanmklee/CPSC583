@@ -117,7 +117,7 @@
 	
 	// D3
 	var svg = d3.select("svg");
-	var data = d3.csv("stages_TDF.csv").then(showData);
+	var data = d3.csv("./stages_TDF.csv").then(showData);
 	var legend = svg.append("g")
 					.attr("id", "legend")
 	

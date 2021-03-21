@@ -20,23 +20,25 @@ A year selector below the visualization allows a specific year's race stage line
 
 ## Variations
 
-The following design variations were implemented using D3.js:
+The following design variations were implemented using D3.js, and can be found at https://jordanmklee.github.io/CPSC583-P3/
 
 #### Variation 1 - Paths
+
+https://jordanmklee.github.io/CPSC583-P3/paths.html
 
 Locations are labelled around the circle and stages are represented as a curved line between two locations. The stage locations are arranged in order of appearance in a given year, selected with a slider under the visualization, which produces a visual with minimal overlapping lines since a stage's origin and destination labels are adjacent to one another. Stage distance is represented by the length of the curved line between two locations. Clock-face conventions are followed: the first stage of that year's Tour is located at the 12 o'clock (the intuitive "start" of a circle), with subsequent stages arranged in clockwise.
 
 #### Variation 2 - Spokes 1
 
+https://jordanmklee.github.io/CPSC583-P3/spokes1.html
+
 A bicycle wheel themed visualization in evolved from Variation 1. Bars (in the style of spokes) are used instead of paths, where the length of each bar represents that stage distance. A distance scale is added to improve readability and context for bar length. Each bar is located in the same place as the curved line in the previous variation; ie. the bar representing a stage and it's distance is located between the origin and destination location label. 
 
 #### Variation 3 - Spokes 2
 
+https://jordanmklee.github.io/CPSC583-P3/spokes2.html
+
 An improved version of Variation 2 with the labels around the circumference representing stage numbers rather than locations, producing a more uniform distribution of "spokes" and improved aesthetics. Origin/destination location information for each stage was omitted from the labels due to readability issues, but was replaced with a flag denoting the country of the stage winner. Also, each spoke is encoded with the stage type using colours loosely inspired by the tour jersey colours (eg. red for mountain stages; red polka dot jersey for leader in the mountains competition), explained with a legend below.
-
-
-
-TODO live version on pages.cpsc.ucalgary.ca/jordan.lee2
 
 ## Process of Implementing Representation and Presentation
 
