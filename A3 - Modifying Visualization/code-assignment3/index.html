@@ -134,7 +134,34 @@
 		var mapSelectedCountries = []
 		mapCountries.on("click", function(){
 			console.log(mapSelectedCountries);
-			// TODO update scatterplot
+			
+			// Update scatterplot so only selected countries are shown
+			scatterplot.selectAll("circle")
+						.data(who)
+						.style("fill", function(d){
+							let countryCode = countryToCode(d3.select(this).attr("class").substr(12))
+							if(mapSelectedCountries.indexOf(countryCode) > -1){
+								return color(d[fieldColor])
+							}
+							else{
+								return "none"
+							}
+						})
+		})
+		
+		// Reset selections on doubleclick
+		svg.on("dblclick", function(){
+			console.log("Cleared map selections")
+			mapSelectedCountries = []
+			
+			// Update map colours
+			mapCountries.selectAll('path')
+						.style('fill', d => color(fertilityById[d.id]))
+			
+			// Update scatterplot dots
+			scatterplot.selectAll("circle")
+						.data(who)
+						.style("fill", function(d) { return color(d[fieldColor]);})
 		})
 		
 		
