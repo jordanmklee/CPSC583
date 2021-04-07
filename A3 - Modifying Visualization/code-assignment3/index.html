@@ -50,7 +50,7 @@
         .append('g')
         .attr('class', 'map');
 
-	const mapCountries = svg.append('g')
+	const mapCountries = map.append('g')
 							.attr('class', 'countries');
 	
     const scatterplot = svg
@@ -69,26 +69,26 @@
         d3.json('world_countries.json'),
         d3.tsv('world_population.tsv')
     ]).then(function(data) {
+		var scatterSelectedCountries = [];
 		
+		// Scatterplot brush functionality
 		let brush = d3.brush();
 		brush.on("brush", function(){
 			let coords = d3.event.selection;	// Get coordinates of brush rectangle
-			var selectedCountries = [];
+			scatterSelectedCountries = []
 			
 			// Add brushed country dots to printout
 			scatterplot.selectAll("circle").each(function(d, i){
 				let cx = d3.select(this).attr("cx")
-				let cy = d3.select(this).attr("cy")
-				
+				let cy = d3.select(this).attr("cy")	
 				
 				if(isSelected(coords, cx, cy)){
 					let countryName = d3.select(this).attr("class").substr(12)
-					selectedCountries.push(countryToCode(countryName));
+					scatterSelectedCountries.push(countryToCode(countryName));
 				}
 			})
 			
-			console.log(selectedCountries)
-			updateMap(selectedCountries)
+			updateMap(scatterSelectedCountries)
 		})
 		
 		// If no brush, display all countries
@@ -99,9 +99,11 @@
 					let countryCode = d3.select(this).attr("class").substr(13)
 					return color(fertilityById[countryCode])
 				})
+				scatterSelectedCountries = []
 			}
+			console.log(scatterSelectedCountries)
 		})
-		scatterplot.append("g").attr("class", "brush").call(brush);			// Adds brush to body
+		scatterplot.append("g").attr("class", "brush").call(brush);
 		
 		
 		// Converts country string into corresponding 3-character code
@@ -128,6 +130,12 @@
 		
 		
 		
+		// Map toggle selection functionality
+		var mapSelectedCountries = []
+		mapCountries.on("click", function(){
+			console.log(mapSelectedCountries);
+			// TODO update scatterplot
+		})
 		
 		
 		const fertilityById = {};
@@ -160,10 +168,7 @@
         who.forEach(d => { fertilityById[d.id] = +d[fieldColor]; });
         countries.features.forEach(d => { d.population = fertilityById[d.id] });
 		
-		
-		drawCountries()
-		function drawCountries(){
-			mapCountries.selectAll('path')
+		mapCountries.selectAll('path')
 					.data(countries.features)
 					.enter().append('path')
 					.attr("class", d => { return "COUNTRY-CODE-"+d.id;} )
@@ -173,9 +178,27 @@
 					.style('opacity', 0.8)
 					.style('stroke-width', 0.3)
 					.on('mouseover',function(d){})
-					.on('mouseout', function(d){});
+					.on('mouseout', function(d){})
+					.on('click', function(d){
+						let countryName = d3.select(this).attr("class").substr(13)
+						
+						// Toggle colour, and update array
+						d3.select(this).style('fill', function(){
+							let baseColour = color(fertilityById[d.id])
+							let newColour = "green"
+							
+							if(d3.select(this).style('fill') != newColour){
+								mapSelectedCountries.push(countryName);
+								return newColour
+							}
+							else{
+								var index = mapSelectedCountries.indexOf(countryName);
+								mapSelectedCountries.splice(index, 1)
+								return baseColour
+							}
+						})
+					});
 
-		}
 		svg.append('path')
 				.datum(topojson.mesh(countries.features, (a, b) => a.id !== b.id))
 				.attr('class', 'names')
