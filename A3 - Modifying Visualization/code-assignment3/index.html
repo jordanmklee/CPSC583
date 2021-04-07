@@ -90,7 +90,18 @@
 			console.log(selectedCountries)
 			updateMap(selectedCountries)
 		})
-		scatterplot.append("g").call(brush);			// Adds brush to body
+		
+		// If no brush, display all countries
+		brush.on("end", function(){
+			if(!d3.event.selection){
+				mapCountries.selectAll("path")
+				.style("fill", function(){
+					let countryCode = d3.select(this).attr("class").substr(13)
+					return color(fertilityById[countryCode])
+				})
+			}
+		})
+		scatterplot.append("g").attr("class", "brush").call(brush);			// Adds brush to body
 		
 		
 		// Converts country string into corresponding 3-character code
@@ -148,19 +159,23 @@
 
         who.forEach(d => { fertilityById[d.id] = +d[fieldColor]; });
         countries.features.forEach(d => { d.population = fertilityById[d.id] });
+		
+		
+		drawCountries()
+		function drawCountries(){
+			mapCountries.selectAll('path')
+					.data(countries.features)
+					.enter().append('path')
+					.attr("class", d => { return "COUNTRY-CODE-"+d.id;} )
+					.attr('d', path)
+					.style('fill', d => color(fertilityById[d.id]))
+					.style('stroke', 'black')
+					.style('opacity', 0.8)
+					.style('stroke-width', 0.3)
+					.on('mouseover',function(d){})
+					.on('mouseout', function(d){});
 
-		mapCountries.selectAll('path')
-				.data(countries.features)
-				.enter().append('path')
-                .attr("class", d => { return "COUNTRY-CODE-"+d.id;} )
-				.attr('d', path)
-				.style('fill', d => color(fertilityById[d.id]))
-				.style('stroke', 'black')
-				.style('opacity', 0.8)
-				.style('stroke-width', 0.3)
-				.on('mouseover',function(d){})
-				.on('mouseout', function(d){});
-
+		}
 		svg.append('path')
 				.datum(topojson.mesh(countries.features, (a, b) => a.id !== b.id))
 				.attr('class', 'names')
@@ -261,6 +276,8 @@
         
         return x0 <= x && x <= x1 && y0 <= y && y <= y1;
     }
+	
+	
 	
 </script>
 </body>
