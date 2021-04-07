@@ -5,6 +5,7 @@
         width: 940px;
         margin: 0 auto;
         margin-top: 2em;
+		user-select: none;
     }
 
     svg {
@@ -49,11 +50,14 @@
         .append('g')
         .attr('class', 'map');
 
+	const mapCountries = svg.append('g')
+							.attr('class', 'countries');
+	
     const scatterplot = svg
         .append('g')
         .attr('class', 'scatterplot')
         .attr("transform", "translate(100,550)");
-
+	
     const projection = d3.geoMercator()
 			.scale(130)
 			.translate( [width / 2, height / 1.5/2]);
@@ -72,22 +76,44 @@
 			var selectedCountries = [];
 			
 			// Add brushed country dots to printout
-			scatterplot.selectAll("circle").each(function(d,i) {
+			scatterplot.selectAll("circle").each(function(d, i){
 				let cx = d3.select(this).attr("cx")
 				let cy = d3.select(this).attr("cy")
 				
 				
 				if(isSelected(coords, cx, cy)){
-					let countryName = d3.select(this).attr("class")
-					selectedCountries.push(countryName.substr(12));
+					let countryName = d3.select(this).attr("class").substr(12)
+					selectedCountries.push(countryToCode(countryName));
 				}
 			})
 			
-			console.log(selectedCountries);
-			
+			console.log(selectedCountries)
+			updateMap(selectedCountries)
 		})
 		scatterplot.append("g").call(brush);			// Adds brush to body
 		
+		
+		// Converts country string into corresponding 3-character code
+		function countryToCode(country){
+			for(var i = 0; i < population.length; i++){
+				if(population[i].name == country){
+					return population[i].id;
+				}
+			}
+			return "";
+		}
+		
+		
+		
+		// Updates map so only selected countries will be shown
+		function updateMap(countries){
+			mapCountries.selectAll("path")
+				.style("fill", function(){
+					let countryCode = d3.select(this).attr("class").substr(13)
+					var selected = (countries.indexOf(countryCode) > -1);
+					return selected ? color(fertilityById[countryCode]) : "none"
+				})
+		}
 		
 		
 		
@@ -123,15 +149,13 @@
         who.forEach(d => { fertilityById[d.id] = +d[fieldColor]; });
         countries.features.forEach(d => { d.population = fertilityById[d.id] });
 
-        svg.append('g')
-				.attr('class', 'countries')
-				.selectAll('path')
+		mapCountries.selectAll('path')
 				.data(countries.features)
 				.enter().append('path')
                 .attr("class", d => { return "COUNTRY-CODE-"+d.id;} )
 				.attr('d', path)
 				.style('fill', d => color(fertilityById[d.id]))
-				.style('stroke', 'white')
+				.style('stroke', 'black')
 				.style('opacity', 0.8)
 				.style('stroke-width', 0.3)
 				.on('mouseover',function(d){})
