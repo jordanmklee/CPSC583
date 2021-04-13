@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>CPSC 583 - P4</title>
+	
+<style>
+	
+	body{
+		background-color: rgb(36,36,36);
+	}
+	
+	div{
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 36px; color: rgb(200,200,0);
+		padding: 15px;
+	}
+	
+	.slidercontainer{
+		width: 700px;
+		margin: auto;
+	}
+	
+	.slider{
+		-webkit-appearance: none;
+		appearance: none;
+		width: 100%;
+		height: 5px;
+		background: rgb(105,105,105);
+	}
+	
+	.slider::-webkit-slider-thumb{
+		-webkit-appearance: none;
+		appearance: none;
+		width: 25px;
+		height: 25px;
+		background: rgb(200,200,0);
+		border-radius: 15px;
+	}
+	
+</style>
+</head>
+
+<body>
+	<div>Tour de France Stages</div>
+	
+	<svg style="display: block; margin: auto" width=700 height=700>
+		<g id="circle"></g>
+	</svg>
+	
+	<div id="yearDisplay"></div>
+	
+	<div class="slidercontainer">
+		<input id="year" class="slider" type="range" min="1903" max="2017" value="2017">
+	</div>
+</body>
+
+<script>
+	// Year slider functionality
+	var slider = document.getElementById("year");
+	var yearDisplay = document.getElementById("yearDisplay");
+	yearDisplay.innerHTML = slider.value;
+	
+	
+	// Display slider value
+	slider.oninput = function(){
+		yearDisplay.innerHTML = this.value;
+	}
+	
+	// Updates visualization on slider move
+	slider.onchange = function(){
+		var data = d3.csv("./stages_TDF.csv").then(update);
+	}
+	
+	// Deletes current visualization and redraws it based on year
+	function update(stages){
+		// Reset previously highlighted paths
+		svg.select("#selectedYear").remove();
+		var selectedYearSVG = svg.append("g")
+									.attr("id", "selectedYear")
+		
+		var selectedYear = yearDisplay.innerHTML;
+		var selectedYearCities = new Array();
+		var selectedYearStages = new Array();
+		var allCities = new Array();
+		
+		
+		
+		
+		
+		// Generate list of selected year information
+		for(var stage of stages){
+			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
+				// Add to city label list
+				if(indexOfCity(selectedYearCities, stage.Origin) == -1)
+					selectedYearCities.push({"name":stage.Origin});
+				if(indexOfCity(selectedYearCities, stage.Destination) == -1)
+					selectedYearCities.push({"name":stage.Destination});
+				
+				selectedYearStages.push(stage);		// Add stage information to selected year array
+			}
+			if(indexOfCity(allCities, stage.Origin) == -1)
+				allCities.push({"name":stage.Origin});
+			if(indexOfCity(allCities, stage.Destination) == -1)
+				allCities.push({"name":stage.Destination});
+		}
+		
+		// Sort displayed cities by alphabetical order
+ 		allCities.sort(function(a, b){
+ 			if(a.name < b.name)
+ 				return -1;
+ 			if(a.name > b.name)
+ 				return 1;
+ 			return 0;
+ 		});
+		
+		
+		
+		
+		
+		// Scale number of cities to go around circle
+		var scaleAngle = d3.scaleBand()
+						.domain(allCities.map(city => city.name))
+						.range([-90, 270])
+		
+		// Scale path curvature by stage distance
+		var distances = stages.map(stage => parseFloat(stage.Distance))
+		var maxDistance = Math.max.apply(Math, distances);
+		var minDistance = Math.min.apply(Math, distances);
+		var scaleDistance = d3.scaleLinear()
+								.domain([minDistance, maxDistance])
+								.range([1, 0.01]);
+		
+		
+		
+		
+		
+		// Draw labels for stages in the current year
+		selectedYearSVG.selectAll("text")
+						.data(selectedYearCities).enter()
+						.append("text")
+						.attr("x", circleX)
+						.attr("y", circleY)
+						.text(function(d) {return d.name})
+						.attr("fill", "rgb(255,255,255)")
+						.attr("font-family", "Open sans")
+						.attr("dominant-baseline", "central")
+						.attr("text-anchor", function(d) {return (scaleAngle(d.name) > 90) ? "end" : "start"})
+						.attr("transform", function(d) {return (scaleAngle(d.name) > 90) ? 
+								"rotate(" + (scaleAngle(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
+							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+		
+		// Draw selected year paths (highlighted)
+		selectedYearSVG.selectAll("path")
+						.data(selectedYearStages).enter()
+						.append("path")
+						.attr("stroke", "yellow")
+						.attr("stroke-width", "0.7")
+						.attr("fill", "none")
+						.attr("d", function(d){return "M " + 													// Start point of path
+							(radius * Math.cos(scaleAngle(d.Origin) * (Math.PI/180)) + circleX) + " " +
+							(radius * Math.sin(scaleAngle(d.Origin) * (Math.PI/180)) + circleY) + 
+							" Q " +																 				// Control point of curve
+							((radius * scaleDistance(d.Distance)) * Math.cos((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleX) + " " +
+							((radius * scaleDistance(d.Distance)) * Math.sin((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleY) + " " +
+							(radius * Math.cos(scaleAngle(d.Destination) * (Math.PI/180)) + circleX) + " " + 	// End point of path
+							(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)});
+		
+		// Draw message for missing years due to World Wars
+		var ww1 = (selectedYear >= 1915) && (selectedYear <= 1918);
+		var ww2 = (selectedYear >= 1940) && (selectedYear <= 1946);
+		if(ww1 || ww2){
+			selectedYearSVG.append("text")
+				.text("No Tour in " + selectedYear + " due to World War " + ((ww1) ? "1" : "2"))
+				.attr("x", circleX)
+				.attr("y", circleY)
+				.style("fill", "rgb(255,255,255)")
+				.attr("font-family", "Open sans")
+				.attr("font-size", "24px")
+				.attr("text-anchor", "middle");
+		}
+	}
+	
+	
+	
+	// Scale svg window to screen size
+	document.getElementsByTagName("svg")[0].setAttribute("width", window.innerWidth * 0.9);
+	document.getElementsByTagName("svg")[0].setAttribute("height", window.innerHeight * 0.7);
+	
+	// Circle variables
+	var circleX = document.getElementsByTagName("svg")[0].getAttribute("width")/2;
+	var circleY = document.getElementsByTagName("svg")[0].getAttribute("height")/2;;
+	var radius = circleY/2;
+	
+	// Returns the array of a city name in array
+	function indexOfCity(cities, newCity){
+		for(var i = 0; i < cities.length; i++){
+			if(cities[i].name == newCity)
+				return i;
+		}
+		return -1;
+	}
+	
+	// D3
+	var svg = d3.select("svg");
+	var data = d3.csv("./stages_TDF.csv").then(showData);
+	
+	// Draw circle
+	var circle = d3.select("#circle")
+					.append("circle")
+					.attr("cx", circleX)
+					.attr("cy", circleY)
+					.attr("r", radius)
+					.style("fill", "none")
+					.style("stroke", "rgb(105,105,105)")
+					.style("stroke-width", 5);
+	
+	
+	
+	
+	
+	
+	// Draw stage data in background
+	function showData(stages){
+		var selectedYear = yearDisplay.innerHTML;
+		var allCities = new Array();
+		
+		// Generate list of all cities for label scaling
+		for(var stage of stages){
+			if(indexOfCity(allCities, stage.Origin) == -1)
+					allCities.push({"name":stage.Origin});
+			if(indexOfCity(allCities, stage.Destination) == -1)
+					allCities.push({"name":stage.Destination});
+		}
+		
+		// Sort displayed cities by alphabetical order
+ 		allCities.sort(function(a, b){
+ 			if(a.name < b.name)
+ 				return -1;
+ 			if(a.name > b.name)
+ 				return 1;
+ 			return 0;
+ 		});
+		
+		
+		
+		
+		
+		// Scale number of cities to go around circle
+		var scaleAngle = d3.scaleBand()
+						.domain(allCities.map(city => city.name))
+						.range([-90, 270])
+		
+		// Scale path curvature by stage distance
+		var distances = stages.map(stage => parseFloat(stage.Distance))
+		var maxDistance = Math.max.apply(Math, distances);
+		var minDistance = Math.min.apply(Math, distances);
+		var scaleDistance = d3.scaleLinear()
+								.domain([minDistance, maxDistance])
+								.range([1, 0.01]);
+		
+		
+		
+		
+		
+		// Draw darkened background paths for every stage
+		// Coordinates of start/end points calculated by the following, where A is the angle of label
+		// Angle is multiplied by pi/180 to convert to radians, since scaleAngle outputs in degrees
+		// x = r * cos(A) + x0
+		// y = r * sin(A) + y0
+		svg.append("g")
+			.attr("id", "paths")
+			.selectAll("path")
+			.data(stages).enter()
+			.append("path")
+			.attr("stroke", "rgb(100,100,100)")
+			.attr("stroke-width", "0.1")
+			.attr("fill", "none")
+			.attr("d", function(d){return "M " + 													// Start point of path
+				(radius * Math.cos(scaleAngle(d.Origin) * (Math.PI/180)) + circleX) + " " +
+				(radius * Math.sin(scaleAngle(d.Origin) * (Math.PI/180)) + circleY) + 
+				" Q " +																 				// Control point of curve
+				((radius * scaleDistance(d.Distance)) * Math.cos((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleX) + " " +
+				((radius * scaleDistance(d.Distance)) * Math.sin((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleY) + " " +
+				(radius * Math.cos(scaleAngle(d.Destination) * (Math.PI/180)) + circleX) + " " + 	// End point of path
+				(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)});
+		
+		
+		
+		
+		
+		update(stages);	// Draw initial highlighted stage
+	}
+</script>
