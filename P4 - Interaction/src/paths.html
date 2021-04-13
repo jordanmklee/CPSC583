@@ -18,6 +18,11 @@
 		padding: 15px;
 	}
 	
+	#detailDisplay{
+		color: white;
+		font-size: 24px;
+	}
+	
 	.slidercontainer{
 		width: 700px;
 		margin: auto;
@@ -55,6 +60,8 @@
 	<div class="slidercontainer">
 		<input id="year" class="slider" type="range" min="1903" max="2017" value="2017">
 	</div>
+	
+	<div id="detailDisplay">(Click on a location to learn more)</div>
 </body>
 
 <script>
@@ -62,7 +69,7 @@
 	var slider = document.getElementById("year");
 	var yearDisplay = document.getElementById("yearDisplay");
 	yearDisplay.innerHTML = slider.value;
-	
+	var selectedYearStages;
 	
 	// Display slider value
 	slider.oninput = function(){
@@ -80,10 +87,11 @@
 		svg.select("#selectedYear").remove();
 		var selectedYearSVG = svg.append("g")
 									.attr("id", "selectedYear")
+		document.getElementById("detailDisplay").innerHTML = "(Click on a location to learn more)";
 		
 		var selectedYear = yearDisplay.innerHTML;
 		var selectedYearCities = new Array();
-		var selectedYearStages = new Array();
+		selectedYearStages = new Array();
 		var allCities = new Array();
 		
 		
@@ -141,6 +149,7 @@
 		selectedYearSVG.selectAll("text")
 						.data(selectedYearCities).enter()
 						.append("text")
+						.attr("id", function(d){return d.name})
 						.attr("x", circleX)
 						.attr("y", circleY)
 						.text(function(d) {return d.name})
@@ -150,14 +159,26 @@
 						.attr("text-anchor", function(d) {return (scaleAngle(d.name) > 90) ? "end" : "start"})
 						.attr("transform", function(d) {return (scaleAngle(d.name) > 90) ? 
 								"rotate(" + (scaleAngle(d.name)-180) + ", " + circleX + " ," + circleY + ") translate(" +  (-radius - 10) + ", 0)" :
-							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" });
+							   	"rotate(" + scaleAngle(d.name) + ", " + circleX + " ," + circleY + ") translate(" +  (radius + 10) + ", 0)" })
+						.on("click", function(d){
+							var labelLocation = d3.select(this).attr("id")
+							
+							for(var i = 0; i < selectedYearStages.length; i++){
+								if(selectedYearStages[i].Origin == labelLocation)
+									showDetails(selectedYearStages[i])
+								// Account for same origin/destination
+								if(selectedYearStages[i].Destination == labelLocation && selectedYearStages[i].Origin != labelLocation)
+									showDetails(selectedYearStages[i])
+							}
+						})
+		
 		
 		// Draw selected year paths (highlighted)
 		selectedYearSVG.selectAll("path")
 						.data(selectedYearStages).enter()
 						.append("path")
 						.attr("stroke", "yellow")
-						.attr("stroke-width", "0.7")
+						.attr("stroke-width", "1")
 						.attr("fill", "none")
 						.attr("d", function(d){return "M " + 													// Start point of path
 							(radius * Math.cos(scaleAngle(d.Origin) * (Math.PI/180)) + circleX) + " " +
@@ -166,7 +187,7 @@
 							((radius * scaleDistance(d.Distance)) * Math.cos((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleX) + " " +
 							((radius * scaleDistance(d.Distance)) * Math.sin((scaleAngle(d.Origin) + scaleAngle(d.Destination))/2 * (Math.PI/180)) + circleY) + " " +
 							(radius * Math.cos(scaleAngle(d.Destination) * (Math.PI/180)) + circleX) + " " + 	// End point of path
-							(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)});
+							(radius * Math.sin(scaleAngle(d.Destination) * (Math.PI/180)) + circleY)})
 		
 		// Draw message for missing years due to World Wars
 		var ww1 = (selectedYear >= 1915) && (selectedYear <= 1918);
@@ -183,6 +204,14 @@
 		}
 	}
 	
+	function showDetails(stage){
+		document.getElementById("detailDisplay").innerHTML = 
+			"Stage " + stage.Stage + ": " + stage.Origin + " to " + stage.Destination + "<br/>"
+					+ stage.Date + "<br/>"
+					+ "Distance: " + stage.Distance + " km<br/>"
+					+ "Type: " + stage.Type + "<br/>"
+					+ "Won by " + stage.Winner;
+	}
 	
 	
 	// Scale svg window to screen size
