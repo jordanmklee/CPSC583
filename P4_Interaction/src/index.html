@@ -18,9 +18,18 @@
 		padding: 15px;
 	}
 	
+	#yearDetail{
+		color: white;
+		font-size: 24px;
+		width: 45%;
+    	float: left;
+	}
+	
 	#detailDisplay{
 		color: white;
 		font-size: 24px;
+		width: 45%;
+    	float: right;
 	}
 	
 	.slidercontainer{
@@ -61,7 +70,10 @@
 		<input id="year" class="slider" type="range" min="1903" max="2017" value="2017">
 	</div>
 	
-	<div id="detailDisplay">(Click on a location to learn more)</div>
+	<div>
+		<div id="yearDetail">Selected year's tour stats will show here...</div>
+		<div id="detailDisplay">(Click on a location to learn more)</div>
+	</div>
 </body>
 
 <script>
@@ -109,6 +121,7 @@
 		svg.select("#selectedYear").remove();
 		var selectedYearSVG = svg.append("g")
 									.attr("id", "selectedYear")
+		document.getElementById("yearDetail").innerHTML = "Selected year's tour stats will show here...";
 		document.getElementById("detailDisplay").innerHTML = "(Click on a location to learn more)";
 		
 		var selectedYear = yearDisplay.innerHTML;
@@ -120,22 +133,54 @@
 		
 		
 		
+		var totalDistance = 0.0;
+		var numStages = 0;
+		var numTT = 0;
+		var numFlat = 0;
+		var numMountain = 0;
+		var numHilly = 0;
+		var numOther = 0;
+		
 		// Generate list of selected year information
 		for(var stage of stages){
-			// Add to city label lists
 			if(stage.Date < (selectedYear+1) && stage.Date > selectedYear){
+				// Add to city label lists
 				if(indexOfCity(selectedYearCities, stage.Origin) == -1)
 					selectedYearCities.push({"name":stage.Origin});
 				if(indexOfCity(selectedYearCities, stage.Destination) == -1)
 					selectedYearCities.push({"name":stage.Destination});
 				
 				selectedYearStages.push(stage);
+				
+				// Update stats
+				totalDistance = totalDistance + parseFloat(stage.Distance);
+				numStages++;
+				if(typeToColour(stage.Type) == typeColours[0])
+					numTT++;
+				if(typeToColour(stage.Type) == typeColours[1])
+					numFlat++;
+				if(typeToColour(stage.Type) == typeColours[2])
+					numMountain++;
+				if(typeToColour(stage.Type) == typeColours[3])
+					numHilly++;
+				if(typeToColour(stage.Type) == typeColours[4])
+					numOther++;
 			}
 			if(indexOfCity(allCities, stage.Origin) == -1)
 				allCities.push({"name":stage.Origin});
 			if(indexOfCity(allCities, stage.Destination) == -1)
 				allCities.push({"name":stage.Destination});
 		}
+		
+		// Update stats display
+		document.getElementById("yearDetail").innerHTML = selectedYear + " Tour de France" + "<br/>"
+															+ totalDistance + " km over " + numStages + " stages" + "<br/><br/>"
+															+ ((numTT > 0) ? numTT + " Time Trials Stages<br/>" : "")
+															+ ((numFlat > 0) ? numFlat + " Flat Stages<br/>" : "")
+															+ ((numMountain > 0) ? numMountain + " Mountain Stages<br/>" : "")
+															+ ((numHilly > 0) ? numHilly + " Hilly Stages<br/>" : "")
+															+ ((numOther > 0) ? numOther + " Other Stages<br/>" : "")
+		
 		
 		// Sort displayed cities by alphabetical order
  		allCities.sort(function(a, b){
