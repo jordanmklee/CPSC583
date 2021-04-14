@@ -1,1 +1,195 @@
-<meta http-equiv="refresh" content="0; url=https://jordanmklee.github.io/CPSC583/A3%20-%20Modifying%20Visualization/code-assignment3/index.html">
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<title>CPSC 583 - Jordan Lee</title>
+<style>
+	
+	html{
+		scroll-behavior: smooth;
+	}
+	
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	div{
+		font-family: 'Open Sans', sans-serif;
+	}
+	
+	h1{
+		color: yellow;
+		font-size: 48px;
+	}
+	
+	h2{
+		color: white;
+		font-size: 30px;
+	}
+	
+	h3{
+		color: yellow;
+		font-size: 30px;
+	}
+	
+	p{
+		color: rgb(255,255,255);
+		font-size: 20px;
+	}
+	
+	a{
+		color: yellow;
+	}
+	
+	iframe{
+		width: 100%;
+		height: 100%;
+	}
+	
+	
+	.navigation{
+		background-color: black;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+	.navigation p{
+		color: yellow;
+		padding-left: 14px;
+		text-decoration: none;
+		font-size: 24px;
+	}
+	.navigation a{
+		float: left;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+	.navigation a:hover{
+		background-color: yellow;
+		color: black;
+	}
+	
+	
+	
+	
+	#contentContainer{
+		background-color: rgb(50,50,50);
+		width: 100%;
+	}
+	
+	.assignment{
+		padding-top: 150px;
+		padding-left: 100px;
+		padding-right: 100px;
+		padding-bottom: 50px;
+	}
+	
+	.desc{
+		padding: 50px;
+		background-color: rgb(36,36,36);
+		border-radius: 20px;
+	}
+	
+	.footer{
+		background-color: black;
+		padding: 15px;
+	}
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="navigation">
+		<p>CPSC 583 - Jordan Lee</p>
+		<p style="color: white">Assignments and project completed for CPSC 583 - Data Visualization, taken at the University of Calgary in Winter 2021.</p>
+		<a href="#a1">A1</a>
+		<a href="#a2">A2</a>
+		<a href="#a3">A3</a>
+		<a href="#p1">P1</a>
+		<a href="#p2">P2</a>
+		<a href="#p3">P3</a>
+		<a href="#p4">P4</a>
+	</div>
+	
+	<div id="contentContainer">
+		<div id="a1" class="assignment">
+			<div class="desc">
+				<h3>A1 - Unemployment Rates</h3>
+				<p><a href="./A1_Unemployment_Rates/src/index.html">Demo</a></p>
+				<p>
+					An information visualization created from tabular data. Potential ideas are explored using the 5+5 method, before being implemented in D3.js. Includes data analysis, and reflection on design choices as well as the visualization.
+				</p>
+			</div>
+		</div>
+		
+		<div id="a2" class="assignment">
+			<div class="desc">
+				<h3>A2 - Modifying D3</h3>
+				<p><a href="./A2_Modifying_D3/code/index.html">Demo</a></p>
+				<p>
+					Given an existing visualization, modified how the D3 JavaScript library created axes to produce a visually distinct axis compared to D3's implementation.
+				</p>
+			</div>
+		</div>
+
+		<div id="a3" class="assignment">
+			<div class="desc">
+				<h3>A3 - Modifying Visualization</h3>
+				<p><a href="./A3_Modifying_Visualization/code-assignment3/index.html">Demo</a></p>
+				<p>
+					Given an existing visualization, modified it to include interaction in the form of brushing and linking.
+				</p>
+			</div>
+		</div>
+		
+		<div id="p1" class="assignment">
+			<div class="desc">
+				<h3>P1 - Data Approval</h3>
+				<p>
+					Proposal for a Tour de France historical dataset found on Kaggle. Explains dataset information, and pros/cons.
+				</p>
+			</div>
+		</div>
+		
+		<div id="p2" class="assignment">
+			<div class="desc">
+				<h3>P2 - Sketching</h3>
+				<p>
+					Exploring possible design directions by sketching subsets using the 10+10 method. Discusses creating sketchable subsets, process and results.
+				</p>
+			</div>
+		</div>
+
+		<div id="p3" class="assignment">
+			<div class="desc">
+				<h3>P3 - Implementation, Representation, and Presentation</h3>
+				<p><a href="./P3_Implementation_Representation_and_Presentation/src/index.html">Demo</a></p>
+				<p>
+					Implemented 3 variations following the design direction from P2's refined sketches, with focus on representation/presentation and minimal interaction. Reflects on design process so far, and how implementation plays a role in revisions.
+				</p>
+			</div>
+		</div>
+		
+		<div id="p4" class="assignment">
+			<div class="desc">
+				<h3>P4 - Interaction</h3>
+				<p><a href="./P4_Interaction/src/index.html">Demo</a></p>
+				<p>
+					Built upon variations created in P3 to incorporate more columns of dataset through interaction. Final report discussing entire process as well as reflection on the final implemented visualization.
+				</p>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="footer">
+		<p style="text-align: right; padding-right: 100px">Jordan Lee (UCID: 30002218)</p>
+	</div>
+</body>
